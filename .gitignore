@@ -1,6 +1,6 @@
-# Model weights (upload manually)
-to_upload/
-*.pt
+# Model weights (upload manually via GitHub UI)
+# to_upload/ folder is tracked so it appears on GitHub
+to_upload/*.pt
 *.pth
 *.bin
 *.safetensors
