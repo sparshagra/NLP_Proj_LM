@@ -1,0 +1,728 @@
+nohup: ignoring input
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/sem10/.netrc.
+wandb: Currently logged in as: sparshagra51 (sparshagra51-international-institute-of-information-tech) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run rwgqhf7g
+wandb: Tracking run with wandb version 0.26.0
+wandb: Run data is saved locally in /home/sem10/Desktop/nlpProj/wandb/run-20260416_083214-rwgqhf7g
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run phase1_124M_gpt2
+wandb: ⭐️ View project at https://wandb.ai/sparshagra51-international-institute-of-information-tech/curriculum_lm
+wandb: 🚀 View run at https://wandb.ai/sparshagra51-international-institute-of-information-tech/curriculum_lm/runs/rwgqhf7g
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+  Device  : cuda
+  GPU     : NVIDIA GeForce RTX 4060 Ti
+  VRAM    : 16.7 GB
+  CUDA    : 12.1
+  W&B     : https://wandb.ai/sparshagra51-international-institute-of-information-tech/curriculum_lm/runs/rwgqhf7g
+Loading TinyStories from disk …
+  Train: 2,119,719 stories
+  Val  : 21,990  stories
+Downloading GPT-2 tokenizer (gpt2) …
+  Tokenizer cached → /home/sem10/Desktop/nlpProj/checkpoints/phase1/tokenizer
+  Vocab size  : 50,257
+  EOS token   : '<|endoftext|>'  (id=50256)
+  PAD token   : '<|endoftext|>'  (id=50256)
+
+Building datasets …
+  ArrowLMDataset: 2,119,719 stories  (block_size=512)
+  ArrowLMDataset: 21,990 stories  (block_size=512)
+  Train batches : 132,483
+  Val   batches : 688
+
+  Model Architecture: Decoder-Only Transformer (GPT-style)
+  ──────────────────────────────────────────────
+  Total trainable parameters : 123.96 M
+    token_emb               38.60 M
+    pos_emb                  0.39 M
+    blocks                  84.97 M
+    ln_final                 0.00 M
+    lm_head                 38.60 M
+  ──────────────────────────────────────────────
+  Note: lm_head weights are TIED to token_emb (not double-counted)
+
+
+═════════════════════════════════════════════════════════════════
+  Phase-1 Training — TinyStories  |  124M decoder-only Transformer
+  Epochs        : 1 → 3
+  Effective batch: 16 × 8 = 128
+  Total steps   : 49,683  (warmup: 2,000)
+  AMP (fp16)    : True
+═════════════════════════════════════════════════════════════════
+
+Token indices sequence length is longer than the specified maximum sequence length for this model (1055 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1048 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1072 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1057 > 1024). Running this sequence through the model will result in indexing errors
+  Ep 01 | step    100 | loss 9.2907 | ppl 10836.60 | lr 1.48e-05 | 216s elapsed
+  Ep 01 | step    200 | loss 7.8713 | ppl  2621.06 | lr 2.98e-05 | 433s elapsed
+  Ep 01 | step    300 | loss 6.8053 | ppl   902.65 | lr 4.48e-05 | 649s elapsed
+  Ep 01 | step    400 | loss 6.0990 | ppl   445.42 | lr 5.98e-05 | 865s elapsed
+  Ep 01 | step    500 | loss 5.6090 | ppl   272.87 | lr 7.49e-05 | 1081s elapsed
+  Ep 01 | step    600 | loss 5.2441 | ppl   189.45 | lr 8.98e-05 | 1297s elapsed
+  Ep 01 | step    700 | loss 4.9527 | ppl   141.55 | lr 1.05e-04 | 1513s elapsed
+  Ep 01 | step    800 | loss 4.7094 | ppl   110.98 | lr 1.20e-04 | 1729s elapsed
+  Ep 01 | step    900 | loss 4.5010 | ppl    90.11 | lr 1.35e-04 | 1945s elapsed
+  Ep 01 | step   1000 | loss 4.3217 | ppl    75.32 | lr 1.50e-04 | 2161s elapsed
+  Ep 01 | step   1100 | loss 4.1642 | ppl    64.34 | lr 1.65e-04 | 2377s elapsed
+  Ep 01 | step   1200 | loss 4.0240 | ppl    55.92 | lr 1.80e-04 | 2593s elapsed
+  Ep 01 | step   1300 | loss 3.8982 | ppl    49.31 | lr 1.95e-04 | 2809s elapsed
+  Ep 01 | step   1400 | loss 3.7848 | ppl    44.02 | lr 2.10e-04 | 3025s elapsed
+  Ep 01 | step   1500 | loss 3.6825 | ppl    39.75 | lr 2.25e-04 | 3241s elapsed
+  Ep 01 | step   1600 | loss 3.5889 | ppl    36.19 | lr 2.40e-04 | 3457s elapsed
+  Ep 01 | step   1700 | loss 3.5040 | ppl    33.25 | lr 2.55e-04 | 3673s elapsed
+  Ep 01 | step   1800 | loss 3.4255 | ppl    30.74 | lr 2.70e-04 | 3889s elapsed
+  Ep 01 | step   1900 | loss 3.3535 | ppl    28.60 | lr 2.85e-04 | 4105s elapsed
+  Ep 01 | step   2000 | loss 3.2867 | ppl    26.75 | lr 3.00e-04 | 4321s elapsed
+  Ep 01 | step   2100 | loss 3.2247 | ppl    25.15 | lr 3.00e-04 | 4537s elapsed
+  Ep 01 | step   2200 | loss 3.1670 | ppl    23.74 | lr 3.00e-04 | 4753s elapsed
+  Ep 01 | step   2300 | loss 3.1129 | ppl    22.49 | lr 3.00e-04 | 4968s elapsed
+  Ep 01 | step   2400 | loss 3.0621 | ppl    21.37 | lr 3.00e-04 | 5184s elapsed
+  Ep 01 | step   2500 | loss 3.0144 | ppl    20.38 | lr 3.00e-04 | 5400s elapsed
+  Ep 01 | step   2600 | loss 2.9696 | ppl    19.48 | lr 3.00e-04 | 5616s elapsed
+  Ep 01 | step   2700 | loss 2.9271 | ppl    18.67 | lr 3.00e-04 | 5832s elapsed
+  Ep 01 | step   2800 | loss 2.8872 | ppl    17.94 | lr 3.00e-04 | 6048s elapsed
+  Ep 01 | step   2900 | loss 2.8495 | ppl    17.28 | lr 3.00e-04 | 6264s elapsed
+  Ep 01 | step   3000 | loss 2.8137 | ppl    16.67 | lr 3.00e-04 | 6480s elapsed
+  Ep 01 | step   3100 | loss 2.7798 | ppl    16.12 | lr 3.00e-04 | 6696s elapsed
+  Ep 01 | step   3200 | loss 2.7476 | ppl    15.60 | lr 3.00e-04 | 6912s elapsed
+  Ep 01 | step   3300 | loss 2.7167 | ppl    15.13 | lr 3.00e-04 | 7128s elapsed
+  Ep 01 | step   3400 | loss 2.6875 | ppl    14.69 | lr 2.99e-04 | 7344s elapsed
+  Ep 01 | step   3500 | loss 2.6596 | ppl    14.29 | lr 2.99e-04 | 7561s elapsed
+  Ep 01 | step   3600 | loss 2.6330 | ppl    13.92 | lr 2.99e-04 | 7777s elapsed
+  Ep 01 | step   3700 | loss 2.6077 | ppl    13.57 | lr 2.99e-04 | 7993s elapsed
+  Ep 01 | step   3800 | loss 2.5831 | ppl    13.24 | lr 2.99e-04 | 8209s elapsed
+  Ep 01 | step   3900 | loss 2.5597 | ppl    12.93 | lr 2.99e-04 | 8425s elapsed
+  Ep 01 | step   4000 | loss 2.5371 | ppl    12.64 | lr 2.99e-04 | 8641s elapsed
+  Ep 01 | step   4100 | loss 2.5156 | ppl    12.37 | lr 2.99e-04 | 8857s elapsed
+  Ep 01 | step   4200 | loss 2.4948 | ppl    12.12 | lr 2.99e-04 | 9074s elapsed
+  Ep 01 | step   4300 | loss 2.4749 | ppl    11.88 | lr 2.98e-04 | 9290s elapsed
+  Ep 01 | step   4400 | loss 2.4556 | ppl    11.65 | lr 2.98e-04 | 9506s elapsed
+  Ep 01 | step   4500 | loss 2.4371 | ppl    11.44 | lr 2.98e-04 | 9722s elapsed
+  Ep 01 | step   4600 | loss 2.4193 | ppl    11.24 | lr 2.98e-04 | 9938s elapsed
+  Ep 01 | step   4700 | loss 2.4021 | ppl    11.05 | lr 2.98e-04 | 10155s elapsed
+  Ep 01 | step   4800 | loss 2.3855 | ppl    10.86 | lr 2.98e-04 | 10371s elapsed
+  Ep 01 | step   4900 | loss 2.3695 | ppl    10.69 | lr 2.98e-04 | 10587s elapsed
+  Ep 01 | step   5000 | loss 2.3540 | ppl    10.53 | lr 2.97e-04 | 10803s elapsed
+  Ep 01 | step   5100 | loss 2.3389 | ppl    10.37 | lr 2.97e-04 | 11019s elapsed
+  Ep 01 | step   5200 | loss 2.3243 | ppl    10.22 | lr 2.97e-04 | 11235s elapsed
+  Ep 01 | step   5300 | loss 2.3100 | ppl    10.07 | lr 2.97e-04 | 11451s elapsed
+  Ep 01 | step   5400 | loss 2.2963 | ppl     9.94 | lr 2.97e-04 | 11667s elapsed
+  Ep 01 | step   5500 | loss 2.2830 | ppl     9.81 | lr 2.96e-04 | 11883s elapsed
+  Ep 01 | step   5600 | loss 2.2702 | ppl     9.68 | lr 2.96e-04 | 12098s elapsed
+  Ep 01 | step   5700 | loss 2.2577 | ppl     9.56 | lr 2.96e-04 | 12314s elapsed
+  Ep 01 | step   5800 | loss 2.2456 | ppl     9.45 | lr 2.96e-04 | 12530s elapsed
+  Ep 01 | step   5900 | loss 2.2339 | ppl     9.34 | lr 2.96e-04 | 12746s elapsed
+  Ep 01 | step   6000 | loss 2.2224 | ppl     9.23 | lr 2.95e-04 | 12962s elapsed
+  Ep 01 | step   6100 | loss 2.2112 | ppl     9.13 | lr 2.95e-04 | 13178s elapsed
+  Ep 01 | step   6200 | loss 2.2003 | ppl     9.03 | lr 2.95e-04 | 13394s elapsed
+  Ep 01 | step   6300 | loss 2.1898 | ppl     8.93 | lr 2.95e-04 | 13610s elapsed
+  Ep 01 | step   6400 | loss 2.1794 | ppl     8.84 | lr 2.94e-04 | 13826s elapsed
+  Ep 01 | step   6500 | loss 2.1694 | ppl     8.75 | lr 2.94e-04 | 14042s elapsed
+  Ep 01 | step   6600 | loss 2.1595 | ppl     8.67 | lr 2.94e-04 | 14258s elapsed
+  Ep 01 | step   6700 | loss 2.1500 | ppl     8.58 | lr 2.94e-04 | 14474s elapsed
+  Ep 01 | step   6800 | loss 2.1406 | ppl     8.50 | lr 2.93e-04 | 14690s elapsed
+  Ep 01 | step   6900 | loss 2.1315 | ppl     8.43 | lr 2.93e-04 | 14906s elapsed
+  Ep 01 | step   7000 | loss 2.1225 | ppl     8.35 | lr 2.93e-04 | 15122s elapsed
+  Ep 01 | step   7100 | loss 2.1136 | ppl     8.28 | lr 2.92e-04 | 15338s elapsed
+  Ep 01 | step   7200 | loss 2.1051 | ppl     8.21 | lr 2.92e-04 | 15554s elapsed
+  Ep 01 | step   7300 | loss 2.0969 | ppl     8.14 | lr 2.92e-04 | 15770s elapsed
+  Ep 01 | step   7400 | loss 2.0888 | ppl     8.08 | lr 2.92e-04 | 15986s elapsed
+  Ep 01 | step   7500 | loss 2.0808 | ppl     8.01 | lr 2.91e-04 | 16203s elapsed
+  Ep 01 | step   7600 | loss 2.0729 | ppl     7.95 | lr 2.91e-04 | 16419s elapsed
+  Ep 01 | step   7700 | loss 2.0654 | ppl     7.89 | lr 2.91e-04 | 16635s elapsed
+  Ep 01 | step   7800 | loss 2.0580 | ppl     7.83 | lr 2.90e-04 | 16851s elapsed
+  Ep 01 | step   7900 | loss 2.0507 | ppl     7.77 | lr 2.90e-04 | 17067s elapsed
+  Ep 01 | step   8000 | loss 2.0435 | ppl     7.72 | lr 2.90e-04 | 17284s elapsed
+  Ep 01 | step   8100 | loss 2.0365 | ppl     7.66 | lr 2.89e-04 | 17500s elapsed
+  Ep 01 | step   8200 | loss 2.0297 | ppl     7.61 | lr 2.89e-04 | 17716s elapsed
+  Ep 01 | step   8300 | loss 2.0230 | ppl     7.56 | lr 2.89e-04 | 17932s elapsed
+  Ep 01 | step   8400 | loss 2.0164 | ppl     7.51 | lr 2.88e-04 | 18149s elapsed
+  Ep 01 | step   8500 | loss 2.0100 | ppl     7.46 | lr 2.88e-04 | 18365s elapsed
+  Ep 01 | step   8600 | loss 2.0036 | ppl     7.42 | lr 2.87e-04 | 18581s elapsed
+  Ep 01 | step   8700 | loss 1.9974 | ppl     7.37 | lr 2.87e-04 | 18797s elapsed
+  Ep 01 | step   8800 | loss 1.9913 | ppl     7.33 | lr 2.87e-04 | 19013s elapsed
+  Ep 01 | step   8900 | loss 1.9854 | ppl     7.28 | lr 2.86e-04 | 19230s elapsed
+  Ep 01 | step   9000 | loss 1.9795 | ppl     7.24 | lr 2.86e-04 | 19446s elapsed
+  Ep 01 | step   9100 | loss 1.9736 | ppl     7.20 | lr 2.86e-04 | 19662s elapsed
+  Ep 01 | step   9200 | loss 1.9679 | ppl     7.16 | lr 2.85e-04 | 19879s elapsed
+  Ep 01 | step   9300 | loss 1.9623 | ppl     7.12 | lr 2.85e-04 | 20095s elapsed
+  Ep 01 | step   9400 | loss 1.9568 | ppl     7.08 | lr 2.84e-04 | 20311s elapsed
+  Ep 01 | step   9500 | loss 1.9515 | ppl     7.04 | lr 2.84e-04 | 20527s elapsed
+  Ep 01 | step   9600 | loss 1.9461 | ppl     7.00 | lr 2.83e-04 | 20743s elapsed
+  Ep 01 | step   9700 | loss 1.9409 | ppl     6.96 | lr 2.83e-04 | 20959s elapsed
+  Ep 01 | step   9800 | loss 1.9359 | ppl     6.93 | lr 2.83e-04 | 21175s elapsed
+  Ep 01 | step   9900 | loss 1.9308 | ppl     6.90 | lr 2.82e-04 | 21391s elapsed
+  Ep 01 | step  10000 | loss 1.9259 | ppl     6.86 | lr 2.82e-04 | 21607s elapsed
+  Ep 01 | step  10100 | loss 1.9210 | ppl     6.83 | lr 2.81e-04 | 21823s elapsed
+  Ep 01 | step  10200 | loss 1.9161 | ppl     6.79 | lr 2.81e-04 | 22039s elapsed
+  Ep 01 | step  10300 | loss 1.9115 | ppl     6.76 | lr 2.80e-04 | 22255s elapsed
+  Ep 01 | step  10400 | loss 1.9068 | ppl     6.73 | lr 2.80e-04 | 22471s elapsed
+  Ep 01 | step  10500 | loss 1.9022 | ppl     6.70 | lr 2.79e-04 | 22687s elapsed
+  Ep 01 | step  10600 | loss 1.8977 | ppl     6.67 | lr 2.79e-04 | 22903s elapsed
+  Ep 01 | step  10700 | loss 1.8932 | ppl     6.64 | lr 2.78e-04 | 23119s elapsed
+  Ep 01 | step  10800 | loss 1.8889 | ppl     6.61 | lr 2.78e-04 | 23335s elapsed
+  Ep 01 | step  10900 | loss 1.8846 | ppl     6.58 | lr 2.77e-04 | 23551s elapsed
+  Ep 01 | step  11000 | loss 1.8803 | ppl     6.56 | lr 2.77e-04 | 23767s elapsed
+  Ep 01 | step  11100 | loss 1.8761 | ppl     6.53 | lr 2.76e-04 | 23982s elapsed
+  Ep 01 | step  11200 | loss 1.8720 | ppl     6.50 | lr 2.76e-04 | 24198s elapsed
+  Ep 01 | step  11300 | loss 1.8679 | ppl     6.47 | lr 2.75e-04 | 24414s elapsed
+  Ep 01 | step  11400 | loss 1.8639 | ppl     6.45 | lr 2.75e-04 | 24630s elapsed
+  Ep 01 | step  11500 | loss 1.8600 | ppl     6.42 | lr 2.74e-04 | 24846s elapsed
+  Ep 01 | step  11600 | loss 1.8561 | ppl     6.40 | lr 2.74e-04 | 25062s elapsed
+  Ep 01 | step  11700 | loss 1.8523 | ppl     6.37 | lr 2.73e-04 | 25278s elapsed
+  Ep 01 | step  11800 | loss 1.8485 | ppl     6.35 | lr 2.73e-04 | 25494s elapsed
+  Ep 01 | step  11900 | loss 1.8448 | ppl     6.33 | lr 2.72e-04 | 25710s elapsed
+  Ep 01 | step  12000 | loss 1.8410 | ppl     6.30 | lr 2.72e-04 | 25926s elapsed
+  Ep 01 | step  12100 | loss 1.8374 | ppl     6.28 | lr 2.71e-04 | 26142s elapsed
+  Ep 01 | step  12200 | loss 1.8338 | ppl     6.26 | lr 2.71e-04 | 26358s elapsed
+  Ep 01 | step  12300 | loss 1.8303 | ppl     6.24 | lr 2.70e-04 | 26574s elapsed
+  Ep 01 | step  12400 | loss 1.8267 | ppl     6.21 | lr 2.70e-04 | 26790s elapsed
+  Ep 01 | step  12500 | loss 1.8233 | ppl     6.19 | lr 2.69e-04 | 27006s elapsed
+  Ep 01 | step  12600 | loss 1.8200 | ppl     6.17 | lr 2.68e-04 | 27222s elapsed
+  Ep 01 | step  12700 | loss 1.8166 | ppl     6.15 | lr 2.68e-04 | 27438s elapsed
+  Ep 01 | step  12800 | loss 1.8133 | ppl     6.13 | lr 2.67e-04 | 27654s elapsed
+  Ep 01 | step  12900 | loss 1.8100 | ppl     6.11 | lr 2.67e-04 | 27871s elapsed
+  Ep 01 | step  13000 | loss 1.8068 | ppl     6.09 | lr 2.66e-04 | 28087s elapsed
+  Ep 01 | step  13100 | loss 1.8036 | ppl     6.07 | lr 2.65e-04 | 28303s elapsed
+  Ep 01 | step  13200 | loss 1.8005 | ppl     6.05 | lr 2.65e-04 | 28519s elapsed
+  Ep 01 | step  13300 | loss 1.7974 | ppl     6.03 | lr 2.64e-04 | 28735s elapsed
+  Ep 01 | step  13400 | loss 1.7943 | ppl     6.02 | lr 2.64e-04 | 28952s elapsed
+  Ep 01 | step  13500 | loss 1.7912 | ppl     6.00 | lr 2.63e-04 | 29168s elapsed
+  Ep 01 | step  13600 | loss 1.7882 | ppl     5.98 | lr 2.62e-04 | 29384s elapsed
+  Ep 01 | step  13700 | loss 1.7852 | ppl     5.96 | lr 2.62e-04 | 29600s elapsed
+  Ep 01 | step  13800 | loss 1.7822 | ppl     5.94 | lr 2.61e-04 | 29817s elapsed
+  Ep 01 | step  13900 | loss 1.7793 | ppl     5.93 | lr 2.61e-04 | 30033s elapsed
+  Ep 01 | step  14000 | loss 1.7764 | ppl     5.91 | lr 2.60e-04 | 30249s elapsed
+  Ep 01 | step  14100 | loss 1.7736 | ppl     5.89 | lr 2.59e-04 | 30465s elapsed
+  Ep 01 | step  14200 | loss 1.7708 | ppl     5.88 | lr 2.59e-04 | 30682s elapsed
+  Ep 01 | step  14300 | loss 1.7680 | ppl     5.86 | lr 2.58e-04 | 30898s elapsed
+  Ep 01 | step  14400 | loss 1.7653 | ppl     5.84 | lr 2.57e-04 | 31114s elapsed
+  Ep 01 | step  14500 | loss 1.7626 | ppl     5.83 | lr 2.57e-04 | 31330s elapsed
+  Ep 01 | step  14600 | loss 1.7599 | ppl     5.81 | lr 2.56e-04 | 31546s elapsed
+  Ep 01 | step  14700 | loss 1.7572 | ppl     5.80 | lr 2.55e-04 | 31763s elapsed
+  Ep 01 | step  14800 | loss 1.7546 | ppl     5.78 | lr 2.55e-04 | 31979s elapsed
+  Ep 01 | step  14900 | loss 1.7519 | ppl     5.77 | lr 2.54e-04 | 32195s elapsed
+  Ep 01 | step  15000 | loss 1.7494 | ppl     5.75 | lr 2.53e-04 | 32411s elapsed
+  Ep 01 | step  15100 | loss 1.7468 | ppl     5.74 | lr 2.53e-04 | 32628s elapsed
+  Ep 01 | step  15200 | loss 1.7442 | ppl     5.72 | lr 2.52e-04 | 32844s elapsed
+  Ep 01 | step  15300 | loss 1.7417 | ppl     5.71 | lr 2.51e-04 | 33060s elapsed
+  Ep 01 | step  15400 | loss 1.7392 | ppl     5.69 | lr 2.51e-04 | 33276s elapsed
+  Ep 01 | step  15500 | loss 1.7368 | ppl     5.68 | lr 2.50e-04 | 33492s elapsed
+  Ep 01 | step  15600 | loss 1.7344 | ppl     5.67 | lr 2.49e-04 | 33709s elapsed
+  Ep 01 | step  15700 | loss 1.7320 | ppl     5.65 | lr 2.49e-04 | 33925s elapsed
+  Ep 01 | step  15800 | loss 1.7297 | ppl     5.64 | lr 2.48e-04 | 34141s elapsed
+  Ep 01 | step  15900 | loss 1.7273 | ppl     5.63 | lr 2.47e-04 | 34357s elapsed
+  Ep 01 | step  16000 | loss 1.7249 | ppl     5.61 | lr 2.47e-04 | 34574s elapsed
+  Ep 01 | step  16100 | loss 1.7226 | ppl     5.60 | lr 2.46e-04 | 34790s elapsed
+  Ep 01 | step  16200 | loss 1.7204 | ppl     5.59 | lr 2.45e-04 | 35006s elapsed
+  Ep 01 | step  16300 | loss 1.7181 | ppl     5.57 | lr 2.44e-04 | 35222s elapsed
+  Ep 01 | step  16400 | loss 1.7159 | ppl     5.56 | lr 2.44e-04 | 35438s elapsed
+  Ep 01 | step  16500 | loss 1.7137 | ppl     5.55 | lr 2.43e-04 | 35655s elapsed
+Token indices sequence length is longer than the specified maximum sequence length for this model (1045 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1025 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (1052 > 1024). Running this sequence through the model will result in indexing errors
+
+─────────────────────────────────────────────────────────────────
+  Epoch 01 done  (35908s  |  10.0h)
+  Train loss : 1.7124  PPL : 5.54
+  Val   loss : 1.3411  PPL : 3.82
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase1/checkpoint_epoch01.pt
+  ★ New best  (val_loss=1.3411  ppl=3.82)
+
+── Sample Generations ──────────────────────────────────
+
+  [Once upon a time]
+  Once upon a time, there was an enormous tree. Every day the tree would sit in its branches and watch all of its leaves.
+One particular day, it began to rain. The tree looked up into the sky, but still didn't know what would happen next. 
+Suddenly, the tree had a great idea! It remembered that when the sun comes out, the leaves will always be ready for something new. So the tree got down from the ground and went outside to look for some new leaves.
+The big sun soon came out again, but this time it was prepared. Its leaves were so soft, just like the last. With a smile on its face, the tree stayed clean for many years. And everyone lived happily ever after.
+And the story has been foreshadowing that moment can bring so much joy. Everyone who saw the big, enormous tree in the middle of their garden. 
+Moral: Always check with your eyes before going exploring! If you are patient and wait for something good might come.â€™s why we have to hurry to find that way, even if things don't turn back right away! But remember never forget to use your mind to stay positive when things go wrong. We must make sure nothing bad sometimes lead us through life's waiting until the end. That way.
+
+So, no matter what happened each thing does not stop is how well. Whenever the tree goes away, it remembers this story has become easy and the startle
+
+
+  [The little rabbit]
+  The little rabbit was hopping around, enjoying the day. Suddenly, there was a loud boom!
+Bunny hopped out of his burrow and ran to explore the nearby forest. He saw lots of trees and flowers. 
+Suddenly, he heard thunder coming from behind him. "Oh no," thought Bunny Bunny Bunny. But then remembered that it might have come from the house they were safe in the storm. So he started running faster. Sure enough, he managed to find out of their way back to be safely. They made them all said: "We will be fine!" 
+
+And when he found himself. The sound, Bunny Bunny bunny bunny bunny. All night sky went off again, and soon!
+The sound sound echoed away, happy that the whole. Bunny Bunny Bunny Bunny Bunny Bunny Bunny Bunny was free! Bunny Bunny looked so happy. It seemed like the best! After a song that Bunny Bunny Bunny Bunny, Bunny knew he had gone, but not go home.
+"I'm ready for something normal again. Bunny could do you are ready for this way until nothing is safe, it's life!â€“ Bunny knew it's safe again!" Bunny Bunny Bunny bunny was safe and he was safe and smiled with happiness. He kept on Bunny felt normal and smiled at himself. And sure that Bunny nodded, after each bunnies were safe, while singing the same, too. Then, all the me us both Bunny went hopping the end, nothing nothing, everything
+
+
+  [One day in the forest]
+  One day in the forest. It was so big!
+Suddenly, there was a loud noise! The ground started to shake and the trees began to move even more.
+The earthquake stopped suddenly. Everything became calm again. 
+The sky grew dark. All of some animals were scared, but also very happy that the earthquake had ended. Now it could go outside and play again soon!
+And they all lived happily ever after. End End with nothing to worry about having fun outside!" 
+The end with no one could beat their happiness. So, it's gone and they never know what happened next time when the sun would come out before everything will be destroyed! But now that this story has been over. 
+"When will last forever?" asked the little girl. 
+But there was always something else. They knew that even if it wasn't, it always knew who was still alive around them. That way everyone who passed by, they stayed safe at the same quietness of each other. And every once they heard the sound of how much they were happy. And that is exactly like this's peaceful moment for many years when things ends well. 
+
+Moral: We don't wait until tomorrow. Good night, why, let us all enjoy the happy moments we have to remember that life can keep our hearts too!"  Every time. And just sing as long and think that this story remembers how the silence is sweet song." As, everything is why is as that it makes
+
+────────────────────────────────────────────────────────
+
+  Ep 02 | step  16600 | loss 1.3279 | ppl     3.77 | lr 2.42e-04 | 86s elapsed
+  Ep 02 | step  16700 | loss 1.3316 | ppl     3.79 | lr 2.41e-04 | 302s elapsed
+  Ep 02 | step  16800 | loss 1.3328 | ppl     3.79 | lr 2.41e-04 | 518s elapsed
+  Ep 02 | step  16900 | loss 1.3319 | ppl     3.79 | lr 2.40e-04 | 734s elapsed
+  Ep 02 | step  17000 | loss 1.3304 | ppl     3.78 | lr 2.39e-04 | 950s elapsed
+  Ep 02 | step  17100 | loss 1.3295 | ppl     3.78 | lr 2.39e-04 | 1166s elapsed
+  Ep 02 | step  17200 | loss 1.3296 | ppl     3.78 | lr 2.38e-04 | 1382s elapsed
+  Ep 02 | step  17300 | loss 1.3299 | ppl     3.78 | lr 2.37e-04 | 1598s elapsed
+  Ep 02 | step  17400 | loss 1.3302 | ppl     3.78 | lr 2.36e-04 | 1814s elapsed
+  Ep 02 | step  17500 | loss 1.3300 | ppl     3.78 | lr 2.36e-04 | 2030s elapsed
+  Ep 02 | step  17600 | loss 1.3300 | ppl     3.78 | lr 2.35e-04 | 2246s elapsed
+  Ep 02 | step  17700 | loss 1.3294 | ppl     3.78 | lr 2.34e-04 | 2462s elapsed
+  Ep 02 | step  17800 | loss 1.3292 | ppl     3.78 | lr 2.33e-04 | 2677s elapsed
+  Ep 02 | step  17900 | loss 1.3288 | ppl     3.78 | lr 2.32e-04 | 2893s elapsed
+  Ep 02 | step  18000 | loss 1.3288 | ppl     3.78 | lr 2.32e-04 | 3109s elapsed
+  Ep 02 | step  18100 | loss 1.3286 | ppl     3.78 | lr 2.31e-04 | 3325s elapsed
+  Ep 02 | step  18200 | loss 1.3283 | ppl     3.77 | lr 2.30e-04 | 3541s elapsed
+  Ep 02 | step  18300 | loss 1.3281 | ppl     3.77 | lr 2.29e-04 | 3757s elapsed
+  Ep 02 | step  18400 | loss 1.3275 | ppl     3.77 | lr 2.29e-04 | 3973s elapsed
+  Ep 02 | step  18500 | loss 1.3272 | ppl     3.77 | lr 2.28e-04 | 4189s elapsed
+  Ep 02 | step  18600 | loss 1.3273 | ppl     3.77 | lr 2.27e-04 | 4405s elapsed
+  Ep 02 | step  18700 | loss 1.3271 | ppl     3.77 | lr 2.26e-04 | 4621s elapsed
+  Ep 02 | step  18800 | loss 1.3270 | ppl     3.77 | lr 2.25e-04 | 4837s elapsed
+  Ep 02 | step  18900 | loss 1.3265 | ppl     3.77 | lr 2.25e-04 | 5053s elapsed
+  Ep 02 | step  19000 | loss 1.3265 | ppl     3.77 | lr 2.24e-04 | 5269s elapsed
+  Ep 02 | step  19100 | loss 1.3263 | ppl     3.77 | lr 2.23e-04 | 5484s elapsed
+  Ep 02 | step  19200 | loss 1.3262 | ppl     3.77 | lr 2.22e-04 | 5700s elapsed
+  Ep 02 | step  19300 | loss 1.3259 | ppl     3.77 | lr 2.21e-04 | 5916s elapsed
+  Ep 02 | step  19400 | loss 1.3256 | ppl     3.76 | lr 2.21e-04 | 6132s elapsed
+  Ep 02 | step  19500 | loss 1.3251 | ppl     3.76 | lr 2.20e-04 | 6348s elapsed
+  Ep 02 | step  19600 | loss 1.3248 | ppl     3.76 | lr 2.19e-04 | 6564s elapsed
+  Ep 02 | step  19700 | loss 1.3245 | ppl     3.76 | lr 2.18e-04 | 6780s elapsed
+  Ep 02 | step  19800 | loss 1.3243 | ppl     3.76 | lr 2.17e-04 | 6996s elapsed
+  Ep 02 | step  19900 | loss 1.3240 | ppl     3.76 | lr 2.17e-04 | 7212s elapsed
+  Ep 02 | step  20000 | loss 1.3238 | ppl     3.76 | lr 2.16e-04 | 7428s elapsed
+  Ep 02 | step  20100 | loss 1.3233 | ppl     3.76 | lr 2.15e-04 | 7644s elapsed
+  Ep 02 | step  20200 | loss 1.3231 | ppl     3.75 | lr 2.14e-04 | 7860s elapsed
+  Ep 02 | step  20300 | loss 1.3229 | ppl     3.75 | lr 2.13e-04 | 8076s elapsed
+  Ep 02 | step  20400 | loss 1.3225 | ppl     3.75 | lr 2.12e-04 | 8292s elapsed
+  Ep 02 | step  20500 | loss 1.3220 | ppl     3.75 | lr 2.12e-04 | 8507s elapsed
+  Ep 02 | step  20600 | loss 1.3218 | ppl     3.75 | lr 2.11e-04 | 8723s elapsed
+  Ep 02 | step  20700 | loss 1.3213 | ppl     3.75 | lr 2.10e-04 | 8939s elapsed
+  Ep 02 | step  20800 | loss 1.3211 | ppl     3.75 | lr 2.09e-04 | 9155s elapsed
+  Ep 02 | step  20900 | loss 1.3206 | ppl     3.75 | lr 2.08e-04 | 9371s elapsed
+  Ep 02 | step  21000 | loss 1.3202 | ppl     3.74 | lr 2.07e-04 | 9587s elapsed
+  Ep 02 | step  21100 | loss 1.3199 | ppl     3.74 | lr 2.06e-04 | 9803s elapsed
+  Ep 02 | step  21200 | loss 1.3195 | ppl     3.74 | lr 2.06e-04 | 10019s elapsed
+  Ep 02 | step  21300 | loss 1.3191 | ppl     3.74 | lr 2.05e-04 | 10235s elapsed
+  Ep 02 | step  21400 | loss 1.3186 | ppl     3.74 | lr 2.04e-04 | 10451s elapsed
+  Ep 02 | step  21500 | loss 1.3182 | ppl     3.74 | lr 2.03e-04 | 10667s elapsed
+  Ep 02 | step  21600 | loss 1.3179 | ppl     3.74 | lr 2.02e-04 | 10883s elapsed
+  Ep 02 | step  21700 | loss 1.3175 | ppl     3.73 | lr 2.01e-04 | 11099s elapsed
+  Ep 02 | step  21800 | loss 1.3173 | ppl     3.73 | lr 2.01e-04 | 11315s elapsed
+  Ep 02 | step  21900 | loss 1.3169 | ppl     3.73 | lr 2.00e-04 | 11531s elapsed
+  Ep 02 | step  22000 | loss 1.3165 | ppl     3.73 | lr 1.99e-04 | 11747s elapsed
+  Ep 02 | step  22100 | loss 1.3163 | ppl     3.73 | lr 1.98e-04 | 11962s elapsed
+  Ep 02 | step  22200 | loss 1.3159 | ppl     3.73 | lr 1.97e-04 | 12178s elapsed
+  Ep 02 | step  22300 | loss 1.3156 | ppl     3.73 | lr 1.96e-04 | 12394s elapsed
+  Ep 02 | step  22400 | loss 1.3152 | ppl     3.73 | lr 1.95e-04 | 12610s elapsed
+  Ep 02 | step  22500 | loss 1.3149 | ppl     3.72 | lr 1.94e-04 | 12826s elapsed
+  Ep 02 | step  22600 | loss 1.3146 | ppl     3.72 | lr 1.94e-04 | 13042s elapsed
+  Ep 02 | step  22700 | loss 1.3143 | ppl     3.72 | lr 1.93e-04 | 13258s elapsed
+  Ep 02 | step  22800 | loss 1.3140 | ppl     3.72 | lr 1.92e-04 | 13474s elapsed
+  Ep 02 | step  22900 | loss 1.3136 | ppl     3.72 | lr 1.91e-04 | 13690s elapsed
+  Ep 02 | step  23000 | loss 1.3132 | ppl     3.72 | lr 1.90e-04 | 13906s elapsed
+  Ep 02 | step  23100 | loss 1.3130 | ppl     3.72 | lr 1.89e-04 | 14122s elapsed
+  Ep 02 | step  23200 | loss 1.3127 | ppl     3.72 | lr 1.88e-04 | 14338s elapsed
+  Ep 02 | step  23300 | loss 1.3124 | ppl     3.72 | lr 1.88e-04 | 14554s elapsed
+  Ep 02 | step  23400 | loss 1.3120 | ppl     3.71 | lr 1.87e-04 | 14770s elapsed
+  Ep 02 | step  23500 | loss 1.3117 | ppl     3.71 | lr 1.86e-04 | 14985s elapsed
+  Ep 02 | step  23600 | loss 1.3114 | ppl     3.71 | lr 1.85e-04 | 15201s elapsed
+  Ep 02 | step  23700 | loss 1.3111 | ppl     3.71 | lr 1.84e-04 | 15417s elapsed
+  Ep 02 | step  23800 | loss 1.3107 | ppl     3.71 | lr 1.83e-04 | 15633s elapsed
+  Ep 02 | step  23900 | loss 1.3104 | ppl     3.71 | lr 1.82e-04 | 15849s elapsed
+  Ep 02 | step  24000 | loss 1.3101 | ppl     3.71 | lr 1.81e-04 | 16065s elapsed
+  Ep 02 | step  24100 | loss 1.3097 | ppl     3.71 | lr 1.80e-04 | 16281s elapsed
+  Ep 02 | step  24200 | loss 1.3094 | ppl     3.70 | lr 1.80e-04 | 16497s elapsed
+  Ep 02 | step  24300 | loss 1.3090 | ppl     3.70 | lr 1.79e-04 | 16713s elapsed
+  Ep 02 | step  24400 | loss 1.3087 | ppl     3.70 | lr 1.78e-04 | 16929s elapsed
+  Ep 02 | step  24500 | loss 1.3084 | ppl     3.70 | lr 1.77e-04 | 17145s elapsed
+  Ep 02 | step  24600 | loss 1.3081 | ppl     3.70 | lr 1.76e-04 | 17361s elapsed
+  Ep 02 | step  24700 | loss 1.3077 | ppl     3.70 | lr 1.75e-04 | 17576s elapsed
+  Ep 02 | step  24800 | loss 1.3074 | ppl     3.70 | lr 1.74e-04 | 17793s elapsed
+  Ep 02 | step  24900 | loss 1.3071 | ppl     3.70 | lr 1.73e-04 | 18008s elapsed
+  Ep 02 | step  25000 | loss 1.3067 | ppl     3.69 | lr 1.72e-04 | 18224s elapsed
+  Ep 02 | step  25100 | loss 1.3063 | ppl     3.69 | lr 1.72e-04 | 18440s elapsed
+  Ep 02 | step  25200 | loss 1.3060 | ppl     3.69 | lr 1.71e-04 | 18656s elapsed
+  Ep 02 | step  25300 | loss 1.3057 | ppl     3.69 | lr 1.70e-04 | 18872s elapsed
+  Ep 02 | step  25400 | loss 1.3053 | ppl     3.69 | lr 1.69e-04 | 19088s elapsed
+  Ep 02 | step  25500 | loss 1.3050 | ppl     3.69 | lr 1.68e-04 | 19303s elapsed
+  Ep 02 | step  25600 | loss 1.3047 | ppl     3.69 | lr 1.67e-04 | 19519s elapsed
+  Ep 02 | step  25700 | loss 1.3044 | ppl     3.69 | lr 1.66e-04 | 19735s elapsed
+  Ep 02 | step  25800 | loss 1.3041 | ppl     3.68 | lr 1.65e-04 | 19951s elapsed
+  Ep 02 | step  25900 | loss 1.3038 | ppl     3.68 | lr 1.64e-04 | 20166s elapsed
+  Ep 02 | step  26000 | loss 1.3034 | ppl     3.68 | lr 1.64e-04 | 20382s elapsed
+  Ep 02 | step  26100 | loss 1.3031 | ppl     3.68 | lr 1.63e-04 | 20598s elapsed
+  Ep 02 | step  26200 | loss 1.3028 | ppl     3.68 | lr 1.62e-04 | 20814s elapsed
+  Ep 02 | step  26300 | loss 1.3025 | ppl     3.68 | lr 1.61e-04 | 21030s elapsed
+  Ep 02 | step  26400 | loss 1.3023 | ppl     3.68 | lr 1.60e-04 | 21245s elapsed
+  Ep 02 | step  26500 | loss 1.3019 | ppl     3.68 | lr 1.59e-04 | 21461s elapsed
+  Ep 02 | step  26600 | loss 1.3016 | ppl     3.68 | lr 1.58e-04 | 21677s elapsed
+  Ep 02 | step  26700 | loss 1.3013 | ppl     3.67 | lr 1.57e-04 | 21893s elapsed
+  Ep 02 | step  26800 | loss 1.3010 | ppl     3.67 | lr 1.56e-04 | 22109s elapsed
+  Ep 02 | step  26900 | loss 1.3006 | ppl     3.67 | lr 1.56e-04 | 22324s elapsed
+  Ep 02 | step  27000 | loss 1.3002 | ppl     3.67 | lr 1.55e-04 | 22540s elapsed
+  Ep 02 | step  27100 | loss 1.3000 | ppl     3.67 | lr 1.54e-04 | 22756s elapsed
+  Ep 02 | step  27200 | loss 1.2997 | ppl     3.67 | lr 1.53e-04 | 22972s elapsed
+  Ep 02 | step  27300 | loss 1.2994 | ppl     3.67 | lr 1.52e-04 | 23187s elapsed
+  Ep 02 | step  27400 | loss 1.2991 | ppl     3.67 | lr 1.51e-04 | 23403s elapsed
+  Ep 02 | step  27500 | loss 1.2987 | ppl     3.66 | lr 1.50e-04 | 23619s elapsed
+  Ep 02 | step  27600 | loss 1.2984 | ppl     3.66 | lr 1.49e-04 | 23835s elapsed
+  Ep 02 | step  27700 | loss 1.2982 | ppl     3.66 | lr 1.49e-04 | 24051s elapsed
+  Ep 02 | step  27800 | loss 1.2978 | ppl     3.66 | lr 1.48e-04 | 24267s elapsed
+  Ep 02 | step  27900 | loss 1.2976 | ppl     3.66 | lr 1.47e-04 | 24482s elapsed
+  Ep 02 | step  28000 | loss 1.2972 | ppl     3.66 | lr 1.46e-04 | 24698s elapsed
+  Ep 02 | step  28100 | loss 1.2970 | ppl     3.66 | lr 1.45e-04 | 24914s elapsed
+  Ep 02 | step  28200 | loss 1.2967 | ppl     3.66 | lr 1.44e-04 | 25130s elapsed
+  Ep 02 | step  28300 | loss 1.2963 | ppl     3.66 | lr 1.43e-04 | 25345s elapsed
+  Ep 02 | step  28400 | loss 1.2960 | ppl     3.65 | lr 1.42e-04 | 25561s elapsed
+  Ep 02 | step  28500 | loss 1.2957 | ppl     3.65 | lr 1.41e-04 | 25777s elapsed
+  Ep 02 | step  28600 | loss 1.2954 | ppl     3.65 | lr 1.41e-04 | 25993s elapsed
+  Ep 02 | step  28700 | loss 1.2951 | ppl     3.65 | lr 1.40e-04 | 26209s elapsed
+  Ep 02 | step  28800 | loss 1.2947 | ppl     3.65 | lr 1.39e-04 | 26424s elapsed
+  Ep 02 | step  28900 | loss 1.2944 | ppl     3.65 | lr 1.38e-04 | 26640s elapsed
+  Ep 02 | step  29000 | loss 1.2941 | ppl     3.65 | lr 1.37e-04 | 26856s elapsed
+  Ep 02 | step  29100 | loss 1.2938 | ppl     3.65 | lr 1.36e-04 | 27072s elapsed
+  Ep 02 | step  29200 | loss 1.2935 | ppl     3.65 | lr 1.35e-04 | 27287s elapsed
+  Ep 02 | step  29300 | loss 1.2933 | ppl     3.64 | lr 1.35e-04 | 27503s elapsed
+  Ep 02 | step  29400 | loss 1.2929 | ppl     3.64 | lr 1.34e-04 | 27719s elapsed
+  Ep 02 | step  29500 | loss 1.2926 | ppl     3.64 | lr 1.33e-04 | 27935s elapsed
+  Ep 02 | step  29600 | loss 1.2923 | ppl     3.64 | lr 1.32e-04 | 28151s elapsed
+  Ep 02 | step  29700 | loss 1.2920 | ppl     3.64 | lr 1.31e-04 | 28367s elapsed
+  Ep 02 | step  29800 | loss 1.2917 | ppl     3.64 | lr 1.30e-04 | 28583s elapsed
+  Ep 02 | step  29900 | loss 1.2915 | ppl     3.64 | lr 1.29e-04 | 28799s elapsed
+  Ep 02 | step  30000 | loss 1.2912 | ppl     3.64 | lr 1.28e-04 | 29015s elapsed
+  Ep 02 | step  30100 | loss 1.2909 | ppl     3.64 | lr 1.28e-04 | 29230s elapsed
+  Ep 02 | step  30200 | loss 1.2906 | ppl     3.63 | lr 1.27e-04 | 29446s elapsed
+  Ep 02 | step  30300 | loss 1.2903 | ppl     3.63 | lr 1.26e-04 | 29662s elapsed
+  Ep 02 | step  30400 | loss 1.2900 | ppl     3.63 | lr 1.25e-04 | 29878s elapsed
+  Ep 02 | step  30500 | loss 1.2897 | ppl     3.63 | lr 1.24e-04 | 30094s elapsed
+  Ep 02 | step  30600 | loss 1.2893 | ppl     3.63 | lr 1.23e-04 | 30310s elapsed
+  Ep 02 | step  30700 | loss 1.2890 | ppl     3.63 | lr 1.23e-04 | 30526s elapsed
+  Ep 02 | step  30800 | loss 1.2887 | ppl     3.63 | lr 1.22e-04 | 30743s elapsed
+  Ep 02 | step  30900 | loss 1.2884 | ppl     3.63 | lr 1.21e-04 | 30960s elapsed
+  Ep 02 | step  31000 | loss 1.2881 | ppl     3.63 | lr 1.20e-04 | 31177s elapsed
+  Ep 02 | step  31100 | loss 1.2878 | ppl     3.62 | lr 1.19e-04 | 31394s elapsed
+  Ep 02 | step  31200 | loss 1.2875 | ppl     3.62 | lr 1.18e-04 | 31612s elapsed
+  Ep 02 | step  31300 | loss 1.2872 | ppl     3.62 | lr 1.17e-04 | 31829s elapsed
+  Ep 02 | step  31400 | loss 1.2869 | ppl     3.62 | lr 1.17e-04 | 32046s elapsed
+  Ep 02 | step  31500 | loss 1.2866 | ppl     3.62 | lr 1.16e-04 | 32263s elapsed
+  Ep 02 | step  31600 | loss 1.2863 | ppl     3.62 | lr 1.15e-04 | 32480s elapsed
+  Ep 02 | step  31700 | loss 1.2860 | ppl     3.62 | lr 1.14e-04 | 32697s elapsed
+  Ep 02 | step  31800 | loss 1.2857 | ppl     3.62 | lr 1.13e-04 | 32914s elapsed
+  Ep 02 | step  31900 | loss 1.2854 | ppl     3.62 | lr 1.13e-04 | 33131s elapsed
+  Ep 02 | step  32000 | loss 1.2851 | ppl     3.61 | lr 1.12e-04 | 33348s elapsed
+  Ep 02 | step  32100 | loss 1.2848 | ppl     3.61 | lr 1.11e-04 | 33566s elapsed
+  Ep 02 | step  32200 | loss 1.2845 | ppl     3.61 | lr 1.10e-04 | 33783s elapsed
+  Ep 02 | step  32300 | loss 1.2842 | ppl     3.61 | lr 1.09e-04 | 34000s elapsed
+  Ep 02 | step  32400 | loss 1.2838 | ppl     3.61 | lr 1.08e-04 | 34217s elapsed
+  Ep 02 | step  32500 | loss 1.2835 | ppl     3.61 | lr 1.08e-04 | 34434s elapsed
+  Ep 02 | step  32600 | loss 1.2833 | ppl     3.61 | lr 1.07e-04 | 34651s elapsed
+  Ep 02 | step  32700 | loss 1.2830 | ppl     3.61 | lr 1.06e-04 | 34869s elapsed
+  Ep 02 | step  32800 | loss 1.2827 | ppl     3.61 | lr 1.05e-04 | 35086s elapsed
+  Ep 02 | step  32900 | loss 1.2824 | ppl     3.61 | lr 1.04e-04 | 35303s elapsed
+  Ep 02 | step  33000 | loss 1.2821 | ppl     3.60 | lr 1.04e-04 | 35521s elapsed
+  Ep 02 | step  33100 | loss 1.2818 | ppl     3.60 | lr 1.03e-04 | 35738s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 02 done  (35906s  |  10.0h)
+  Train loss : 1.2817  PPL : 3.60
+  Val   loss : 1.2359  PPL : 3.44
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase1/checkpoint_epoch02.pt
+  ★ New best  (val_loss=1.2359  ppl=3.44)
+
+── Sample Generations ──────────────────────────────────
+
+  [Once upon a time]
+  Once upon a time, there was a little girl named Lily. She loved to play in her garden with her toys. One day, she found an ordinary box buried under the ground. 
+Excitedly, she ran inside to tell her mom about the box. "Mommy, look what I discovered!" she said. Her mom smiled and told her to keep digging.
+A few days later, Lily's parents surprised her with the box. "We can use it to decorate your room for your new birthday party tomorrow," they explained. 
+Lily couldn't wait to see all her decorations. Later that night, as everyone prepared for their special occasion, Lily opened the box carefully. Inside was a beautiful dress just like the ones before! Lily was so happy and proud of herself for finding such a wonderful present. From then on, she always remembered to take care of her belongings. The end. It was simple but extraordinary! And you have never seen something like this ordinary box. This may be a secret treasure chest full of surprises! But if you take care of them, they will stay alive forever! Just like how Lily used her imagination to find it, would turn into something even more extraordinary. So, Lily continued to make sure not only know the mystery: what could come out of its surprise in future. And that is whatâ€“ one: - that, one day, when someone else. Until one morning was right? A diamond!â€ -: a rock
+
+
+  [The little rabbit]
+  The little rabbit hopped around and the other had the before, out of the sun and all had their own. They hopped as fast as they went â€˜˜-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  [One day in the forest]
+  One day in the forest, and animals all had enough to do something very special. They decided they wanted to get ready first. 
+They gathered some supplies and started gathering things that they would need for their special surprise. The squirrels found nuts, and they were so excited to find them! 
+The animals worked together to make sure everything was just right and not too hard or it might be dull. Once they finished, they finally knew what the surprise was! 
+It was a big blanket with pictures on it. They spread it out and then stood in front of their surprise! It was filled with so much love and joy. The animals smiled knowing exactly how special this blanket was going to bring it back home to show all the other animals. 
+And that's story about the special blanket which brought it with all its wonderful friends. Everyone loved seeing the blanket and all the animal friends. The end! From then on, everyone always remembered the power of giving out the best, no matter how small something is! 
+  And ever since that day, the bunny was known as one who didn't really know exactly when giving up! He would never be so close when he gave up. 
+
+So even though, never did find out that the most important moral value - it's hard work? All because of the most precious, a little extra help will always pay attention and love will come in a happy ending. And for what life will come!"  Everyone in its head - but
+
+────────────────────────────────────────────────────────
+
+  Ep 03 | step  33200 | loss 1.2097 | ppl     3.35 | lr 1.02e-04 | 174s elapsed
+  Ep 03 | step  33300 | loss 1.2097 | ppl     3.35 | lr 1.01e-04 | 391s elapsed
+  Ep 03 | step  33400 | loss 1.2089 | ppl     3.35 | lr 1.01e-04 | 608s elapsed
+  Ep 03 | step  33500 | loss 1.2094 | ppl     3.35 | lr 9.97e-05 | 825s elapsed
+  Ep 03 | step  33600 | loss 1.2085 | ppl     3.35 | lr 9.90e-05 | 1043s elapsed
+  Ep 03 | step  33700 | loss 1.2076 | ppl     3.35 | lr 9.82e-05 | 1260s elapsed
+  Ep 03 | step  33800 | loss 1.2082 | ppl     3.35 | lr 9.74e-05 | 1477s elapsed
+  Ep 03 | step  33900 | loss 1.2078 | ppl     3.35 | lr 9.67e-05 | 1694s elapsed
+  Ep 03 | step  34000 | loss 1.2079 | ppl     3.35 | lr 9.59e-05 | 1911s elapsed
+  Ep 03 | step  34100 | loss 1.2077 | ppl     3.35 | lr 9.51e-05 | 2128s elapsed
+  Ep 03 | step  34200 | loss 1.2078 | ppl     3.35 | lr 9.44e-05 | 2346s elapsed
+  Ep 03 | step  34300 | loss 1.2077 | ppl     3.35 | lr 9.36e-05 | 2563s elapsed
+  Ep 03 | step  34400 | loss 1.2074 | ppl     3.34 | lr 9.29e-05 | 2780s elapsed
+  Ep 03 | step  34500 | loss 1.2076 | ppl     3.35 | lr 9.21e-05 | 2997s elapsed
+  Ep 03 | step  34600 | loss 1.2076 | ppl     3.35 | lr 9.14e-05 | 3214s elapsed
+  Ep 03 | step  34700 | loss 1.2076 | ppl     3.35 | lr 9.06e-05 | 3431s elapsed
+  Ep 03 | step  34800 | loss 1.2070 | ppl     3.34 | lr 8.99e-05 | 3649s elapsed
+  Ep 03 | step  34900 | loss 1.2069 | ppl     3.34 | lr 8.91e-05 | 3866s elapsed
+  Ep 03 | step  35000 | loss 1.2068 | ppl     3.34 | lr 8.84e-05 | 4083s elapsed
+  Ep 03 | step  35100 | loss 1.2066 | ppl     3.34 | lr 8.77e-05 | 4300s elapsed
+  Ep 03 | step  35200 | loss 1.2062 | ppl     3.34 | lr 8.69e-05 | 4517s elapsed
+  Ep 03 | step  35300 | loss 1.2061 | ppl     3.34 | lr 8.62e-05 | 4734s elapsed
+  Ep 03 | step  35400 | loss 1.2062 | ppl     3.34 | lr 8.55e-05 | 4952s elapsed
+  Ep 03 | step  35500 | loss 1.2060 | ppl     3.34 | lr 8.48e-05 | 5169s elapsed
+  Ep 03 | step  35600 | loss 1.2060 | ppl     3.34 | lr 8.41e-05 | 5386s elapsed
+  Ep 03 | step  35700 | loss 1.2057 | ppl     3.34 | lr 8.34e-05 | 5603s elapsed
+  Ep 03 | step  35800 | loss 1.2055 | ppl     3.34 | lr 8.27e-05 | 5820s elapsed
+  Ep 03 | step  35900 | loss 1.2053 | ppl     3.34 | lr 8.19e-05 | 6038s elapsed
+  Ep 03 | step  36000 | loss 1.2051 | ppl     3.34 | lr 8.12e-05 | 6255s elapsed
+  Ep 03 | step  36100 | loss 1.2050 | ppl     3.34 | lr 8.06e-05 | 6472s elapsed
+  Ep 03 | step  36200 | loss 1.2049 | ppl     3.34 | lr 7.99e-05 | 6689s elapsed
+  Ep 03 | step  36300 | loss 1.2048 | ppl     3.34 | lr 7.92e-05 | 6906s elapsed
+  Ep 03 | step  36400 | loss 1.2046 | ppl     3.34 | lr 7.85e-05 | 7124s elapsed
+  Ep 03 | step  36500 | loss 1.2047 | ppl     3.34 | lr 7.78e-05 | 7341s elapsed
+  Ep 03 | step  36600 | loss 1.2048 | ppl     3.34 | lr 7.71e-05 | 7558s elapsed
+  Ep 03 | step  36700 | loss 1.2047 | ppl     3.34 | lr 7.65e-05 | 7775s elapsed
+  Ep 03 | step  36800 | loss 1.2046 | ppl     3.34 | lr 7.58e-05 | 7992s elapsed
+  Ep 03 | step  36900 | loss 1.2045 | ppl     3.34 | lr 7.51e-05 | 8210s elapsed
+  Ep 03 | step  37000 | loss 1.2043 | ppl     3.33 | lr 7.45e-05 | 8427s elapsed
+  Ep 03 | step  37100 | loss 1.2043 | ppl     3.33 | lr 7.38e-05 | 8644s elapsed
+  Ep 03 | step  37200 | loss 1.2042 | ppl     3.33 | lr 7.31e-05 | 8861s elapsed
+  Ep 03 | step  37300 | loss 1.2042 | ppl     3.33 | lr 7.25e-05 | 9078s elapsed
+  Ep 03 | step  37400 | loss 1.2042 | ppl     3.33 | lr 7.19e-05 | 9295s elapsed
+  Ep 03 | step  37500 | loss 1.2040 | ppl     3.33 | lr 7.12e-05 | 9513s elapsed
+  Ep 03 | step  37600 | loss 1.2037 | ppl     3.33 | lr 7.06e-05 | 9730s elapsed
+  Ep 03 | step  37700 | loss 1.2035 | ppl     3.33 | lr 6.99e-05 | 9947s elapsed
+  Ep 03 | step  37800 | loss 1.2034 | ppl     3.33 | lr 6.93e-05 | 10164s elapsed
+  Ep 03 | step  37900 | loss 1.2031 | ppl     3.33 | lr 6.87e-05 | 10381s elapsed
+  Ep 03 | step  38000 | loss 1.2030 | ppl     3.33 | lr 6.81e-05 | 10598s elapsed
+  Ep 03 | step  38100 | loss 1.2029 | ppl     3.33 | lr 6.74e-05 | 10816s elapsed
+  Ep 03 | step  38200 | loss 1.2027 | ppl     3.33 | lr 6.68e-05 | 11033s elapsed
+  Ep 03 | step  38300 | loss 1.2025 | ppl     3.33 | lr 6.62e-05 | 11250s elapsed
+  Ep 03 | step  38400 | loss 1.2024 | ppl     3.33 | lr 6.56e-05 | 11467s elapsed
+  Ep 03 | step  38500 | loss 1.2023 | ppl     3.33 | lr 6.50e-05 | 11684s elapsed
+  Ep 03 | step  38600 | loss 1.2022 | ppl     3.33 | lr 6.44e-05 | 11901s elapsed
+  Ep 03 | step  38700 | loss 1.2020 | ppl     3.33 | lr 6.38e-05 | 12119s elapsed
+  Ep 03 | step  38800 | loss 1.2017 | ppl     3.33 | lr 6.32e-05 | 12336s elapsed
+  Ep 03 | step  38900 | loss 1.2016 | ppl     3.33 | lr 6.27e-05 | 12553s elapsed
+  Ep 03 | step  39000 | loss 1.2016 | ppl     3.33 | lr 6.21e-05 | 12770s elapsed
+  Ep 03 | step  39100 | loss 1.2014 | ppl     3.32 | lr 6.15e-05 | 12987s elapsed
+  Ep 03 | step  39200 | loss 1.2013 | ppl     3.32 | lr 6.09e-05 | 13205s elapsed
+  Ep 03 | step  39300 | loss 1.2011 | ppl     3.32 | lr 6.04e-05 | 13422s elapsed
+  Ep 03 | step  39400 | loss 1.2009 | ppl     3.32 | lr 5.98e-05 | 13639s elapsed
+  Ep 03 | step  39500 | loss 1.2009 | ppl     3.32 | lr 5.93e-05 | 13856s elapsed
+  Ep 03 | step  39600 | loss 1.2007 | ppl     3.32 | lr 5.87e-05 | 14073s elapsed
+  Ep 03 | step  39700 | loss 1.2006 | ppl     3.32 | lr 5.82e-05 | 14290s elapsed
+  Ep 03 | step  39800 | loss 1.2004 | ppl     3.32 | lr 5.76e-05 | 14508s elapsed
+  Ep 03 | step  39900 | loss 1.2003 | ppl     3.32 | lr 5.71e-05 | 14725s elapsed
+  Ep 03 | step  40000 | loss 1.2000 | ppl     3.32 | lr 5.66e-05 | 14942s elapsed
+  Ep 03 | step  40100 | loss 1.1997 | ppl     3.32 | lr 5.60e-05 | 15159s elapsed
+  Ep 03 | step  40200 | loss 1.1996 | ppl     3.32 | lr 5.55e-05 | 15376s elapsed
+  Ep 03 | step  40300 | loss 1.1995 | ppl     3.32 | lr 5.50e-05 | 15593s elapsed
+  Ep 03 | step  40400 | loss 1.1994 | ppl     3.32 | lr 5.45e-05 | 15811s elapsed
+  Ep 03 | step  40500 | loss 1.1992 | ppl     3.32 | lr 5.40e-05 | 16028s elapsed
+  Ep 03 | step  40600 | loss 1.1991 | ppl     3.32 | lr 5.35e-05 | 16245s elapsed
+  Ep 03 | step  40700 | loss 1.1989 | ppl     3.32 | lr 5.30e-05 | 16462s elapsed
+  Ep 03 | step  40800 | loss 1.1987 | ppl     3.32 | lr 5.25e-05 | 16679s elapsed
+  Ep 03 | step  40900 | loss 1.1986 | ppl     3.32 | lr 5.20e-05 | 16896s elapsed
+  Ep 03 | step  41000 | loss 1.1984 | ppl     3.31 | lr 5.15e-05 | 17113s elapsed
+  Ep 03 | step  41100 | loss 1.1982 | ppl     3.31 | lr 5.10e-05 | 17331s elapsed
+  Ep 03 | step  41200 | loss 1.1981 | ppl     3.31 | lr 5.05e-05 | 17548s elapsed
+  Ep 03 | step  41300 | loss 1.1979 | ppl     3.31 | lr 5.01e-05 | 17765s elapsed
+  Ep 03 | step  41400 | loss 1.1978 | ppl     3.31 | lr 4.96e-05 | 17982s elapsed
+  Ep 03 | step  41500 | loss 1.1976 | ppl     3.31 | lr 4.92e-05 | 18199s elapsed
+  Ep 03 | step  41600 | loss 1.1975 | ppl     3.31 | lr 4.87e-05 | 18417s elapsed
+  Ep 03 | step  41700 | loss 1.1973 | ppl     3.31 | lr 4.83e-05 | 18634s elapsed
+  Ep 03 | step  41800 | loss 1.1972 | ppl     3.31 | lr 4.78e-05 | 18851s elapsed
+  Ep 03 | step  41900 | loss 1.1970 | ppl     3.31 | lr 4.74e-05 | 19068s elapsed
+  Ep 03 | step  42000 | loss 1.1968 | ppl     3.31 | lr 4.69e-05 | 19285s elapsed
+  Ep 03 | step  42100 | loss 1.1967 | ppl     3.31 | lr 4.65e-05 | 19502s elapsed
+  Ep 03 | step  42200 | loss 1.1965 | ppl     3.31 | lr 4.61e-05 | 19719s elapsed
+  Ep 03 | step  42300 | loss 1.1964 | ppl     3.31 | lr 4.57e-05 | 19936s elapsed
+  Ep 03 | step  42400 | loss 1.1962 | ppl     3.31 | lr 4.52e-05 | 20153s elapsed
+  Ep 03 | step  42500 | loss 1.1961 | ppl     3.31 | lr 4.48e-05 | 20371s elapsed
+  Ep 03 | step  42600 | loss 1.1960 | ppl     3.31 | lr 4.44e-05 | 20588s elapsed
+  Ep 03 | step  42700 | loss 1.1958 | ppl     3.31 | lr 4.40e-05 | 20805s elapsed
+  Ep 03 | step  42800 | loss 1.1957 | ppl     3.31 | lr 4.36e-05 | 21022s elapsed
+  Ep 03 | step  42900 | loss 1.1956 | ppl     3.31 | lr 4.33e-05 | 21239s elapsed
+  Ep 03 | step  43000 | loss 1.1955 | ppl     3.31 | lr 4.29e-05 | 21456s elapsed
+  Ep 03 | step  43100 | loss 1.1953 | ppl     3.30 | lr 4.25e-05 | 21673s elapsed
+  Ep 03 | step  43200 | loss 1.1952 | ppl     3.30 | lr 4.21e-05 | 21890s elapsed
+  Ep 03 | step  43300 | loss 1.1950 | ppl     3.30 | lr 4.18e-05 | 22108s elapsed
+  Ep 03 | step  43400 | loss 1.1949 | ppl     3.30 | lr 4.14e-05 | 22325s elapsed
+  Ep 03 | step  43500 | loss 1.1947 | ppl     3.30 | lr 4.11e-05 | 22542s elapsed
+  Ep 03 | step  43600 | loss 1.1946 | ppl     3.30 | lr 4.07e-05 | 22759s elapsed
+  Ep 03 | step  43700 | loss 1.1945 | ppl     3.30 | lr 4.04e-05 | 22976s elapsed
+  Ep 03 | step  43800 | loss 1.1944 | ppl     3.30 | lr 4.00e-05 | 23193s elapsed
+  Ep 03 | step  43900 | loss 1.1942 | ppl     3.30 | lr 3.97e-05 | 23410s elapsed
+  Ep 03 | step  44000 | loss 1.1941 | ppl     3.30 | lr 3.94e-05 | 23627s elapsed
+  Ep 03 | step  44100 | loss 1.1940 | ppl     3.30 | lr 3.90e-05 | 23844s elapsed
+  Ep 03 | step  44200 | loss 1.1939 | ppl     3.30 | lr 3.87e-05 | 24061s elapsed
+  Ep 03 | step  44300 | loss 1.1938 | ppl     3.30 | lr 3.84e-05 | 24278s elapsed
+  Ep 03 | step  44400 | loss 1.1937 | ppl     3.30 | lr 3.81e-05 | 24495s elapsed
+  Ep 03 | step  44500 | loss 1.1936 | ppl     3.30 | lr 3.78e-05 | 24713s elapsed
+  Ep 03 | step  44600 | loss 1.1933 | ppl     3.30 | lr 3.75e-05 | 24930s elapsed
+  Ep 03 | step  44700 | loss 1.1932 | ppl     3.30 | lr 3.72e-05 | 25147s elapsed
+  Ep 03 | step  44800 | loss 1.1931 | ppl     3.30 | lr 3.69e-05 | 25364s elapsed
+  Ep 03 | step  44900 | loss 1.1929 | ppl     3.30 | lr 3.67e-05 | 25581s elapsed
+  Ep 03 | step  45000 | loss 1.1928 | ppl     3.30 | lr 3.64e-05 | 25798s elapsed
+  Ep 03 | step  45100 | loss 1.1927 | ppl     3.30 | lr 3.61e-05 | 26015s elapsed
+  Ep 03 | step  45200 | loss 1.1926 | ppl     3.30 | lr 3.58e-05 | 26232s elapsed
+  Ep 03 | step  45300 | loss 1.1925 | ppl     3.30 | lr 3.56e-05 | 26449s elapsed
+  Ep 03 | step  45400 | loss 1.1924 | ppl     3.29 | lr 3.53e-05 | 26667s elapsed
+  Ep 03 | step  45500 | loss 1.1922 | ppl     3.29 | lr 3.51e-05 | 26884s elapsed
+  Ep 03 | step  45600 | loss 1.1921 | ppl     3.29 | lr 3.49e-05 | 27101s elapsedwandb: updating run metadata
+wandb: updating run metadata; uploading history steps 497-498, summary, console lines 615-666
+wandb: uploading history steps 497-498, summary, console lines 615-666
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading wandb-summary.json
+wandb: uploading output.log
+wandb: 
+wandb: Run history:
+wandb:      epoch ▁▅█
+wandb:     tokens ▁▁▁▁▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb: train/loss █▄▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/lr ▁██████▇▇▇▇▇▇▆▆▆▆▅▅▅▄▄▃▃▃▃▃▃▃▂▂▂▂▂▂▂▁▁▁▁
+wandb:  train/ppl █▄▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   val/loss █▃▁
+wandb:    val/ppl █▃▁
+wandb: 
+wandb: Run summary:
+wandb:      epoch 3
+wandb:     tokens 3250585600
+wandb: train/loss 1.18776
+wandb:   train/lr 3e-05
+wandb:  train/ppl 3.27973
+wandb:   val/loss 1.18782
+wandb:    val/ppl 3.27993
+wandb: 
+wandb: 🚀 View run phase1_124M_gpt2 at: https://wandb.ai/sparshagra51-international-institute-of-information-tech/curriculum_lm/runs/rwgqhf7g
+wandb: ⭐️ View project at: https://wandb.ai/sparshagra51-international-institute-of-information-tech/curriculum_lm
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260416_083214-rwgqhf7g/logs
+
+  Ep 03 | step  45700 | loss 1.1920 | ppl     3.29 | lr 3.46e-05 | 27318s elapsed
+  Ep 03 | step  45800 | loss 1.1919 | ppl     3.29 | lr 3.44e-05 | 27535s elapsed
+  Ep 03 | step  45900 | loss 1.1918 | ppl     3.29 | lr 3.42e-05 | 27752s elapsed
+  Ep 03 | step  46000 | loss 1.1917 | ppl     3.29 | lr 3.40e-05 | 27969s elapsed
+  Ep 03 | step  46100 | loss 1.1916 | ppl     3.29 | lr 3.37e-05 | 28186s elapsed
+  Ep 03 | step  46200 | loss 1.1914 | ppl     3.29 | lr 3.35e-05 | 28403s elapsed
+  Ep 03 | step  46300 | loss 1.1913 | ppl     3.29 | lr 3.33e-05 | 28621s elapsed
+  Ep 03 | step  46400 | loss 1.1912 | ppl     3.29 | lr 3.31e-05 | 28838s elapsed
+  Ep 03 | step  46500 | loss 1.1911 | ppl     3.29 | lr 3.30e-05 | 29055s elapsed
+  Ep 03 | step  46600 | loss 1.1909 | ppl     3.29 | lr 3.28e-05 | 29272s elapsed
+  Ep 03 | step  46700 | loss 1.1908 | ppl     3.29 | lr 3.26e-05 | 29489s elapsed
+  Ep 03 | step  46800 | loss 1.1907 | ppl     3.29 | lr 3.24e-05 | 29706s elapsed
+  Ep 03 | step  46900 | loss 1.1906 | ppl     3.29 | lr 3.23e-05 | 29923s elapsed
+  Ep 03 | step  47000 | loss 1.1905 | ppl     3.29 | lr 3.21e-05 | 30140s elapsed
+  Ep 03 | step  47100 | loss 1.1904 | ppl     3.29 | lr 3.20e-05 | 30357s elapsed
+  Ep 03 | step  47200 | loss 1.1903 | ppl     3.29 | lr 3.18e-05 | 30574s elapsed
+  Ep 03 | step  47300 | loss 1.1901 | ppl     3.29 | lr 3.17e-05 | 30791s elapsed
+  Ep 03 | step  47400 | loss 1.1900 | ppl     3.29 | lr 3.15e-05 | 31008s elapsed
+  Ep 03 | step  47500 | loss 1.1899 | ppl     3.29 | lr 3.14e-05 | 31225s elapsed
+  Ep 03 | step  47600 | loss 1.1898 | ppl     3.29 | lr 3.13e-05 | 31443s elapsed
+  Ep 03 | step  47700 | loss 1.1897 | ppl     3.29 | lr 3.12e-05 | 31660s elapsed
+  Ep 03 | step  47800 | loss 1.1896 | ppl     3.29 | lr 3.10e-05 | 31877s elapsed
+  Ep 03 | step  47900 | loss 1.1895 | ppl     3.29 | lr 3.09e-05 | 32094s elapsed
+  Ep 03 | step  48000 | loss 1.1894 | ppl     3.29 | lr 3.08e-05 | 32311s elapsed
+  Ep 03 | step  48100 | loss 1.1893 | ppl     3.28 | lr 3.07e-05 | 32528s elapsed
+  Ep 03 | step  48200 | loss 1.1892 | ppl     3.28 | lr 3.06e-05 | 32745s elapsed
+  Ep 03 | step  48300 | loss 1.1891 | ppl     3.28 | lr 3.06e-05 | 32962s elapsed
+  Ep 03 | step  48400 | loss 1.1890 | ppl     3.28 | lr 3.05e-05 | 33179s elapsed
+  Ep 03 | step  48500 | loss 1.1888 | ppl     3.28 | lr 3.04e-05 | 33396s elapsed
+  Ep 03 | step  48600 | loss 1.1887 | ppl     3.28 | lr 3.03e-05 | 33613s elapsed
+  Ep 03 | step  48700 | loss 1.1886 | ppl     3.28 | lr 3.03e-05 | 33830s elapsed
+  Ep 03 | step  48800 | loss 1.1885 | ppl     3.28 | lr 3.02e-05 | 34047s elapsed
+  Ep 03 | step  48900 | loss 1.1884 | ppl     3.28 | lr 3.02e-05 | 34264s elapsed
+  Ep 03 | step  49000 | loss 1.1883 | ppl     3.28 | lr 3.01e-05 | 34482s elapsed
+  Ep 03 | step  49100 | loss 1.1882 | ppl     3.28 | lr 3.01e-05 | 34699s elapsed
+  Ep 03 | step  49200 | loss 1.1881 | ppl     3.28 | lr 3.01e-05 | 34916s elapsed
+  Ep 03 | step  49300 | loss 1.1880 | ppl     3.28 | lr 3.00e-05 | 35133s elapsed
+  Ep 03 | step  49400 | loss 1.1879 | ppl     3.28 | lr 3.00e-05 | 35350s elapsed
+  Ep 03 | step  49500 | loss 1.1878 | ppl     3.28 | lr 3.00e-05 | 35567s elapsed
+  Ep 03 | step  49600 | loss 1.1878 | ppl     3.28 | lr 3.00e-05 | 35784s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 03 done  (36082s  |  10.0h)
+  Train loss : 1.1877  PPL : 3.28
+  Val   loss : 1.1878  PPL : 3.28
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase1/checkpoint_epoch03.pt
+  ★ New best  (val_loss=1.1878  ppl=3.28)
+
+── Sample Generations ──────────────────────────────────
+
+  [Once upon a time]
+  Once upon a time, there was an adorable dog named Spot. He had very long legs that he loved to run and play with his friends in the park.
+One day, as Spot was playing with his friend, a little girl named Lily came up to them. She said, "Hi Spot! I want to see your long leg." Spot wagged his tail and barked happily, ready for their adventure outside.
+Lily took Spot's paw and started walking around the park. As they walked, Spot pointed at things and asked Lily many questions about their favorite toys. They laughed and played all day long. At the end of the day, Lily hugged Spot and said, "I have a fun day today!" And from then on, whenever Lily wanted to play with her adorable little dog Spot. The end. 
+And so, every season after the big surprise was waiting just for him. And sure enough, each year would be filled with lots of love, laughter and even more beautiful flowers. 
+And it did - when everyone met in the park, they were all surrounded by a group of little kids who loved to hug and enjoy life together. It always made all the most wonderful memories that no one could ever keep forever. 
+
+The End. All this story will be that they will have to learn how the joy of friendship, what they can do and why the world will be full of happiness, never stop us from living their happy memories forever, so quickly change and bring
+
+
+  [The little rabbit]
+  The little rabbit hopped hopped, and they their own. They hop, and â€�---- - to a busy busy busy!
+One day the bunny's mama was ready for some fresh air. She looked around and noticed something. It was a big, black sign with bright colors on it: "A party!" Mama said with a smile. 
+
+Mama said to her baby bunny, "I think, I'm going so fast." Mama said, "We're so happy, we can bring everyone be more, but no more like all like last like them all and the big. " she could not like it had a big, more and then began to do just right so big. And she said, like a big again. The Mama said," Mama was sad to be big. 
+
+
+" again, Mama said � and did she knew, everything would get bigger, and when Mama, so small and when she felt she was too. All four, mom mom stopped feeling happy because the biggest, and she started now, and the little. Little by by the size. 
+
+
+"" 
+" and the little little again until until in it's small by small and the number all began growing big again and soon became so big a big enough for before they were big. 
+
+Little. 
+Once again and a normal, the same and all began as quickly grew to rock!
+  tiny, until it was like they
+
+
+  [One day in the forest]
+  One day in the forest. The trees were full of life and the animals living around them.
+The sun was shining, making the day so warm. As the day began to dry up all the plants in their home. 
+But soon it started raining outside and soon everything had been wet for too long! All the plants that lived on in such a hot day. 
+After some time were still dead, but the rain just kept coming down the ground. 
+Finally after days of rain fell one year and all the plants that had been left standing for as a reminder not to get too close by. So the little flowers grew into big, bright flowers which would never forget this special moment. And even though no rain can be changed forever. But now with a twinkle in your eye. A small bit will always look back at the beauty of nature. That's something to remember. And from then on the flowers every day. 
+And they kept looking for hours - until finally, the sky started to die. "It's going to stay here"â€, when suddenly appeared on the wind. When they looked, there was not to tell what was - it was now dead. But he couldn't see a real life anymore: the sun had died of life, and no place where he could just sit and look again. It was the dead dead thing that there. 
+
+
+But later on the next morning, the sun moved away never came again, leaving the dead tree still
+
+────────────────────────────────────────────────────────
+
+
+═════════════════════════════════════════════════════════════════
+  Phase-1 Training Complete!
+  Best val PPL : 3.28
+  Best model   : /home/sem10/Desktop/nlpProj/checkpoints/phase1/best_model.pt
+  History      : /home/sem10/Desktop/nlpProj/logs/phase1_history.json
+═════════════════════════════════════════════════════════════════
+
+→ Next: python train_phase2.py

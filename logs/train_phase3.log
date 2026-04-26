@@ -1,0 +1,810 @@
+nohup: ignoring input
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: dikshita-mustoori (dikshita-mustoori-international-institute-of-information) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run hu2duzic
+wandb: Tracking run with wandb version 0.26.0
+wandb: Run data is saved locally in /home/sem10/Desktop/nlpProj/wandb/run-20260422_114141-hu2duzic
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run phase3_mixed_124M
+wandb: ⭐️ View project at https://wandb.ai/dikshita-mustoori-international-institute-of-information/curriculum_lm
+wandb: 🚀 View run at https://wandb.ai/dikshita-mustoori-international-institute-of-information/curriculum_lm/runs/hu2duzic
+
+  Device  : cuda
+  GPU     : NVIDIA GeForce RTX 4060 Ti
+  VRAM    : 16.7 GB
+  CUDA    : 12.1
+  W&B     : https://wandb.ai/dikshita-mustoori-international-institute-of-information/curriculum_lm/runs/hu2duzic
+
+Loading tokenizer …
+  Loading Phase 1 tokenizer from /home/sem10/Desktop/nlpProj/checkpoints/phase1/tokenizer …
+  Vocab size  : 50,257
+  EOS token   : '<|endoftext|>'  (id=50256)
+
+Loading Phase 3 datasets …
+Loading Phase 3 binary token corpus …
+  Total train tokens : 2,000,000,767
+  Train file         : 8.0 GB
+  Source breakdown:
+    openwebtext       : 35.0%
+    c4                : 30.0%
+    stackexchange     : 25.0%
+    bookcorpus_wikipedia: 10.0%
+  WikiBinDataset : train_tokens.bin  2.000B tokens  → 3,906,250 blocks  (block=512, stride=512)
+  WikiBinDataset : val_tokens.bin  0.020B tokens  → 39,061 blocks  (block=512, stride=512)
+  Train batches : 325,521
+  Val   batches : 3,256
+
+  Model Architecture: Decoder-Only Transformer (GPT-style)
+  ──────────────────────────────────────────────
+  Total trainable parameters : 123.96 M
+    token_emb               38.60 M
+    pos_emb                  0.39 M
+    blocks                  84.97 M
+    ln_final                 0.00 M
+    lm_head                 38.60 M
+  ──────────────────────────────────────────────
+  Note: lm_head weights are TIED to token_emb (not double-counted)
+
+
+═════════════════════════════════════════════════════════════════
+  CURRICULUM LEARNING — Loading Phase 2 weights
+  Source: /home/sem10/Desktop/nlpProj/checkpoints/phase2/best_model.pt
+  Phase 2 val PPL  : 20.47  (Wikipedia)
+  Phase 3 target   : strong generalisation on web+reasoning text
+  LR               : 5e-05  (Phase 2 was 1e-4, ×2 lower)
+═════════════════════════════════════════════════════════════════
+
+═════════════════════════════════════════════════════════════════
+  Phase-3 Training — Mixed Corpus  |  124M decoder-only Transformer
+  Curriculum : Phase1→Phase2→Phase3 (TinyStories→Wiki→Mixed)
+  Epochs     : 1 → 3
+  Eff. batch : 12 × 11 = 132
+  Total steps: 88,779  (warmup: 500)
+  LR         : 5e-05 → 5e-06  (cosine)
+  AMP (fp16) : True
+═════════════════════════════════════════════════════════════════
+
+  Ep 01 | step    200 | loss 3.8553 | ppl    47.24 | lr 1.99e-05 | 445s elapsed
+  Ep 01 | step    400 | loss 3.7697 | ppl    43.37 | lr 3.99e-05 | 890s elapsed
+  Ep 01 | step    600 | loss 3.7181 | ppl    41.18 | lr 5.00e-05 | 1336s elapsed
+  Ep 01 | step    800 | loss 3.6804 | ppl    39.66 | lr 5.00e-05 | 1781s elapsed
+  Ep 01 | step   1000 | loss 3.6501 | ppl    38.48 | lr 5.00e-05 | 2226s elapsed
+  Ep 01 | step   1200 | loss 3.6261 | ppl    37.57 | lr 5.00e-05 | 2671s elapsed
+  Ep 01 | step   1400 | loss 3.6050 | ppl    36.78 | lr 5.00e-05 | 3116s elapsed
+  Ep 01 | step   1600 | loss 3.5887 | ppl    36.19 | lr 5.00e-05 | 3561s elapsed
+  Ep 01 | step   1800 | loss 3.5735 | ppl    35.64 | lr 5.00e-05 | 4006s elapsed
+  Ep 01 | step   2000 | loss 3.5609 | ppl    35.19 | lr 5.00e-05 | 4451s elapsed
+  Ep 01 | step   2200 | loss 3.5490 | ppl    34.78 | lr 5.00e-05 | 4897s elapsed
+  Ep 01 | step   2400 | loss 3.5386 | ppl    34.42 | lr 4.99e-05 | 5342s elapsed
+  Ep 01 | step   2600 | loss 3.5290 | ppl    34.09 | lr 4.99e-05 | 5788s elapsed
+  Ep 01 | step   2800 | loss 3.5210 | ppl    33.82 | lr 4.99e-05 | 6233s elapsed
+  Ep 01 | step   3000 | loss 3.5125 | ppl    33.53 | lr 4.99e-05 | 6678s elapsed
+  Ep 01 | step   3200 | loss 3.5058 | ppl    33.31 | lr 4.99e-05 | 7124s elapsed
+  Ep 01 | step   3400 | loss 3.4993 | ppl    33.09 | lr 4.99e-05 | 7569s elapsed
+  Ep 01 | step   3600 | loss 3.4923 | ppl    32.86 | lr 4.99e-05 | 8015s elapsed
+  Ep 01 | step   3800 | loss 3.4868 | ppl    32.68 | lr 4.98e-05 | 8460s elapsed
+  Ep 01 | step   4000 | loss 3.4814 | ppl    32.51 | lr 4.98e-05 | 8905s elapsed
+  Ep 01 | step   4200 | loss 3.4756 | ppl    32.32 | lr 4.98e-05 | 9351s elapsed
+  Ep 01 | step   4400 | loss 3.4707 | ppl    32.16 | lr 4.98e-05 | 9797s elapsed
+  Ep 01 | step   4600 | loss 3.4659 | ppl    32.00 | lr 4.98e-05 | 10242s elapsed
+  Ep 01 | step   4800 | loss 3.4612 | ppl    31.86 | lr 4.97e-05 | 10688s elapsed
+  Ep 01 | step   5000 | loss 3.4569 | ppl    31.72 | lr 4.97e-05 | 11134s elapsed
+  Ep 01 | step   5200 | loss 3.4527 | ppl    31.59 | lr 4.97e-05 | 11579s elapsed
+  Ep 01 | step   5400 | loss 3.4489 | ppl    31.47 | lr 4.97e-05 | 12025s elapsed
+  Ep 01 | step   5600 | loss 3.4451 | ppl    31.35 | lr 4.96e-05 | 12471s elapsed
+  Ep 01 | step   5800 | loss 3.4414 | ppl    31.23 | lr 4.96e-05 | 12916s elapsed
+  Ep 01 | step   6000 | loss 3.4380 | ppl    31.12 | lr 4.96e-05 | 13362s elapsed
+  Ep 01 | step   6200 | loss 3.4348 | ppl    31.03 | lr 4.95e-05 | 13808s elapsed
+  Ep 01 | step   6400 | loss 3.4316 | ppl    30.93 | lr 4.95e-05 | 14254s elapsed
+  Ep 01 | step   6600 | loss 3.4284 | ppl    30.83 | lr 4.95e-05 | 14700s elapsed
+  Ep 01 | step   6800 | loss 3.4254 | ppl    30.73 | lr 4.94e-05 | 15146s elapsed
+  Ep 01 | step   7000 | loss 3.4224 | ppl    30.64 | lr 4.94e-05 | 15592s elapsed
+  Ep 01 | step   7200 | loss 3.4198 | ppl    30.56 | lr 4.94e-05 | 16038s elapsed
+  Ep 01 | step   7400 | loss 3.4170 | ppl    30.48 | lr 4.93e-05 | 16484s elapsed
+  Ep 01 | step   7600 | loss 3.4147 | ppl    30.41 | lr 4.93e-05 | 16929s elapsed
+  Ep 01 | step   7800 | loss 3.4121 | ppl    30.33 | lr 4.92e-05 | 17375s elapsed
+  Ep 01 | step   8000 | loss 3.4097 | ppl    30.26 | lr 4.92e-05 | 17821s elapsed
+  Ep 01 | step   8200 | loss 3.4073 | ppl    30.18 | lr 4.92e-05 | 18268s elapsed
+  Ep 01 | step   8400 | loss 3.4050 | ppl    30.11 | lr 4.91e-05 | 18714s elapsed
+  Ep 01 | step   8600 | loss 3.4028 | ppl    30.05 | lr 4.91e-05 | 19160s elapsed
+  Ep 01 | step   8800 | loss 3.4007 | ppl    29.99 | lr 4.90e-05 | 19606s elapsed
+  Ep 01 | step   9000 | loss 3.3984 | ppl    29.92 | lr 4.90e-05 | 20053s elapsed
+  Ep 01 | step   9200 | loss 3.3961 | ppl    29.85 | lr 4.89e-05 | 20499s elapsed
+  Ep 01 | step   9400 | loss 3.3940 | ppl    29.78 | lr 4.89e-05 | 20945s elapsed
+  Ep 01 | step   9600 | loss 3.3919 | ppl    29.72 | lr 4.88e-05 | 21391s elapsed
+  Ep 01 | step   9800 | loss 3.3899 | ppl    29.66 | lr 4.88e-05 | 21838s elapsed
+  Ep 01 | step  10000 | loss 3.3878 | ppl    29.60 | lr 4.87e-05 | 22284s elapsed
+  Ep 01 | step  10200 | loss 3.3859 | ppl    29.54 | lr 4.87e-05 | 22730s elapsed
+  Ep 01 | step  10400 | loss 3.3843 | ppl    29.50 | lr 4.86e-05 | 23176s elapsed
+  Ep 01 | step  10600 | loss 3.3825 | ppl    29.44 | lr 4.86e-05 | 23623s elapsed
+  Ep 01 | step  10800 | loss 3.3806 | ppl    29.39 | lr 4.85e-05 | 24069s elapsed
+  Ep 01 | step  11000 | loss 3.3787 | ppl    29.33 | lr 4.84e-05 | 24515s elapsed
+  Ep 01 | step  11200 | loss 3.3769 | ppl    29.28 | lr 4.84e-05 | 24962s elapsed
+  Ep 01 | step  11400 | loss 3.3752 | ppl    29.23 | lr 4.83e-05 | 25408s elapsed
+  Ep 01 | step  11600 | loss 3.3732 | ppl    29.17 | lr 4.83e-05 | 25854s elapsed
+  Ep 01 | step  11800 | loss 3.3716 | ppl    29.12 | lr 4.82e-05 | 26300s elapsed
+  Ep 01 | step  12000 | loss 3.3699 | ppl    29.07 | lr 4.81e-05 | 26747s elapsed
+  Ep 01 | step  12200 | loss 3.3682 | ppl    29.03 | lr 4.81e-05 | 27193s elapsed
+  Ep 01 | step  12400 | loss 3.3668 | ppl    28.99 | lr 4.80e-05 | 27639s elapsed
+  Ep 01 | step  12600 | loss 3.3652 | ppl    28.94 | lr 4.79e-05 | 28086s elapsed
+  Ep 01 | step  12800 | loss 3.3637 | ppl    28.90 | lr 4.79e-05 | 28532s elapsed
+  Ep 01 | step  13000 | loss 3.3621 | ppl    28.85 | lr 4.78e-05 | 28978s elapsed
+  Ep 01 | step  13200 | loss 3.3608 | ppl    28.81 | lr 4.77e-05 | 29425s elapsed
+  Ep 01 | step  13400 | loss 3.3593 | ppl    28.77 | lr 4.77e-05 | 29871s elapsed
+  Ep 01 | step  13600 | loss 3.3578 | ppl    28.73 | lr 4.76e-05 | 30318s elapsed
+  Ep 01 | step  13800 | loss 3.3564 | ppl    28.68 | lr 4.75e-05 | 30764s elapsed
+  Ep 01 | step  14000 | loss 3.3550 | ppl    28.64 | lr 4.75e-05 | 31210s elapsed
+  Ep 01 | step  14200 | loss 3.3536 | ppl    28.61 | lr 4.74e-05 | 31657s elapsed
+  Ep 01 | step  14400 | loss 3.3522 | ppl    28.57 | lr 4.73e-05 | 32103s elapsed
+  Ep 01 | step  14600 | loss 3.3509 | ppl    28.53 | lr 4.72e-05 | 32550s elapsed
+  Ep 01 | step  14800 | loss 3.3496 | ppl    28.49 | lr 4.71e-05 | 32996s elapsed
+  Ep 01 | step  15000 | loss 3.3482 | ppl    28.45 | lr 4.71e-05 | 33443s elapsed
+  Ep 01 | step  15200 | loss 3.3469 | ppl    28.41 | lr 4.70e-05 | 33889s elapsed
+  Ep 01 | step  15400 | loss 3.3455 | ppl    28.37 | lr 4.69e-05 | 34336s elapsed
+  Ep 01 | step  15600 | loss 3.3442 | ppl    28.34 | lr 4.68e-05 | 34782s elapsed
+  Ep 01 | step  15800 | loss 3.3429 | ppl    28.30 | lr 4.67e-05 | 35228s elapsed
+  Ep 01 | step  16000 | loss 3.3417 | ppl    28.27 | lr 4.67e-05 | 35675s elapsed
+  Ep 01 | step  16200 | loss 3.3406 | ppl    28.24 | lr 4.66e-05 | 36121s elapsed
+  Ep 01 | step  16400 | loss 3.3394 | ppl    28.20 | lr 4.65e-05 | 36568s elapsed
+  Ep 01 | step  16600 | loss 3.3382 | ppl    28.17 | lr 4.64e-05 | 37014s elapsed
+  Ep 01 | step  16800 | loss 3.3370 | ppl    28.14 | lr 4.63e-05 | 37461s elapsed
+  Ep 01 | step  17000 | loss 3.3359 | ppl    28.10 | lr 4.62e-05 | 37907s elapsed
+  Ep 01 | step  17200 | loss 3.3349 | ppl    28.08 | lr 4.61e-05 | 38354s elapsed
+  Ep 01 | step  17400 | loss 3.3337 | ppl    28.04 | lr 4.61e-05 | 38801s elapsed
+  Ep 01 | step  17600 | loss 3.3325 | ppl    28.01 | lr 4.60e-05 | 39247s elapsed
+  Ep 01 | step  17800 | loss 3.3314 | ppl    27.98 | lr 4.59e-05 | 39693s elapsed
+  Ep 01 | step  18000 | loss 3.3303 | ppl    27.95 | lr 4.58e-05 | 40140s elapsed
+  Ep 01 | step  18200 | loss 3.3292 | ppl    27.92 | lr 4.57e-05 | 40587s elapsed
+  Ep 01 | step  18400 | loss 3.3281 | ppl    27.89 | lr 4.56e-05 | 41033s elapsed
+  Ep 01 | step  18600 | loss 3.3270 | ppl    27.86 | lr 4.55e-05 | 41480s elapsed
+  Ep 01 | step  18800 | loss 3.3260 | ppl    27.83 | lr 4.54e-05 | 41926s elapsed
+  Ep 01 | step  19000 | loss 3.3249 | ppl    27.80 | lr 4.53e-05 | 42372s elapsed
+  Ep 01 | step  19200 | loss 3.3239 | ppl    27.77 | lr 4.52e-05 | 42819s elapsed
+  Ep 01 | step  19400 | loss 3.3229 | ppl    27.74 | lr 4.51e-05 | 43265s elapsed
+  Ep 01 | step  19600 | loss 3.3219 | ppl    27.71 | lr 4.50e-05 | 43711s elapsed
+  Ep 01 | step  19800 | loss 3.3209 | ppl    27.69 | lr 4.49e-05 | 44158s elapsed
+  Ep 01 | step  20000 | loss 3.3200 | ppl    27.66 | lr 4.48e-05 | 44604s elapsed
+  Ep 01 | step  20200 | loss 3.3190 | ppl    27.63 | lr 4.47e-05 | 45050s elapsed
+  Ep 01 | step  20400 | loss 3.3182 | ppl    27.61 | lr 4.46e-05 | 45496s elapsed
+  Ep 01 | step  20600 | loss 3.3173 | ppl    27.59 | lr 4.45e-05 | 45942s elapsed
+  Ep 01 | step  20800 | loss 3.3163 | ppl    27.56 | lr 4.44e-05 | 46389s elapsed
+  Ep 01 | step  21000 | loss 3.3154 | ppl    27.53 | lr 4.43e-05 | 46835s elapsed
+  Ep 01 | step  21200 | loss 3.3146 | ppl    27.51 | lr 4.42e-05 | 47281s elapsed
+  Ep 01 | step  21400 | loss 3.3137 | ppl    27.49 | lr 4.41e-05 | 47727s elapsed
+  Ep 01 | step  21600 | loss 3.3128 | ppl    27.46 | lr 4.39e-05 | 48173s elapsed
+  Ep 01 | step  21800 | loss 3.3120 | ppl    27.44 | lr 4.38e-05 | 48619s elapsed
+  Ep 01 | step  22000 | loss 3.3111 | ppl    27.42 | lr 4.37e-05 | 49066s elapsed
+  Ep 01 | step  22200 | loss 3.3102 | ppl    27.39 | lr 4.36e-05 | 49512s elapsed
+  Ep 01 | step  22400 | loss 3.3093 | ppl    27.37 | lr 4.35e-05 | 49958s elapsed
+  Ep 01 | step  22600 | loss 3.3085 | ppl    27.34 | lr 4.34e-05 | 50404s elapsed
+  Ep 01 | step  22800 | loss 3.3076 | ppl    27.32 | lr 4.33e-05 | 50850s elapsed
+  Ep 01 | step  23000 | loss 3.3067 | ppl    27.30 | lr 4.32e-05 | 51297s elapsed
+  Ep 01 | step  23200 | loss 3.3059 | ppl    27.27 | lr 4.30e-05 | 51743s elapsed
+  Ep 01 | step  23400 | loss 3.3050 | ppl    27.25 | lr 4.29e-05 | 52189s elapsed
+  Ep 01 | step  23600 | loss 3.3041 | ppl    27.22 | lr 4.28e-05 | 52635s elapsed
+  Ep 01 | step  23800 | loss 3.3032 | ppl    27.20 | lr 4.27e-05 | 53082s elapsed
+  Ep 01 | step  24000 | loss 3.3026 | ppl    27.18 | lr 4.26e-05 | 53528s elapsed
+  Ep 01 | step  24200 | loss 3.3018 | ppl    27.16 | lr 4.25e-05 | 53974s elapsed
+  Ep 01 | step  24400 | loss 3.3011 | ppl    27.14 | lr 4.23e-05 | 54421s elapsed
+  Ep 01 | step  24600 | loss 3.3003 | ppl    27.12 | lr 4.22e-05 | 54867s elapsed
+  Ep 01 | step  24800 | loss 3.2995 | ppl    27.10 | lr 4.21e-05 | 55313s elapsed
+  Ep 01 | step  25000 | loss 3.2988 | ppl    27.08 | lr 4.20e-05 | 55759s elapsed
+  Ep 01 | step  25200 | loss 3.2979 | ppl    27.06 | lr 4.19e-05 | 56205s elapsed
+  Ep 01 | step  25400 | loss 3.2972 | ppl    27.04 | lr 4.17e-05 | 56652s elapsed
+  Ep 01 | step  25600 | loss 3.2964 | ppl    27.02 | lr 4.16e-05 | 57098s elapsed
+  Ep 01 | step  25800 | loss 3.2956 | ppl    26.99 | lr 4.15e-05 | 57544s elapsed
+  Ep 01 | step  26000 | loss 3.2949 | ppl    26.97 | lr 4.14e-05 | 57990s elapsed
+  Ep 01 | step  26200 | loss 3.2941 | ppl    26.95 | lr 4.12e-05 | 58436s elapsed
+  Ep 01 | step  26400 | loss 3.2933 | ppl    26.93 | lr 4.11e-05 | 58882s elapsed
+  Ep 01 | step  26600 | loss 3.2926 | ppl    26.91 | lr 4.10e-05 | 59328s elapsed
+  Ep 01 | step  26800 | loss 3.2919 | ppl    26.89 | lr 4.08e-05 | 59774s elapsed
+  Ep 01 | step  27000 | loss 3.2912 | ppl    26.88 | lr 4.07e-05 | 60220s elapsed
+  Ep 01 | step  27200 | loss 3.2904 | ppl    26.85 | lr 4.06e-05 | 60666s elapsed
+  Ep 01 | step  27400 | loss 3.2898 | ppl    26.84 | lr 4.05e-05 | 61113s elapsed
+  Ep 01 | step  27600 | loss 3.2891 | ppl    26.82 | lr 4.03e-05 | 61559s elapsed
+  Ep 01 | step  27800 | loss 3.2884 | ppl    26.80 | lr 4.02e-05 | 62005s elapsed
+  Ep 01 | step  28000 | loss 3.2877 | ppl    26.78 | lr 4.01e-05 | 62451s elapsed
+  Ep 01 | step  28200 | loss 3.2871 | ppl    26.76 | lr 3.99e-05 | 62897s elapsed
+  Ep 01 | step  28400 | loss 3.2864 | ppl    26.75 | lr 3.98e-05 | 63343s elapsed
+  Ep 01 | step  28600 | loss 3.2857 | ppl    26.73 | lr 3.97e-05 | 63790s elapsed
+  Ep 01 | step  28800 | loss 3.2850 | ppl    26.71 | lr 3.95e-05 | 64236s elapsed
+  Ep 01 | step  29000 | loss 3.2844 | ppl    26.69 | lr 3.94e-05 | 64682s elapsed
+  Ep 01 | step  29200 | loss 3.2838 | ppl    26.68 | lr 3.93e-05 | 65128s elapsed
+  Ep 01 | step  29400 | loss 3.2832 | ppl    26.66 | lr 3.91e-05 | 65575s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 01 done  (66018s  |  18.3h)
+  Train loss : 3.2825  PPL : 26.64
+  Val   loss : 3.5026  PPL : 33.20
+  Phase 2 PPL was : 20.47  (curriculum improvement: -12.73)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase3/checkpoint_epoch01.pt
+  ★ New best  (val_loss=3.5026  ppl=33.20)
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl on the ground (in terms of how she was called), who lived in a small room and where the children were waiting for the man to be killed. The only thing that would happen though would be that he was being taken away by some people from her life as soon as they came back from the house.
+The boy’s mother was being attacked with bullets. She had an army of bullet-proof knives on her face so it wouldn’t damage anything but her head as well. Her brother was still breathing and holding his hands for fear of her death because he wanted to kill him. He tried to use a hammer to hit the head and a knife to remove his hands but did not able to. Instead he shot a bullet into the woman's throat and then fell onto another area near the child’s neck. When this happened he pulled out his gun and started shooting again. A few minutes later he ran out screaming to her father and started firing again.
+He was now in shock when he heard more than one voice coming from him in English and from his face. It said “Yes, you are alive and in need of help” and he called police.
+There is no evidence to suggest this was intentional. There is no real reason why someone might try to get closer or closer to them. What we should do is to call 911 at any moment to report that person who struck you with the weapon should have been taken to hospital immediately. This could mean that it may have caused a physical injury or even fatal injuries. We should also ask the parents to help us when it comes to making sure their kids know exactly what kind of weapons are available. Remember: if it isn't a mental illness, it might make it harder for your family to get its treatment. If it doesn't work that way, it won't be working until the end of every month. And remember: don't forget to talk to your mom about where it starts…
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began in 776 AD, when a group led by the Count of Monte-Carlo (Viscount Palatine was crowned King) gathered at Bessau and brought the army to their attention. The army had to deal with many different events, such as the Battle of the Somme. In order to get the city back under control, the Romans were asked to take it.
+
+During this time, the Viceroy of Spain, in the course of his rule, proposed several new plans for Spain, including the creation of an empire that would have as its capital in exchange for revenues from the war and tax on exports to the Kingdom of France. This policy had not been implemented until the reigns of King Ferdinand VI of Naples (1341–1308), the son of John II of Naples, which, together with William IV of France, created the first royal house in Europe. After Philip III's death in 1371, John VII of Naples ordered the construction of a castle and a palace. On 10 April 1372 Henry VIII of Castile created the first royal residence in Europe. A new royal palace was constructed at San Francisco on the site of the former monastery that had been home to the Duke of Montesano and his wife Lady Anne of England. However, due to the lack of funding and other political instability, the foundations were laid down in 1374. An initial plan called for the construction of two larger structures, at San José and at El Capitan. Each of these, with the support of Prince Richard de la Hernández, had to be built in three days. That summer, Henry IX decided that he needed to build it himself before the king was elected. The city of San Jose, the centre of San Luis Province, was given its present name, because it had a history of development and construction.
+
+In 1403, King John VII appointed a "Kingdom" named after him for his territory in San Pedro.
+
+
+  [The best way to implement a binary search tree in Python is]
+  The best way to implement a binary search tree in Python is through the "search" command.</p>
+</li>
+<li><a href="https://docs.python.org/3/library/listing-unicode.html#hashCode%28import_string"><code>&gt; import string &amp;&lt;u'\n', '@fname': u'\t[1:i], @bName='foo', nil]`)</code></a>: </li>
+<li><strong>[ edit ]</strong>, <em>(and since this question doesn't mention anything related, I don't want to repeat it. To add an answer there would be something like :</em>"  The only way you could do that, without using any of the builtin functions for such parsing would be to use a standard library and have all of these strings and their values parsed by one function instead of writing to a file (like an HTML page). For instance: </ul>
+</blockquote>
+
+
+<pre class="lang-py prettyprint-override"><code>def foo(request):
+    if request._isPrime():
+        print True # will return true while this method matches the current url  // 
+else:
+        print False # will return false on some other method!   
+</code></pre>
+
+<hr>
+
+<h2>Edit 2: Fixed bugfix after reading your comment:</h2>
+
+<ol start="10">
+<li>If a module fails, its content is lost too </li>
+<li>It might be possible to create new modules or run them together with other modules from another package and use that. If this happens then we'll need to write new modules or run them separately.</li>
+</ol>
+
+<hr>
+
+<h
+
+
+  [Recent advancements in machine learning have shown that]
+  Recent advancements in machine learning have shown that learning is the most important aspect of a person's life. In many cases, it is easier to get started and learn with a particular focus on the basics while also improving skills for managing multiple tasks at different times, not just one day per week.
+The ability to practice machine learning may prove beneficial in your everyday job or business or whatever you are doing within your daily schedule. For instance, making use of time with all kinds of activities can be beneficial especially if it is to meet and greet people, to make sure they are working on an appropriate task, even to stress-free days. So, when we have time that we take advantage of our skill sets and the other things which help us stay focused and productive. There are some types of these types of tools that people may need to do with their busy schedules. If you want something you would like to try to give this type of tool some consideration. It will enable you to be more flexible on certain aspects of your work environment that will allow you to concentrate and develop. As long as you think about what you are spending money to spend time over those activities, we’ll probably have a better idea than a lot of these tools. However, don't forget that there are also the various other ways your career might be more fulfilling - in addition to being able to complete work efficiently or get to know others better. And when working out, you’re going to be very much less stressed as you start to work effectively. You want to increase productivity when you are involved in a project or a field project, but also in case you are focusing on getting into any kind of activity, it takes some effort to keep yourself engaged and engaged throughout each day. A lot of people are using this kind of tool because it gives them the opportunity to get an edge when they get tired, feel bad emotions, go home, stop talking, etc. They also realize that it makes more sense that their tasks aren’t always completed
+
+
+  [Stack Overflow: How do I fix a segmentation fault in C++?]
+  Stack Overflow: How do I fix a segmentation fault in C++?</a></li>
+<li><strong>(Edit) A workaround is to use <code>[0] &amp; 0xFFF1f4c; // no, it's not possible!</code>.  The reason for this, according to the author of StackOverFlow, was that he was trying to create <em>"no"</em>, but in order to avoid having too many lines of code.</p></li>
+<li><strong>(In another sentence, we will have another line of Java instead of calling "print method". We don't want a whole lot of these types)</strong>: you can call <kbd>CTRL</kbd>+C (or <kbd>SHIFT-BONLY</kbd>) - which is why there are so few types at runtime. There should be only one type of printing - in particular <code>XMLDoc::Printing()</code>. This means you cannot call <kbd>TRACE</kbd> or <kbd>LONG</kbd>, since they're both different kinds of printing functions and each print job uses its own copy of <code>STOP_TIMESTAMP(...)</code> as well.</li>
+</ul>
+
+
+<blockquote>
+  <p>I'm sorry, I just wanted my question wrong (sorry, here isn't such a standard, please). It goes back a bit longer. I'll try to come up with something more flexible/correct if needed.</p>
+</blockquote>
+
+<hr />
+
+<h2>The answer might apply to other things when printing, like printouts - if you're using a printer that uses XSLT the next time you need it to display something. When you really need a page of information on the printer that uses any kind of data, <s href="http://en.wikipedia.
+
+────────────────────────────────────────────────────────────────
+
+  Ep 02 | step  29600 | loss 3.2010 | ppl    24.56 | lr 3.90e-05 | 18s elapsed
+  Ep 02 | step  29800 | loss 3.1736 | ppl    23.89 | lr 3.88e-05 | 463s elapsed
+  Ep 02 | step  30000 | loss 3.1722 | ppl    23.86 | lr 3.87e-05 | 909s elapsed
+  Ep 02 | step  30200 | loss 3.1696 | ppl    23.80 | lr 3.86e-05 | 1355s elapsed
+  Ep 02 | step  30400 | loss 3.1712 | ppl    23.84 | lr 3.84e-05 | 1800s elapsed
+  Ep 02 | step  30600 | loss 3.1690 | ppl    23.78 | lr 3.83e-05 | 2246s elapsed
+  Ep 02 | step  30800 | loss 3.1688 | ppl    23.78 | lr 3.81e-05 | 2691s elapsed
+  Ep 02 | step  31000 | loss 3.1690 | ppl    23.78 | lr 3.80e-05 | 3137s elapsed
+  Ep 02 | step  31200 | loss 3.1685 | ppl    23.77 | lr 3.79e-05 | 3582s elapsed
+  Ep 02 | step  31400 | loss 3.1682 | ppl    23.76 | lr 3.77e-05 | 4028s elapsed
+  Ep 02 | step  31600 | loss 3.1692 | ppl    23.79 | lr 3.76e-05 | 4473s elapsed
+  Ep 02 | step  31800 | loss 3.1698 | ppl    23.80 | lr 3.74e-05 | 4919s elapsed
+  Ep 02 | step  32000 | loss 3.1702 | ppl    23.81 | lr 3.73e-05 | 5364s elapsed
+  Ep 02 | step  32200 | loss 3.1703 | ppl    23.81 | lr 3.71e-05 | 5809s elapsed
+  Ep 02 | step  32400 | loss 3.1702 | ppl    23.81 | lr 3.70e-05 | 6255s elapsed
+  Ep 02 | step  32600 | loss 3.1700 | ppl    23.81 | lr 3.68e-05 | 6700s elapsed
+  Ep 02 | step  32800 | loss 3.1701 | ppl    23.81 | lr 3.67e-05 | 7146s elapsed
+  Ep 02 | step  33000 | loss 3.1699 | ppl    23.80 | lr 3.66e-05 | 7592s elapsed
+  Ep 02 | step  33200 | loss 3.1697 | ppl    23.80 | lr 3.64e-05 | 8037s elapsed
+  Ep 02 | step  33400 | loss 3.1694 | ppl    23.79 | lr 3.63e-05 | 8482s elapsed
+  Ep 02 | step  33600 | loss 3.1692 | ppl    23.79 | lr 3.61e-05 | 8927s elapsed
+  Ep 02 | step  33800 | loss 3.1690 | ppl    23.78 | lr 3.60e-05 | 9373s elapsed
+  Ep 02 | step  34000 | loss 3.1687 | ppl    23.78 | lr 3.58e-05 | 9818s elapsed
+  Ep 02 | step  34200 | loss 3.1683 | ppl    23.77 | lr 3.57e-05 | 10263s elapsed
+  Ep 02 | step  34400 | loss 3.1677 | ppl    23.75 | lr 3.55e-05 | 10709s elapsed
+  Ep 02 | step  34600 | loss 3.1677 | ppl    23.75 | lr 3.54e-05 | 11154s elapsed
+  Ep 02 | step  34800 | loss 3.1675 | ppl    23.75 | lr 3.52e-05 | 11599s elapsed
+  Ep 02 | step  35000 | loss 3.1671 | ppl    23.74 | lr 3.51e-05 | 12045s elapsed
+  Ep 02 | step  35200 | loss 3.1670 | ppl    23.74 | lr 3.49e-05 | 12490s elapsed
+  Ep 02 | step  35400 | loss 3.1667 | ppl    23.73 | lr 3.48e-05 | 12936s elapsed
+  Ep 02 | step  35600 | loss 3.1664 | ppl    23.72 | lr 3.46e-05 | 13381s elapsed
+  Ep 02 | step  35800 | loss 3.1663 | ppl    23.72 | lr 3.45e-05 | 13826s elapsed
+  Ep 02 | step  36000 | loss 3.1659 | ppl    23.71 | lr 3.43e-05 | 14272s elapsed
+  Ep 02 | step  36200 | loss 3.1656 | ppl    23.70 | lr 3.42e-05 | 14717s elapsed
+  Ep 02 | step  36400 | loss 3.1654 | ppl    23.70 | lr 3.40e-05 | 15163s elapsed
+  Ep 02 | step  36600 | loss 3.1651 | ppl    23.69 | lr 3.39e-05 | 15608s elapsed
+  Ep 02 | step  36800 | loss 3.1650 | ppl    23.69 | lr 3.37e-05 | 16053s elapsed
+  Ep 02 | step  37000 | loss 3.1647 | ppl    23.68 | lr 3.35e-05 | 16498s elapsed
+  Ep 02 | step  37200 | loss 3.1646 | ppl    23.68 | lr 3.34e-05 | 16943s elapsed
+  Ep 02 | step  37400 | loss 3.1643 | ppl    23.67 | lr 3.32e-05 | 17389s elapsed
+  Ep 02 | step  37600 | loss 3.1640 | ppl    23.66 | lr 3.31e-05 | 17834s elapsed
+  Ep 02 | step  37800 | loss 3.1638 | ppl    23.66 | lr 3.29e-05 | 18279s elapsed
+  Ep 02 | step  38000 | loss 3.1636 | ppl    23.66 | lr 3.28e-05 | 18724s elapsed
+  Ep 02 | step  38200 | loss 3.1634 | ppl    23.65 | lr 3.26e-05 | 19170s elapsed
+  Ep 02 | step  38400 | loss 3.1633 | ppl    23.65 | lr 3.25e-05 | 19615s elapsed
+  Ep 02 | step  38600 | loss 3.1630 | ppl    23.64 | lr 3.23e-05 | 20061s elapsed
+  Ep 02 | step  38800 | loss 3.1627 | ppl    23.63 | lr 3.21e-05 | 20506s elapsed
+  Ep 02 | step  39000 | loss 3.1625 | ppl    23.63 | lr 3.20e-05 | 20952s elapsed
+  Ep 02 | step  39200 | loss 3.1623 | ppl    23.62 | lr 3.18e-05 | 21397s elapsed
+  Ep 02 | step  39400 | loss 3.1621 | ppl    23.62 | lr 3.17e-05 | 21843s elapsed
+  Ep 02 | step  39600 | loss 3.1618 | ppl    23.61 | lr 3.15e-05 | 22289s elapsed
+  Ep 02 | step  39800 | loss 3.1616 | ppl    23.61 | lr 3.14e-05 | 22734s elapsed
+  Ep 02 | step  40000 | loss 3.1613 | ppl    23.60 | lr 3.12e-05 | 23180s elapsed
+  Ep 02 | step  40200 | loss 3.1610 | ppl    23.60 | lr 3.10e-05 | 23626s elapsed
+  Ep 02 | step  40400 | loss 3.1610 | ppl    23.59 | lr 3.09e-05 | 24071s elapsed
+  Ep 02 | step  40600 | loss 3.1606 | ppl    23.59 | lr 3.07e-05 | 24517s elapsed
+  Ep 02 | step  40800 | loss 3.1604 | ppl    23.58 | lr 3.06e-05 | 24963s elapsed
+  Ep 02 | step  41000 | loss 3.1601 | ppl    23.57 | lr 3.04e-05 | 25409s elapsed
+  Ep 02 | step  41200 | loss 3.1600 | ppl    23.57 | lr 3.02e-05 | 25855s elapsed
+  Ep 02 | step  41400 | loss 3.1599 | ppl    23.57 | lr 3.01e-05 | 26301s elapsed
+  Ep 02 | step  41600 | loss 3.1596 | ppl    23.56 | lr 2.99e-05 | 26747s elapsed
+  Ep 02 | step  41800 | loss 3.1594 | ppl    23.56 | lr 2.98e-05 | 27193s elapsed
+  Ep 02 | step  42000 | loss 3.1590 | ppl    23.55 | lr 2.96e-05 | 27639s elapsed
+  Ep 02 | step  42200 | loss 3.1589 | ppl    23.54 | lr 2.95e-05 | 28085s elapsed
+  Ep 02 | step  42400 | loss 3.1585 | ppl    23.54 | lr 2.93e-05 | 28531s elapsed
+  Ep 02 | step  42600 | loss 3.1583 | ppl    23.53 | lr 2.91e-05 | 28977s elapsed
+  Ep 02 | step  42800 | loss 3.1580 | ppl    23.52 | lr 2.90e-05 | 29424s elapsed
+  Ep 02 | step  43000 | loss 3.1578 | ppl    23.52 | lr 2.88e-05 | 29870s elapsed
+  Ep 02 | step  43200 | loss 3.1575 | ppl    23.51 | lr 2.87e-05 | 30316s elapsed
+  Ep 02 | step  43400 | loss 3.1573 | ppl    23.51 | lr 2.85e-05 | 30762s elapsed
+  Ep 02 | step  43600 | loss 3.1570 | ppl    23.50 | lr 2.83e-05 | 31209s elapsed
+  Ep 02 | step  43800 | loss 3.1568 | ppl    23.49 | lr 2.82e-05 | 31655s elapsed
+  Ep 02 | step  44000 | loss 3.1566 | ppl    23.49 | lr 2.80e-05 | 32101s elapsed
+  Ep 02 | step  44200 | loss 3.1564 | ppl    23.49 | lr 2.79e-05 | 32547s elapsed
+  Ep 02 | step  44400 | loss 3.1561 | ppl    23.48 | lr 2.77e-05 | 32994s elapsed
+  Ep 02 | step  44600 | loss 3.1560 | ppl    23.48 | lr 2.75e-05 | 33440s elapsed
+  Ep 02 | step  44800 | loss 3.1558 | ppl    23.47 | lr 2.74e-05 | 33886s elapsed
+  Ep 02 | step  45000 | loss 3.1556 | ppl    23.47 | lr 2.72e-05 | 34333s elapsed
+  Ep 02 | step  45200 | loss 3.1554 | ppl    23.46 | lr 2.71e-05 | 34779s elapsed
+  Ep 02 | step  45400 | loss 3.1553 | ppl    23.46 | lr 2.69e-05 | 35225s elapsed
+  Ep 02 | step  45600 | loss 3.1551 | ppl    23.45 | lr 2.67e-05 | 35671s elapsed
+  Ep 02 | step  45800 | loss 3.1549 | ppl    23.45 | lr 2.66e-05 | 36118s elapsed
+  Ep 02 | step  46000 | loss 3.1546 | ppl    23.44 | lr 2.64e-05 | 36564s elapsed
+  Ep 02 | step  46200 | loss 3.1543 | ppl    23.44 | lr 2.63e-05 | 37010s elapsed
+  Ep 02 | step  46400 | loss 3.1541 | ppl    23.43 | lr 2.61e-05 | 37457s elapsed
+  Ep 02 | step  46600 | loss 3.1540 | ppl    23.43 | lr 2.59e-05 | 37903s elapsed
+  Ep 02 | step  46800 | loss 3.1538 | ppl    23.42 | lr 2.58e-05 | 38349s elapsed
+  Ep 02 | step  47000 | loss 3.1535 | ppl    23.42 | lr 2.56e-05 | 38795s elapsed
+  Ep 02 | step  47200 | loss 3.1534 | ppl    23.42 | lr 2.55e-05 | 39242s elapsed
+  Ep 02 | step  47400 | loss 3.1533 | ppl    23.41 | lr 2.53e-05 | 39688s elapsed
+  Ep 02 | step  47600 | loss 3.1531 | ppl    23.41 | lr 2.51e-05 | 40134s elapsed
+  Ep 02 | step  47800 | loss 3.1529 | ppl    23.40 | lr 2.50e-05 | 40581s elapsed
+  Ep 02 | step  48000 | loss 3.1527 | ppl    23.40 | lr 2.48e-05 | 41027s elapsed
+  Ep 02 | step  48200 | loss 3.1526 | ppl    23.40 | lr 2.47e-05 | 41473s elapsed
+  Ep 02 | step  48400 | loss 3.1523 | ppl    23.39 | lr 2.45e-05 | 41919s elapsed
+  Ep 02 | step  48600 | loss 3.1521 | ppl    23.38 | lr 2.43e-05 | 42366s elapsed
+  Ep 02 | step  48800 | loss 3.1518 | ppl    23.38 | lr 2.42e-05 | 42812s elapsed
+  Ep 02 | step  49000 | loss 3.1517 | ppl    23.37 | lr 2.40e-05 | 43258s elapsed
+  Ep 02 | step  49200 | loss 3.1515 | ppl    23.37 | lr 2.39e-05 | 43705s elapsed
+  Ep 02 | step  49400 | loss 3.1512 | ppl    23.36 | lr 2.37e-05 | 44151s elapsed
+  Ep 02 | step  49600 | loss 3.1509 | ppl    23.36 | lr 2.35e-05 | 44597s elapsed
+  Ep 02 | step  49800 | loss 3.1506 | ppl    23.35 | lr 2.34e-05 | 45044s elapsed
+  Ep 02 | step  50000 | loss 3.1505 | ppl    23.35 | lr 2.32e-05 | 45490s elapsed
+  Ep 02 | step  50200 | loss 3.1502 | ppl    23.34 | lr 2.31e-05 | 45936s elapsed
+  Ep 02 | step  50400 | loss 3.1500 | ppl    23.33 | lr 2.29e-05 | 46382s elapsed
+  Ep 02 | step  50600 | loss 3.1498 | ppl    23.33 | lr 2.28e-05 | 46829s elapsed
+  Ep 02 | step  50800 | loss 3.1496 | ppl    23.33 | lr 2.26e-05 | 47275s elapsed
+  Ep 02 | step  51000 | loss 3.1494 | ppl    23.32 | lr 2.25e-05 | 47721s elapsed
+  Ep 02 | step  51200 | loss 3.1493 | ppl    23.32 | lr 2.23e-05 | 48168s elapsed
+  Ep 02 | step  51400 | loss 3.1491 | ppl    23.32 | lr 2.21e-05 | 48614s elapsed
+  Ep 02 | step  51600 | loss 3.1489 | ppl    23.31 | lr 2.20e-05 | 49060s elapsed
+  Ep 02 | step  51800 | loss 3.1487 | ppl    23.31 | lr 2.18e-05 | 49507s elapsed
+  Ep 02 | step  52000 | loss 3.1486 | ppl    23.30 | lr 2.17e-05 | 49953s elapsed
+  Ep 02 | step  52200 | loss 3.1484 | ppl    23.30 | lr 2.15e-05 | 50400s elapsed
+  Ep 02 | step  52400 | loss 3.1482 | ppl    23.29 | lr 2.14e-05 | 50846s elapsed
+  Ep 02 | step  52600 | loss 3.1480 | ppl    23.29 | lr 2.12e-05 | 51292s elapsed
+  Ep 02 | step  52800 | loss 3.1478 | ppl    23.28 | lr 2.11e-05 | 51738s elapsed
+  Ep 02 | step  53000 | loss 3.1477 | ppl    23.28 | lr 2.09e-05 | 52185s elapsed
+  Ep 02 | step  53200 | loss 3.1475 | ppl    23.28 | lr 2.08e-05 | 52631s elapsed
+  Ep 02 | step  53400 | loss 3.1473 | ppl    23.27 | lr 2.06e-05 | 53077s elapsed
+  Ep 02 | step  53600 | loss 3.1472 | ppl    23.27 | lr 2.04e-05 | 53524s elapsed
+  Ep 02 | step  53800 | loss 3.1470 | ppl    23.27 | lr 2.03e-05 | 53970s elapsed
+  Ep 02 | step  54000 | loss 3.1469 | ppl    23.26 | lr 2.01e-05 | 54416s elapsed
+  Ep 02 | step  54200 | loss 3.1467 | ppl    23.26 | lr 2.00e-05 | 54862s elapsed
+  Ep 02 | step  54400 | loss 3.1465 | ppl    23.26 | lr 1.98e-05 | 55309s elapsed
+  Ep 02 | step  54600 | loss 3.1463 | ppl    23.25 | lr 1.97e-05 | 55755s elapsed
+  Ep 02 | step  54800 | loss 3.1462 | ppl    23.25 | lr 1.95e-05 | 56201s elapsed
+  Ep 02 | step  55000 | loss 3.1459 | ppl    23.24 | lr 1.94e-05 | 56648s elapsed
+  Ep 02 | step  55200 | loss 3.1458 | ppl    23.24 | lr 1.92e-05 | 57094s elapsed
+  Ep 02 | step  55400 | loss 3.1457 | ppl    23.23 | lr 1.91e-05 | 57540s elapsed
+  Ep 02 | step  55600 | loss 3.1455 | ppl    23.23 | lr 1.89e-05 | 57987s elapsed
+  Ep 02 | step  55800 | loss 3.1454 | ppl    23.23 | lr 1.88e-05 | 58433s elapsed
+  Ep 02 | step  56000 | loss 3.1453 | ppl    23.23 | lr 1.87e-05 | 58879s elapsed
+  Ep 02 | step  56200 | loss 3.1451 | ppl    23.22 | lr 1.85e-05 | 59326s elapsed
+  Ep 02 | step  56400 | loss 3.1449 | ppl    23.22 | lr 1.84e-05 | 59772s elapsed
+  Ep 02 | step  56600 | loss 3.1447 | ppl    23.21 | lr 1.82e-05 | 60218s elapsed
+  Ep 02 | step  56800 | loss 3.1445 | ppl    23.21 | lr 1.81e-05 | 60665s elapsed
+  Ep 02 | step  57000 | loss 3.1443 | ppl    23.20 | lr 1.79e-05 | 61111s elapsed
+  Ep 02 | step  57200 | loss 3.1441 | ppl    23.20 | lr 1.78e-05 | 61557s elapsed
+  Ep 02 | step  57400 | loss 3.1439 | ppl    23.19 | lr 1.76e-05 | 62004s elapsed
+  Ep 02 | step  57600 | loss 3.1438 | ppl    23.19 | lr 1.75e-05 | 62450s elapsed
+  Ep 02 | step  57800 | loss 3.1436 | ppl    23.19 | lr 1.73e-05 | 62897s elapsed
+  Ep 02 | step  58000 | loss 3.1434 | ppl    23.18 | lr 1.72e-05 | 63343s elapsed
+  Ep 02 | step  58200 | loss 3.1432 | ppl    23.18 | lr 1.71e-05 | 63790s elapsed
+  Ep 02 | step  58400 | loss 3.1430 | ppl    23.17 | lr 1.69e-05 | 64236s elapsed
+  Ep 02 | step  58600 | loss 3.1429 | ppl    23.17 | lr 1.68e-05 | 64683s elapsed
+  Ep 02 | step  58800 | loss 3.1427 | ppl    23.17 | lr 1.66e-05 | 65129s elapsed
+  Ep 02 | step  59000 | loss 3.1425 | ppl    23.16 | lr 1.65e-05 | 65575s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 02 done  (66001s  |  18.3h)
+  Train loss : 3.1424  PPL : 23.16
+  Val   loss : 3.4311  PPL : 30.91
+  Phase 2 PPL was : 20.47  (curriculum improvement: -10.44)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase3/checkpoint_epoch02.pt
+  ★ New best  (val_loss=3.4311  ppl=30.91)
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl’s hair that looked like her. It had been a long night before the wedding, but in the end it ended up being something we did not want to have any of our guests. So, that was something that had happened for us. And then after the ceremony the girls were all dressed together at once and they walked out on their own. They were just very happy, and I’m sure most people would have loved them as much as they did for the other women who they knew. But, no worries if the girls had walked home or didn't have anything to do with us or anything we could say to them afterwards.
+The next day, I thought about making some pictures of my own for the wedding. A friend invited me and asked me what I wanted and I said yes! Then my friend came over to help the couple make up. He told me to take it to our room so I can share with everyone that she is interested.
+I was just so excited about the idea. She made me feel special and want more! We decided to try some photography from her blog, which she gave me as a gift and she even took some pics. The photos were so beautiful! Not only was she really looking super cute (the girls were wearing their gown) she also made me smile and she even sent me one free photo of herself as a thank you note. Also, she also took some pretty awesome picture shots of me! There is a lot going on when you look at photos of your wedding! You know how this goes? Thank God that all my friends are there too!
+As usual, when I called my boyfriend, he put his phone away because he wasn’t around anymore and then, he’d say, “Hi everyone!” He said, “You’re gonna get so good at taking pictures and getting to know your bride. That will be fun to watch right now.” My boyfriend
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began in Rome when Pope Leo XIII visited on 12 March 1523 to try to understand the reasons for his visit. The most important part was the preparation and training of the troops, which included a detailed understanding of Roman military tactics, military policy, and strategic planning. After completing their duty at St Peter's Basilica in the background of the battle with France (1522), John Major, the Pope wanted to discuss the need for better warfare against Germanic forces. He also asked if Roman troops could serve under General George III of Germany.
+
+In addition, General George IV was the first European commander in Africa. His mission was to "take over a country that is hostile to Rome". In this mission, he focused primarily on defeating the Romans, including those from South America. However, in order to win the war, his army must be well prepared; after some time, he received an offer that would help him and his army recover as he had been given instructions to do so by the emperor. This offer was not accepted until 1534 due to problems with British trade relations: it would have been impossible for the Emperor to make peace with Africa, while the Emperor did not want to negotiate with Britain before settling into Rome. This meant that Britain would be unable to offer assistance in defending African colonies, and he ordered his troops to attack them. Meanwhile, other forces in Africa were facing strong resistance and pressure from neighbouring countries like Italy. To prevent this, the Emperor ordered the creation of a large number of warships to protect against German raids in northern Africa. The fleet of six warships had a total length of . These ships had to arrive on the coast to patrol and defend themselves against enemy threats. Many of these vessels were built for the imperialists' benefit during World War I, but were not ready for service because they required heavy supplies. Because of the increasing danger posed by war, the Emperor directed all ships from overseas through Africa, even though the ships were already armed. During the French-
+
+
+  [The best way to implement a binary search tree in Python is]
+  The best way to implement a binary search tree in Python is to create the hash, and make it a singleton. This will allow you to store the value you are trying to retrieve in a database.</p>
+<pre><code>import hashlib ashashbase 
+#=&gt; 'a' % (Hash[i] == 1)
+
+def query(id):
+    return id
+</code></pre>
+<h1>EDIT 2:</h1>
+<blockquote>
+<ul>
+<li>This solution doesn't work for all sorts of languages... you could build your own binary trees using hashes, but if that's not possible then I'd recommend starting with something like <em>b = [0x500000003] + b * 0x000000000000000</em>. </li>
+<li><strong>Doing the same on multiple platforms requires some sort of extra knowledge about how <code>[0x70000004] + 3^16 = 3</code>, though it won't be quite so simple -- the hash can only be read from an integer at runtime! If your app has many platforms, just use this approach.</strong></li>
+</ol>
+
+
+<p>"It depends" - the hash function would be called "the first time". It cannot have any access to the underlying data.</p>
+
+<p>(And I think "all modern systems" really rely on one another.)</p>
+
+<hr>
+
+<p>If you don't want to use binary trees then it might depend on what platform you're on, not the implementation.</p>
+
+<p>In other words do all computers have that capability? Well, maybe there was no problem doing it yourself, not with the hardware itself, not with the filesystem or running applications.</p>
+
+<p>Maybe you need a binary search indexer (<a href="http://en.
+
+
+  [Recent advancements in machine learning have shown that]
+  Recent advancements in machine learning have shown that machine-learning can be used by individuals and communities to teach knowledge. A recent study published in the Journal of Computer Science has found a correlation between Machine Learning (MLT) performance (as well as machine language skills), but also a lack of understanding on the domain of computation/language research.
+The focus for the paper is an overview of the topic, based on an analysis of 3D modeling which examined how MLM programs could be utilized to build complex models across multiple domains at different levels. The researchers also showed that the role of language skills (e.g., the ability to interpret questions in two languages without the need for a real language interpreter) was limited to learning about basic concepts such as mathematics, physics, astronomy, logic etc. This paper covers several areas of applied training including:
+ Language Education; where information needs to be presented with the model; where relevant data can be read or written, and
+ Language Training; where information should be taught; where applicable information will be given to students’ parents;
+ Languages Teaching; where information can be discussed with help from teachers;
+
+In addition to the above mentioned aspects of training students’ learning, it appears that many educational frameworks are being developed to meet those needs. These include classroom technology or programming techniques (E&P): these activities must be carried out in order to provide appropriate content for class sizes in order to encourage learners to learn quickly and efficiently using their knowledge; and also for online instruction and other education options such as a web browser program. In particular, students will be expected to use this curriculum, rather than learning from scratch. It should not be difficult to apply this course because the tools are provided and students will gain new insight into their experiences. However, there are exceptions when using the online courses at the university level. There are plenty of instructional materials available which have examples of this type of learning. For example, for example, videos on computer science (like “This Is My Life!�
+
+
+  [Stack Overflow: How do I fix a segmentation fault in C++?]
+  Stack Overflow: How do I fix a segmentation fault in C++?</p>
+
+
+<blockquote>
+  <ul><li>"How do I fix a segmentation fault in C++?"</li></ol>
+</blockquote>
+
+<p>(In my opinion, this is the correct way to solve your problem.)</p>
+
+<pre class="lang-c prettyprint-override"><code>#include &lt;vector&gt;
+using namespace std;
+
+void main() {
+  vector x = 0.0f/2*(i); // OK, but not exactly.
+}
+// What's wrong with it? If you want to access x and y from inside of vector (I guess) there are two problems that need further investigation.</li>
+</ul>
+
+<h3>References: </h3>
+
+<ul>
+<li><a href="http://www.ibm.com/developerworks/javaee/" rel="noreferrer">IBM - JavaEE Library Reference Guide</a></li>
+<li><a href="https://rads.stackoverflow.com/amzn/click/com/0197242348" rel="nofollow noreferrer" rel="nofollow noreferrer">Java EE Libraries - JPA 1.6 (JAXB)</a>, "Introduction", "Evaluating Object Oriented Programming".</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <ul>
+  <li>Why does the compiler automatically
+  generate code for such cases as this one? Because when I run, it generates code where I cannot
+  see what's going on - I get
+  an exception with no explanation given.</li>
+  <li>Is something inside which you can't see the error message or anything else you could possibly think of?
+
+────────────────────────────────────────────────────────────────
+
+  Ep 03 | step  59200 | loss 3.0693 | ppl    21.53 | lr 1.64e-05 | 36s elapsed
+  Ep 03 | step  59400 | loss 3.0997 | ppl    22.19 | lr 1.62e-05 | 482s elapsed
+  Ep 03 | step  59600 | loss 3.0988 | ppl    22.17 | lr 1.61e-05 | 928s elapsed
+  Ep 03 | step  59800 | loss 3.0987 | ppl    22.17 | lr 1.59e-05 | 1374s elapsed
+  Ep 03 | step  60000 | loss 3.0987 | ppl    22.17 | lr 1.58e-05 | 1820s elapsed
+  Ep 03 | step  60200 | loss 3.0976 | ppl    22.14 | lr 1.57e-05 | 2266s elapsed
+  Ep 03 | step  60400 | loss 3.0985 | ppl    22.16 | lr 1.55e-05 | 2712s elapsed
+  Ep 03 | step  60600 | loss 3.0985 | ppl    22.16 | lr 1.54e-05 | 3158s elapsed
+  Ep 03 | step  60800 | loss 3.0987 | ppl    22.17 | lr 1.53e-05 | 3604s elapsed
+  Ep 03 | step  61000 | loss 3.0988 | ppl    22.17 | lr 1.51e-05 | 4050s elapsed
+  Ep 03 | step  61200 | loss 3.0981 | ppl    22.16 | lr 1.50e-05 | 4496s elapsed
+  Ep 03 | step  61400 | loss 3.0977 | ppl    22.15 | lr 1.49e-05 | 4942s elapsed
+  Ep 03 | step  61600 | loss 3.0987 | ppl    22.17 | lr 1.47e-05 | 5388s elapsed
+  Ep 03 | step  61800 | loss 3.0989 | ppl    22.17 | lr 1.46e-05 | 5834s elapsed
+  Ep 03 | step  62000 | loss 3.0987 | ppl    22.17 | lr 1.45e-05 | 6280s elapsed
+  Ep 03 | step  62200 | loss 3.0989 | ppl    22.17 | lr 1.43e-05 | 6726s elapsed
+  Ep 03 | step  62400 | loss 3.0989 | ppl    22.17 | lr 1.42e-05 | 7172s elapsed
+  Ep 03 | step  62600 | loss 3.0988 | ppl    22.17 | lr 1.41e-05 | 7618s elapsed
+  Ep 03 | step  62800 | loss 3.0987 | ppl    22.17 | lr 1.40e-05 | 8064s elapsed
+  Ep 03 | step  63000 | loss 3.0990 | ppl    22.18 | lr 1.38e-05 | 8509s elapsed
+  Ep 03 | step  63200 | loss 3.0985 | ppl    22.17 | lr 1.37e-05 | 8955s elapsed
+  Ep 03 | step  63400 | loss 3.0992 | ppl    22.18 | lr 1.36e-05 | 9401s elapsed
+  Ep 03 | step  63600 | loss 3.0993 | ppl    22.18 | lr 1.34e-05 | 9848s elapsed
+  Ep 03 | step  63800 | loss 3.0996 | ppl    22.19 | lr 1.33e-05 | 10294s elapsed
+  Ep 03 | step  64000 | loss 3.0995 | ppl    22.19 | lr 1.32e-05 | 10739s elapsed
+  Ep 03 | step  64200 | loss 3.0994 | ppl    22.18 | lr 1.31e-05 | 11185s elapsed
+  Ep 03 | step  64400 | loss 3.0998 | ppl    22.19 | lr 1.30e-05 | 11631s elapsed
+  Ep 03 | step  64600 | loss 3.0997 | ppl    22.19 | lr 1.28e-05 | 12077s elapsed
+  Ep 03 | step  64800 | loss 3.0995 | ppl    22.19 | lr 1.27e-05 | 12523s elapsed
+  Ep 03 | step  65000 | loss 3.0993 | ppl    22.18 | lr 1.26e-05 | 12969s elapsed
+  Ep 03 | step  65200 | loss 3.0992 | ppl    22.18 | lr 1.25e-05 | 13415s elapsed
+  Ep 03 | step  65400 | loss 3.0989 | ppl    22.17 | lr 1.23e-05 | 13861s elapsed
+  Ep 03 | step  65600 | loss 3.0994 | ppl    22.18 | lr 1.22e-05 | 14307s elapsed
+  Ep 03 | step  65800 | loss 3.0996 | ppl    22.19 | lr 1.21e-05 | 14753s elapsed
+  Ep 03 | step  66000 | loss 3.0994 | ppl    22.19 | lr 1.20e-05 | 15199s elapsed
+  Ep 03 | step  66200 | loss 3.0994 | ppl    22.18 | lr 1.19e-05 | 15645s elapsed
+  Ep 03 | step  66400 | loss 3.0991 | ppl    22.18 | lr 1.18e-05 | 16091s elapsed
+  Ep 03 | step  66600 | loss 3.0991 | ppl    22.18 | lr 1.17e-05 | 16537s elapsed
+  Ep 03 | step  66800 | loss 3.0990 | ppl    22.18 | lr 1.15e-05 | 16983s elapsed
+  Ep 03 | step  67000 | loss 3.0992 | ppl    22.18 | lr 1.14e-05 | 17429s elapsed
+  Ep 03 | step  67200 | loss 3.0990 | ppl    22.18 | lr 1.13e-05 | 17875s elapsed
+  Ep 03 | step  67400 | loss 3.0990 | ppl    22.17 | lr 1.12e-05 | 18321s elapsed
+  Ep 03 | step  67600 | loss 3.0990 | ppl    22.18 | lr 1.11e-05 | 18767s elapsed
+  Ep 03 | step  67800 | loss 3.0989 | ppl    22.17 | lr 1.10e-05 | 19213s elapsed
+  Ep 03 | step  68000 | loss 3.0988 | ppl    22.17 | lr 1.09e-05 | 19659s elapsed
+  Ep 03 | step  68200 | loss 3.0988 | ppl    22.17 | lr 1.08e-05 | 20104s elapsed
+  Ep 03 | step  68400 | loss 3.0986 | ppl    22.17 | lr 1.07e-05 | 20550s elapsed
+  Ep 03 | step  68600 | loss 3.0986 | ppl    22.17 | lr 1.06e-05 | 20996s elapsed
+  Ep 03 | step  68800 | loss 3.0983 | ppl    22.16 | lr 1.05e-05 | 21442s elapsed
+  Ep 03 | step  69000 | loss 3.0984 | ppl    22.16 | lr 1.03e-05 | 21888s elapsed
+  Ep 03 | step  69200 | loss 3.0984 | ppl    22.16 | lr 1.02e-05 | 22334s elapsed
+  Ep 03 | step  69400 | loss 3.0984 | ppl    22.16 | lr 1.01e-05 | 22780s elapsed
+  Ep 03 | step  69600 | loss 3.0984 | ppl    22.16 | lr 1.00e-05 | 23226s elapsed
+  Ep 03 | step  69800 | loss 3.0984 | ppl    22.16 | lr 9.94e-06 | 23672s elapsed
+  Ep 03 | step  70000 | loss 3.0984 | ppl    22.16 | lr 9.84e-06 | 24118s elapsed
+  Ep 03 | step  70200 | loss 3.0983 | ppl    22.16 | lr 9.74e-06 | 24564s elapsed
+  Ep 03 | step  70400 | loss 3.0981 | ppl    22.16 | lr 9.64e-06 | 25010s elapsed
+  Ep 03 | step  70600 | loss 3.0980 | ppl    22.15 | lr 9.55e-06 | 25456s elapsed
+  Ep 03 | step  70800 | loss 3.0981 | ppl    22.16 | lr 9.45e-06 | 25902s elapsed
+  Ep 03 | step  71000 | loss 3.0980 | ppl    22.15 | lr 9.36e-06 | 26348s elapsed
+  Ep 03 | step  71200 | loss 3.0978 | ppl    22.15 | lr 9.26e-06 | 26794s elapsed
+  Ep 03 | step  71400 | loss 3.0979 | ppl    22.15 | lr 9.17e-06 | 27240s elapsed
+  Ep 03 | step  71600 | loss 3.0979 | ppl    22.15 | lr 9.08e-06 | 27685s elapsed
+  Ep 03 | step  71800 | loss 3.0978 | ppl    22.15 | lr 8.98e-06 | 28131s elapsed
+  Ep 03 | step  72000 | loss 3.0978 | ppl    22.15 | lr 8.89e-06 | 28577s elapsed
+  Ep 03 | step  72200 | loss 3.0977 | ppl    22.15 | lr 8.80e-06 | 29022s elapsed
+  Ep 03 | step  72400 | loss 3.0976 | ppl    22.15 | lr 8.72e-06 | 29468s elapsed
+  Ep 03 | step  72600 | loss 3.0974 | ppl    22.14 | lr 8.63e-06 | 29913s elapsed
+  Ep 03 | step  72800 | loss 3.0974 | ppl    22.14 | lr 8.54e-06 | 30359s elapsed
+  Ep 03 | step  73000 | loss 3.0973 | ppl    22.14 | lr 8.46e-06 | 30804s elapsed
+  Ep 03 | step  73200 | loss 3.0972 | ppl    22.14 | lr 8.37e-06 | 31250s elapsed
+  Ep 03 | step  73400 | loss 3.0973 | ppl    22.14 | lr 8.29e-06 | 31696s elapsed
+  Ep 03 | step  73600 | loss 3.0973 | ppl    22.14 | lr 8.20e-06 | 32142s elapsed
+  Ep 03 | step  73800 | loss 3.0973 | ppl    22.14 | lr 8.12e-06 | 32587s elapsed
+  Ep 03 | step  74000 | loss 3.0972 | ppl    22.13 | lr 8.04e-06 | 33033s elapsed
+  Ep 03 | step  74200 | loss 3.0971 | ppl    22.13 | lr 7.96e-06 | 33479s elapsed
+  Ep 03 | step  74400 | loss 3.0971 | ppl    22.13 | lr 7.88e-06 | 33925s elapsed
+  Ep 03 | step  74600 | loss 3.0970 | ppl    22.13 | lr 7.80e-06 | 34371s elapsed
+  Ep 03 | step  74800 | loss 3.0970 | ppl    22.13 | lr 7.73e-06 | 34817s elapsed
+  Ep 03 | step  75000 | loss 3.0969 | ppl    22.13 | lr 7.65e-06 | 35262s elapsed
+  Ep 03 | step  75200 | loss 3.0968 | ppl    22.13 | lr 7.58e-06 | 35708s elapsed
+  Ep 03 | step  75400 | loss 3.0967 | ppl    22.13 | lr 7.50e-06 | 36154s elapsed
+  Ep 03 | step  75600 | loss 3.0966 | ppl    22.12 | lr 7.43e-06 | 36600s elapsed
+  Ep 03 | step  75800 | loss 3.0965 | ppl    22.12 | lr 7.36e-06 | 37046s elapsed
+  Ep 03 | step  76000 | loss 3.0965 | ppl    22.12 | lr 7.29e-06 | 37491s elapsed
+  Ep 03 | step  76200 | loss 3.0963 | ppl    22.12 | lr 7.22e-06 | 37937s elapsed
+  Ep 03 | step  76400 | loss 3.0963 | ppl    22.12 | lr 7.15e-06 | 38383s elapsed
+  Ep 03 | step  76600 | loss 3.0963 | ppl    22.12 | lr 7.08e-06 | 38829s elapsed
+  Ep 03 | step  76800 | loss 3.0962 | ppl    22.11 | lr 7.01e-06 | 39274s elapsed
+  Ep 03 | step  77000 | loss 3.0962 | ppl    22.11 | lr 6.95e-06 | 39720s elapsed
+  Ep 03 | step  77200 | loss 3.0961 | ppl    22.11 | lr 6.88e-06 | 40166s elapsed
+  Ep 03 | step  77400 | loss 3.0961 | ppl    22.11 | lr 6.82e-06 | 40611s elapsed
+  Ep 03 | step  77600 | loss 3.0960 | ppl    22.11 | lr 6.76e-06 | 41057s elapsed
+  Ep 03 | step  77800 | loss 3.0959 | ppl    22.11 | lr 6.70e-06 | 41503s elapsed
+  Ep 03 | step  78000 | loss 3.0957 | ppl    22.10 | lr 6.64e-06 | 41949s elapsed
+  Ep 03 | step  78200 | loss 3.0957 | ppl    22.10 | lr 6.58e-06 | 42395s elapsed
+  Ep 03 | step  78400 | loss 3.0955 | ppl    22.10 | lr 6.52e-06 | 42840s elapsed
+  Ep 03 | step  78600 | loss 3.0955 | ppl    22.10 | lr 6.46e-06 | 43286s elapsed
+  Ep 03 | step  78800 | loss 3.0955 | ppl    22.10 | lr 6.40e-06 | 43731s elapsed
+  Ep 03 | step  79000 | loss 3.0955 | ppl    22.10 | lr 6.35e-06 | 44177s elapsed
+  Ep 03 | step  79200 | loss 3.0954 | ppl    22.10 | lr 6.29e-06 | 44622s elapsed
+  Ep 03 | step  79400 | loss 3.0954 | ppl    22.10 | lr 6.24e-06 | 45067s elapsed
+  Ep 03 | step  79600 | loss 3.0952 | ppl    22.09 | lr 6.19e-06 | 45513s elapsed
+  Ep 03 | step  79800 | loss 3.0952 | ppl    22.09 | lr 6.14e-06 | 45958s elapsed
+  Ep 03 | step  80000 | loss 3.0951 | ppl    22.09 | lr 6.09e-06 | 46404s elapsed
+  Ep 03 | step  80200 | loss 3.0951 | ppl    22.09 | lr 6.04e-06 | 46849s elapsed
+  Ep 03 | step  80400 | loss 3.0950 | ppl    22.09 | lr 5.99e-06 | 47295s elapsed
+  Ep 03 | step  80600 | loss 3.0949 | ppl    22.09 | lr 5.95e-06 | 47741s elapsed
+  Ep 03 | step  80800 | loss 3.0949 | ppl    22.09 | lr 5.90e-06 | 48187s elapsed
+  Ep 03 | step  81000 | loss 3.0948 | ppl    22.08 | lr 5.86e-06 | 48633s elapsed
+  Ep 03 | step  81200 | loss 3.0948 | ppl    22.08 | lr 5.81e-06 | 49079s elapsed
+  Ep 03 | step  81400 | loss 3.0948 | ppl    22.08 | lr 5.77e-06 | 49525s elapsed
+  Ep 03 | step  81600 | loss 3.0946 | ppl    22.08 | lr 5.73e-06 | 49971s elapsed
+  Ep 03 | step  81800 | loss 3.0945 | ppl    22.08 | lr 5.69e-06 | 50418s elapsed
+  Ep 03 | step  82000 | loss 3.0945 | ppl    22.08 | lr 5.65e-06 | 50864s elapsed
+  Ep 03 | step  82200 | loss 3.0944 | ppl    22.08 | lr 5.61e-06 | 51310s elapsed
+  Ep 03 | step  82400 | loss 3.0943 | ppl    22.07 | lr 5.58e-06 | 51756s elapsed
+  Ep 03 | step  82600 | loss 3.0942 | ppl    22.07 | lr 5.54e-06 | 52202s elapsed
+  Ep 03 | step  82800 | loss 3.0941 | ppl    22.07 | lr 5.51e-06 | 52649s elapsed
+  Ep 03 | step  83000 | loss 3.0941 | ppl    22.07 | lr 5.47e-06 | 53095s elapsed
+  Ep 03 | step  83200 | loss 3.0940 | ppl    22.06 | lr 5.44e-06 | 53541s elapsed
+  Ep 03 | step  83400 | loss 3.0939 | ppl    22.06 | lr 5.41e-06 | 53988s elapsed
+  Ep 03 | step  83600 | loss 3.0938 | ppl    22.06 | lr 5.38e-06 | 54434s elapsed
+  Ep 03 | step  83800 | loss 3.0937 | ppl    22.06 | lr 5.35e-06 | 54880s elapsed
+  Ep 03 | step  84000 | loss 3.0936 | ppl    22.06 | lr 5.32e-06 | 55327s elapsed
+  Ep 03 | step  84200 | loss 3.0936 | ppl    22.06 | lr 5.30e-06 | 55773s elapsed
+  Ep 03 | step  84400 | loss 3.0936 | ppl    22.06 | lr 5.27e-06 | 56219s elapsed
+  Ep 03 | step  84600 | loss 3.0935 | ppl    22.05 | lr 5.25e-06 | 56666s elapsed
+  Ep 03 | step  84800 | loss 3.0933 | ppl    22.05 | lr 5.23e-06 | 57112s elapsed
+  Ep 03 | step  85000 | loss 3.0933 | ppl    22.05 | lr 5.20e-06 | 57558s elapsed
+  Ep 03 | step  85200 | loss 3.0932 | ppl    22.05 | lr 5.18e-06 | 58005s elapsed
+  Ep 03 | step  85400 | loss 3.0931 | ppl    22.04 | lr 5.16e-06 | 58451s elapsed
+  Ep 03 | step  85600 | loss 3.0930 | ppl    22.04 | lr 5.14e-06 | 58897s elapsed
+  Ep 03 | step  85800 | loss 3.0930 | ppl    22.04 | lr 5.13e-06 | 59344s elapsed
+  Ep 03 | step  86000 | loss 3.0930 | ppl    22.04 | lr 5.11e-06 | 59790s elapsed
+  Ep 03 | step  86200 | loss 3.0930 | ppl    22.04 | lr 5.09e-06 | 60236s elapsed
+  Ep 03 | step  86400 | loss 3.0929 | ppl    22.04 | lr 5.08e-06 | 60682s elapsed
+  Ep 03 | step  86600 | loss 3.0928 | ppl    22.04 | lr 5.07e-06 | 61129s elapsed
+  Ep 03 | step  86800 | loss 3.0927 | ppl    22.04 | lr 5.06e-06 | 61575s elapsed
+  Ep 03 | step  87000 | loss 3.0927 | ppl    22.04 | lr 5.05e-06 | 62021s elapsed
+  Ep 03 | step  87200 | loss 3.0926 | ppl    22.03 | lr 5.04e-06 | 62468s elapsed
+  Ep 03 | step  87400 | loss 3.0925 | ppl    22.03 | lr 5.03e-06 | 62914s elapsed
+  Ep 03 | step  87600 | loss 3.0924 | ppl    22.03 | lr 5.02e-06 | 63360s elapsed
+  Ep 03 | step  87800 | loss 3.0924 | ppl    22.03 | lr 5.01e-06 | 63807s elapsed
+  Ep 03 | step  88000 | loss 3.0923 | ppl    22.03 | lr 5.01e-06 | 64253s elapsed
+  Ep 03 | step  88200 | loss 3.0922 | ppl    22.03 | lr 5.00e-06 | 64699s elapsed
+  Ep 03 | step  88400 | loss 3.0922 | ppl    22.03 | lr 5.00e-06 | 65145s elapsed
+  Ep 03 | step  88600 | loss 3.0921 | ppl    22.02 | lr 5.00e-06 | 65592s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 03 done  (66000s  |  18.3h)
+  Train loss : 3.0921  PPL : 22.02
+  Val   loss : 3.4051  PPL : 30.12
+  Phase 2 PPL was : 20.47  (curriculum improvement: -9.65)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase3/checkpoint_epoch03.pt
+  ★ New best  (val_loss=3.4051  ppl=30.12)
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl in the garden and she had her head cut off by this beautiful young woman who seemed to be holding it down. It didn’t help that the girls were crying and there was nothing to look forward to seeing or talking about in the garden either.
+It turns out that the girls, who are in their early stages of growth, aren’t really just the ones playing around with it. They are trying to get it right. This is what happened during one week of growing, when we got to see a few of them grow. We learned that they had been trying to make some flower arrangements for Christmas as well. The other three are in ‘a garden full of new stems’ but they didn’t give us much information on the actual roots. When I saw those, I knew that I wanted to know more about the growth process of these kinds of plants. One day we visited the nursery to look at my garden and they told me it had grown quite successfully without any problems. After three weeks of waiting for the root to have finished, we decided the best thing to do would be to visit my sister-in-law (who we now think is very kind) to get her started. She has given birth to one. And yes, she has made one. But since then we’ve been able to see what else she can come up with for our garden which includes a couple of different species that she will use in the next year. There are also several varieties that were planted that are growing this season but we still haven’t seen an end of the stem, so hopefully we won’t see any more.
+Here’s my plan in order for the plants to grow in your garden, and for your own future plans, how you planned them to grow? Let me know if there are any questions or concerns, or if anything would be a good fit.
+My husband’s first step was planting two
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began in the late third century BCE. The first emperor had been appointed by the Romans, but he did not want to have a regent. He was forced into a pact with his enemies and was forced to flee the city after being captured by an army under Caesar's rule.
+This is the main reason why Rome has been so successful at fighting wars between rival powers. In fact, a number of centuries ago, Rome fought against the Byzantine invasions of Syria, Egypt (including Damascus), Palestine, Syria, Lebanon, Yemen, Sudan etc., all to ensure that the empire remained intact through its own war. Now, as we are aware, this is a major battle which happened during the reigns of Emperor Maximian, who had given birth to three great dynasties: the Hittite Dynasty, the Byzantine Empire, and the Byzantines. After their return from Constantinople they were forced into exile until the turn of the fourth millennium BC. But even before they left Constantinople the empire fell apart and was lost. This means that the only thing that can be done is to rebuild the empire of your favorite one-and-done kings. However, there will always be another emperor who, when he comes back for an opportunity, could not succeed. That is to say if you want to maintain your empire, it would make sense for the other emperor.
+One such example may be the Emperor Gennai, the great empress, whose last words were “fear of the land” for many years. It was the first time since the death of Emperor Constantine I that the emperor had been able to hold the throne, but because of some political problems, so was the throne of my father — the Emperor himself. If not for her, who she married? What does this mean for our relationship to empire? Are these things as well as our own? They should not seem like the same way. The Emperor has no power or authority over us, nor does he have
+
+
+  [The best way to implement a binary search tree in Python is]
+  The best way to implement a binary search tree in Python is with <a href="http://docs.python.org/library/schemas.html" rel="noreferrer">samples</a> or something like that.</p></li>
+<li><strong><code>.search()</code>: In general it's an implementation of the <em>"differences" layer", such as "inheritance" and "de-identity".  It also has no real use for recursive algorithms, just one step at a time (or even more so).  The only thing you'll need is another library which can be easily ported to other languages.</strong>, as far as I know there are libraries out there on Linux and Windows (they're very old, but not really used quite yet). </li>
+<li><i>(Note: This code requires two different implementations) A library, called <kbd>Ctrl + R</kbd> ("the same as C") for each language. For example, if you look for <m>e</m> (which contains <x > y), then on that particular line, go <kbd>F8</kbd> - this will allow you to write your own functions using either <kbd>C5</kbd> or <kbd>B4</kbd>. If you find yourself having difficulty getting your function to do things like this, get some help here, as well: <a href="https://stackoverflow.com/questions/181560/how-do-you-use-mod_arithmetic#17297775"><br />You may want to check out all of these websites, though.</a></li>
+<li><strike>[EDIT] [edited 3rd edit]: For those who don't have experience with python code you could try to write a module for Python which combines both modules into a single module.</strike></li>
+<ul>
+
+
+  [Recent advancements in machine learning have shown that]
+  Recent advancements in machine learning have shown that they can be used for both real and human-created tasks. One of the most important advances is to use machine learning as a tool, allowing a developer to identify features which make an impact on his/her business. This has now been accomplished by using tools such as OpenCV or MVC.
+The first step is to implement AI. The AI team uses AI-like algorithms to help solve problems in humans. These algorithms are called “theoretical” because their aim is to solve a problem with natural language processing. However, unlike many other languages, this isn’t really necessary: if you know a programming language, it may not be possible to understand what you need to do before you make your next project. For example, one might take into consideration how to describe a problem without knowing its meaning in order to avoid guessing what it actually looks like. Another option would be to create a script based around the code in question, which automatically calls itself a computer and outputs data at the screen when the program completes. Another alternative is to develop some new language extensions within another language like Ruby, Python, Perl etc.. Such extensions include the following:</p>
+<ul>
+<li><a href="http://developerworks.apple.com/" rel="noreferrer">DeveloperWorks</a></li>
+</ul>
+</blockquote>
+<h3>See also: <a href="https://stackoverflow.com/questions/174592/ruby-scalability-how-to-convert-objective-javascripts-into-c#181629" title=&quot;Scala Scales'?title_id=$1&amp;action=/path/to/script%20and+eval(...)"><strong>Ruby Scales</strong></a>, <em>"How to convert objective JavaScripts into C++ objects" (C++ Programming
+
+
+  [Stack Overflow: How do I fix a segmentation fault in C++?]
+  Stack Overflow: How do I fix a segmentation fault in C++?</p>
+
+<pre><code>.void_t *main() { // &lt;- No such function for this thread, but I get the following errors...&gt;;
+
+    main();// *** here** (this is actually not an error)
+
+  }
+}
+</code></pre>
+
+
+<blockquote>
+  <h3>What am i missing? What am i doing wrong? </h3>
+  
+  <ul>
+  <li>First of all, where are my variables declared as static ? So why isn't there any more private member functions in the code that need them? The <strong>static variable declaration</strong> for the class is just like that of an array. You can't access it from within a container.</li>
+  <li>(Also if you wanted to do an object accessor, you'd have to create your own object)</li>
+  <li>If you want to be able to access private members with one method you would have to do something like:</li>
+  <ol>
+  <li>Create a new instance of your class</li>
+  <li>Set up a factory instance of your custom class for each method and then assign its public variable to that factory.</li>
+  </ol>
+</blockquote>
+
+<hr/>
+
+<blockquote>
+  <p>[Edit]<br />
+I've changed everything, now it's clear that I don't want to change anything outside the constructor.</p>
+</blockquote>
+
+<p>You'll see the same thing when you use a non-private method. Instead of declaring an <em>instance</em>, you pass the reference into a <a href="https://stackoverflow.com/questions/15552664">constructor’s” construct
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading output.log; uploading config.yaml
+wandb: uploading output.log
+wandb: uploading history steps 445-445, summary, console lines 700-754
+wandb: 
+wandb: Run history:
+wandb:      epoch ▁▅█
+wandb:     tokens ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇█████
+wandb: train/loss █▇▆▆▅▅▅▅▄▄▄▄▄▄▄▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/lr ██████████▇▇▆▆▆▆▅▅▅▄▃▃▃▃▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁
+wandb:  train/ppl █▇▆▅▅▄▄▄▄▄▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁
+wandb:   val/loss █▃▁
+wandb:    val/ppl █▃▁
+wandb: 
+wandb: Run summary:
+wandb:      epoch 3
+wandb:     tokens 5987942400
+wandb: train/loss 3.09213
+wandb:   train/lr 1e-05
+wandb:  train/ppl 22.02387
+wandb:   val/loss 3.4051
+wandb:    val/ppl 30.1172
+wandb: 
+wandb: 🚀 View run phase3_mixed_124M at: https://wandb.ai/dikshita-mustoori-international-institute-of-information/curriculum_lm/runs/hu2duzic
+wandb: ⭐️ View project at: https://wandb.ai/dikshita-mustoori-international-institute-of-information/curriculum_lm
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260422_114141-hu2duzic/logs
+
+────────────────────────────────────────────────────────────────
+
+
+═════════════════════════════════════════════════════════════════
+  Phase-3 Training Complete!
+  Best val PPL : 30.12  (Mixed corpus)
+  Phase 2 PPL  : 20.47  (Wikipedia)
+  Curriculum   : model improved across all 3 phases ✓
+  Best model   : /home/sem10/Desktop/nlpProj/checkpoints/phase3/best_model.pt
+  History      : /home/sem10/Desktop/nlpProj/logs/phase3_history.json
+═════════════════════════════════════════════════════════════════
+
+→ Inference: python inference_phase3.py

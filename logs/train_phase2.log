@@ -1,0 +1,789 @@
+nohup: ignoring input
+=== Phase 2 Download Started: Sat Apr 18 05:35:22 EDT 2026 ===
+Token indices sequence length is longer than the specified maximum sequence length for this model (8668 > 1024). Running this sequence through the model will result in indexing errors
+  Removed partial file: /home/sem10/Desktop/nlpProj/data/phase2_wikipedia/train_tokens.bin
+  Removed partial file: /home/sem10/Desktop/nlpProj/data/phase2_wikipedia/val_tokens.bin
+Loading GPT-2 tokenizer …
+  Loaded from Phase 1 cache: /home/sem10/Desktop/nlpProj/checkpoints/phase1/tokenizer
+  Vocab: 50,257  BOS=50256  EOS=50256
+
+══════════════════════════════════════════════════════════════
+  Streaming wikimedia/wikipedia (20231101.en) …
+  (Same content as Kaggle: ffatty/plaintext-wikipedia-full-english)
+  Target  : 1.0B train + 10M val tokens
+  Disk est: ~4.04 GB
+══════════════════════════════════════════════════════════════
+
+  Art:  5,000  Train:0.016B (  1.6%)  Val:0.1M (  1.2%)  Disk:0.06GB  0.7Mtok/s  [0.0h]
+  Art: 10,000  Train:0.021B (  2.1%)  Val:0.2M (  1.7%)  Disk:0.08GB  0.8Mtok/s  [0.0h]
+  Art: 15,000  Train:0.026B (  2.6%)  Val:0.2M (  2.2%)  Disk:0.10GB  0.8Mtok/s  [0.0h]
+  Art: 20,000  Train:0.031B (  3.1%)  Val:0.3M (  2.9%)  Disk:0.12GB  0.8Mtok/s  [0.0h]
+  Art: 25,000  Train:0.036B (  3.6%)  Val:0.3M (  3.3%)  Disk:0.14GB  0.8Mtok/s  [0.0h]
+  Art: 30,000  Train:0.041B (  4.1%)  Val:0.4M (  3.7%)  Disk:0.17GB  0.8Mtok/s  [0.0h]
+  Art: 35,000  Train:0.046B (  4.6%)  Val:0.5M (  4.6%)  Disk:0.19GB  0.8Mtok/s  [0.0h]
+  Art: 40,000  Train:0.051B (  5.1%)  Val:0.5M (  5.1%)  Disk:0.21GB  0.8Mtok/s  [0.0h]
+  Art: 45,000  Train:0.056B (  5.6%)  Val:0.6M (  5.6%)  Disk:0.23GB  0.8Mtok/s  [0.0h]
+  Art: 50,000  Train:0.061B (  6.1%)  Val:0.6M (  6.2%)  Disk:0.25GB  0.8Mtok/s  [0.0h]
+  Art: 55,000  Train:0.066B (  6.6%)  Val:0.7M (  6.6%)  Disk:0.27GB  0.8Mtok/s  [0.0h]
+  Art: 60,000  Train:0.071B (  7.1%)  Val:0.7M (  7.1%)  Disk:0.29GB  0.8Mtok/s  [0.0h]
+  Art: 65,000  Train:0.076B (  7.6%)  Val:0.8M (  7.7%)  Disk:0.31GB  0.8Mtok/s  [0.0h]
+  Art: 70,000  Train:0.081B (  8.1%)  Val:0.8M (  8.2%)  Disk:0.33GB  0.8Mtok/s  [0.0h]
+  Art: 75,000  Train:0.085B (  8.5%)  Val:0.9M (  8.7%)  Disk:0.35GB  0.8Mtok/s  [0.0h]
+  Art: 80,000  Train:0.090B (  9.0%)  Val:0.9M (  9.2%)  Disk:0.36GB  0.8Mtok/s  [0.0h]
+  Art: 85,000  Train:0.095B (  9.5%)  Val:1.0M (  9.7%)  Disk:0.38GB  0.8Mtok/s  [0.0h]
+  Art: 90,000  Train:0.100B ( 10.0%)  Val:1.0M ( 10.3%)  Disk:0.40GB  0.8Mtok/s  [0.0h]
+  Art: 95,000  Train:0.105B ( 10.5%)  Val:1.1M ( 10.8%)  Disk:0.42GB  0.8Mtok/s  [0.0h]
+  Art:100,000  Train:0.110B ( 11.0%)  Val:1.1M ( 11.3%)  Disk:0.44GB  0.8Mtok/s  [0.0h]
+  Art:105,000  Train:0.115B ( 11.5%)  Val:1.2M ( 12.0%)  Disk:0.46GB  0.8Mtok/s  [0.0h]
+  Art:110,000  Train:0.120B ( 12.0%)  Val:1.3M ( 12.6%)  Disk:0.48GB  0.8Mtok/s  [0.0h]
+  Art:115,000  Train:0.124B ( 12.4%)  Val:1.3M ( 13.0%)  Disk:0.50GB  0.8Mtok/s  [0.0h]
+  Art:120,000  Train:0.129B ( 12.9%)  Val:1.4M ( 13.6%)  Disk:0.52GB  0.8Mtok/s  [0.0h]
+  Art:125,000  Train:0.134B ( 13.4%)  Val:1.4M ( 14.2%)  Disk:0.54GB  0.8Mtok/s  [0.0h]
+  Art:130,000  Train:0.139B ( 13.9%)  Val:1.5M ( 14.7%)  Disk:0.56GB  0.8Mtok/s  [0.1h]
+  Art:135,000  Train:0.144B ( 14.4%)  Val:1.5M ( 15.2%)  Disk:0.58GB  0.8Mtok/s  [0.1h]
+  Art:140,000  Train:0.149B ( 14.9%)  Val:1.6M ( 15.8%)  Disk:0.60GB  0.8Mtok/s  [0.1h]
+  Art:145,000  Train:0.154B ( 15.4%)  Val:1.6M ( 16.3%)  Disk:0.62GB  0.8Mtok/s  [0.1h]
+  Art:150,000  Train:0.159B ( 15.9%)  Val:1.7M ( 16.7%)  Disk:0.64GB  0.8Mtok/s  [0.1h]
+  Art:155,000  Train:0.163B ( 16.3%)  Val:1.7M ( 17.1%)  Disk:0.66GB  0.7Mtok/s  [0.1h]
+  Art:160,000  Train:0.168B ( 16.8%)  Val:1.8M ( 17.6%)  Disk:0.68GB  0.7Mtok/s  [0.1h]
+  Art:165,000  Train:0.173B ( 17.3%)  Val:1.8M ( 18.3%)  Disk:0.70GB  0.7Mtok/s  [0.1h]
+  Art:170,000  Train:0.177B ( 17.7%)  Val:1.9M ( 18.7%)  Disk:0.72GB  0.7Mtok/s  [0.1h]
+  Art:175,000  Train:0.182B ( 18.2%)  Val:1.9M ( 19.2%)  Disk:0.74GB  0.7Mtok/s  [0.1h]
+  Art:180,000  Train:0.187B ( 18.7%)  Val:2.0M ( 19.7%)  Disk:0.75GB  0.7Mtok/s  [0.1h]
+  Art:185,000  Train:0.192B ( 19.2%)  Val:2.0M ( 20.4%)  Disk:0.78GB  0.7Mtok/s  [0.1h]
+  Art:190,000  Train:0.197B ( 19.7%)  Val:2.1M ( 21.0%)  Disk:0.79GB  0.7Mtok/s  [0.1h]
+  Art:195,000  Train:0.201B ( 20.1%)  Val:2.1M ( 21.3%)  Disk:0.81GB  0.7Mtok/s  [0.1h]
+  Art:200,000  Train:0.206B ( 20.6%)  Val:2.2M ( 21.7%)  Disk:0.83GB  0.7Mtok/s  [0.1h]
+  Art:205,000  Train:0.211B ( 21.1%)  Val:2.2M ( 22.1%)  Disk:0.85GB  0.7Mtok/s  [0.1h]
+  Art:210,000  Train:0.215B ( 21.5%)  Val:2.3M ( 22.5%)  Disk:0.87GB  0.7Mtok/s  [0.1h]
+  Art:215,000  Train:0.220B ( 22.0%)  Val:2.3M ( 23.0%)  Disk:0.89GB  0.7Mtok/s  [0.1h]
+  Art:220,000  Train:0.224B ( 22.4%)  Val:2.3M ( 23.3%)  Disk:0.90GB  0.7Mtok/s  [0.1h]
+  Art:225,000  Train:0.228B ( 22.8%)  Val:2.4M ( 23.8%)  Disk:0.92GB  0.7Mtok/s  [0.1h]
+  Art:230,000  Train:0.233B ( 23.3%)  Val:2.4M ( 24.4%)  Disk:0.94GB  0.7Mtok/s  [0.1h]
+  Art:235,000  Train:0.237B ( 23.7%)  Val:2.5M ( 24.8%)  Disk:0.96GB  0.7Mtok/s  [0.1h]
+  Art:240,000  Train:0.242B ( 24.2%)  Val:2.5M ( 25.1%)  Disk:0.98GB  0.7Mtok/s  [0.1h]
+  Art:245,000  Train:0.246B ( 24.6%)  Val:2.6M ( 25.7%)  Disk:1.00GB  0.7Mtok/s  [0.1h]
+  Art:250,000  Train:0.251B ( 25.1%)  Val:2.6M ( 26.1%)  Disk:1.01GB  0.6Mtok/s  [0.1h]
+  Art:255,000  Train:0.255B ( 25.5%)  Val:2.6M ( 26.5%)  Disk:1.03GB  0.6Mtok/s  [0.1h]
+  Art:260,000  Train:0.260B ( 26.0%)  Val:2.7M ( 26.8%)  Disk:1.05GB  0.6Mtok/s  [0.1h]
+  Art:265,000  Train:0.264B ( 26.4%)  Val:2.7M ( 27.5%)  Disk:1.07GB  0.6Mtok/s  [0.1h]
+  Art:270,000  Train:0.269B ( 26.9%)  Val:2.8M ( 27.9%)  Disk:1.09GB  0.6Mtok/s  [0.1h]
+  Art:275,000  Train:0.273B ( 27.3%)  Val:2.8M ( 28.4%)  Disk:1.10GB  0.6Mtok/s  [0.1h]
+  Art:280,000  Train:0.277B ( 27.7%)  Val:2.9M ( 29.0%)  Disk:1.12GB  0.6Mtok/s  [0.1h]
+  Art:285,000  Train:0.282B ( 28.2%)  Val:3.0M ( 29.5%)  Disk:1.14GB  0.6Mtok/s  [0.1h]
+  Art:290,000  Train:0.286B ( 28.6%)  Val:3.0M ( 30.0%)  Disk:1.16GB  0.6Mtok/s  [0.1h]
+  Art:295,000  Train:0.291B ( 29.1%)  Val:3.0M ( 30.4%)  Disk:1.18GB  0.6Mtok/s  [0.1h]
+  Art:300,000  Train:0.295B ( 29.5%)  Val:3.1M ( 30.8%)  Disk:1.19GB  0.6Mtok/s  [0.1h]
+  Art:305,000  Train:0.298B ( 29.8%)  Val:3.1M ( 31.2%)  Disk:1.21GB  0.6Mtok/s  [0.1h]
+  Art:310,000  Train:0.303B ( 30.3%)  Val:3.2M ( 31.6%)  Disk:1.22GB  0.6Mtok/s  [0.1h]
+  Art:315,000  Train:0.307B ( 30.7%)  Val:3.2M ( 32.0%)  Disk:1.24GB  0.6Mtok/s  [0.1h]
+  Art:320,000  Train:0.310B ( 31.0%)  Val:3.2M ( 32.4%)  Disk:1.25GB  0.6Mtok/s  [0.1h]
+  Art:325,000  Train:0.314B ( 31.4%)  Val:3.3M ( 32.7%)  Disk:1.27GB  0.6Mtok/s  [0.2h]
+  Art:330,000  Train:0.318B ( 31.8%)  Val:3.3M ( 33.2%)  Disk:1.29GB  0.6Mtok/s  [0.2h]
+  Art:335,000  Train:0.322B ( 32.2%)  Val:3.4M ( 33.6%)  Disk:1.30GB  0.6Mtok/s  [0.2h]
+  Art:340,000  Train:0.326B ( 32.6%)  Val:3.4M ( 33.9%)  Disk:1.32GB  0.6Mtok/s  [0.2h]
+  Art:345,000  Train:0.330B ( 33.0%)  Val:3.4M ( 34.3%)  Disk:1.34GB  0.6Mtok/s  [0.2h]
+  Art:350,000  Train:0.335B ( 33.5%)  Val:3.5M ( 34.7%)  Disk:1.35GB  0.6Mtok/s  [0.2h]
+  Art:355,000  Train:0.340B ( 34.0%)  Val:3.5M ( 35.1%)  Disk:1.37GB  0.6Mtok/s  [0.2h]
+  Art:360,000  Train:0.344B ( 34.4%)  Val:3.6M ( 35.7%)  Disk:1.39GB  0.6Mtok/s  [0.2h]
+  Art:365,000  Train:0.348B ( 34.8%)  Val:3.6M ( 36.0%)  Disk:1.41GB  0.6Mtok/s  [0.2h]
+  Art:370,000  Train:0.352B ( 35.2%)  Val:3.7M ( 36.5%)  Disk:1.42GB  0.6Mtok/s  [0.2h]
+  Art:375,000  Train:0.357B ( 35.7%)  Val:3.7M ( 36.9%)  Disk:1.44GB  0.6Mtok/s  [0.2h]
+  Art:380,000  Train:0.361B ( 36.1%)  Val:3.7M ( 37.2%)  Disk:1.46GB  0.6Mtok/s  [0.2h]
+  Art:385,000  Train:0.365B ( 36.5%)  Val:3.8M ( 37.6%)  Disk:1.48GB  0.6Mtok/s  [0.2h]
+  Art:390,000  Train:0.369B ( 36.9%)  Val:3.8M ( 38.0%)  Disk:1.49GB  0.6Mtok/s  [0.2h]
+  Art:395,000  Train:0.373B ( 37.3%)  Val:3.9M ( 38.6%)  Disk:1.51GB  0.6Mtok/s  [0.2h]
+  Art:400,000  Train:0.377B ( 37.7%)  Val:3.9M ( 38.9%)  Disk:1.52GB  0.6Mtok/s  [0.2h]
+  Art:405,000  Train:0.382B ( 38.2%)  Val:3.9M ( 39.4%)  Disk:1.54GB  0.6Mtok/s  [0.2h]
+  Art:410,000  Train:0.386B ( 38.6%)  Val:4.0M ( 39.8%)  Disk:1.56GB  0.6Mtok/s  [0.2h]
+  Art:415,000  Train:0.390B ( 39.0%)  Val:4.0M ( 40.3%)  Disk:1.58GB  0.6Mtok/s  [0.2h]
+  Art:420,000  Train:0.394B ( 39.4%)  Val:4.1M ( 40.7%)  Disk:1.59GB  0.6Mtok/s  [0.2h]
+  Art:425,000  Train:0.399B ( 39.9%)  Val:4.1M ( 41.3%)  Disk:1.61GB  0.6Mtok/s  [0.2h]
+  Art:430,000  Train:0.403B ( 40.3%)  Val:4.2M ( 41.7%)  Disk:1.63GB  0.6Mtok/s  [0.2h]
+  Art:435,000  Train:0.407B ( 40.7%)  Val:4.2M ( 42.1%)  Disk:1.65GB  0.6Mtok/s  [0.2h]
+  Art:440,000  Train:0.411B ( 41.1%)  Val:4.2M ( 42.4%)  Disk:1.66GB  0.6Mtok/s  [0.2h]
+  Art:445,000  Train:0.415B ( 41.5%)  Val:4.3M ( 42.8%)  Disk:1.68GB  0.6Mtok/s  [0.2h]
+  Art:450,000  Train:0.420B ( 42.0%)  Val:4.3M ( 43.2%)  Disk:1.70GB  0.6Mtok/s  [0.2h]
+  Art:455,000  Train:0.424B ( 42.4%)  Val:4.4M ( 43.6%)  Disk:1.71GB  0.6Mtok/s  [0.2h]
+  Art:460,000  Train:0.428B ( 42.8%)  Val:4.4M ( 44.2%)  Disk:1.73GB  0.6Mtok/s  [0.2h]
+  Art:465,000  Train:0.432B ( 43.2%)  Val:4.5M ( 44.6%)  Disk:1.75GB  0.6Mtok/s  [0.2h]
+  Art:470,000  Train:0.436B ( 43.6%)  Val:4.5M ( 45.0%)  Disk:1.76GB  0.6Mtok/s  [0.2h]
+  Art:475,000  Train:0.441B ( 44.1%)  Val:4.5M ( 45.5%)  Disk:1.78GB  0.6Mtok/s  [0.2h]
+  Art:480,000  Train:0.445B ( 44.5%)  Val:4.6M ( 45.9%)  Disk:1.80GB  0.6Mtok/s  [0.2h]
+  Art:485,000  Train:0.449B ( 44.9%)  Val:4.6M ( 46.2%)  Disk:1.81GB  0.6Mtok/s  [0.2h]
+  Art:490,000  Train:0.453B ( 45.3%)  Val:4.7M ( 46.5%)  Disk:1.83GB  0.6Mtok/s  [0.2h]
+  Art:495,000  Train:0.457B ( 45.7%)  Val:4.7M ( 47.0%)  Disk:1.85GB  0.6Mtok/s  [0.2h]
+  Art:500,000  Train:0.462B ( 46.2%)  Val:4.7M ( 47.4%)  Disk:1.87GB  0.6Mtok/s  [0.2h]
+  Art:505,000  Train:0.466B ( 46.6%)  Val:4.8M ( 47.9%)  Disk:1.88GB  0.6Mtok/s  [0.2h]
+  Art:510,000  Train:0.470B ( 47.0%)  Val:4.8M ( 48.4%)  Disk:1.90GB  0.6Mtok/s  [0.2h]
+  Art:515,000  Train:0.475B ( 47.5%)  Val:4.9M ( 48.7%)  Disk:1.92GB  0.6Mtok/s  [0.2h]
+  Art:520,000  Train:0.480B ( 48.0%)  Val:4.9M ( 49.3%)  Disk:1.94GB  0.6Mtok/s  [0.2h]
+  Art:525,000  Train:0.484B ( 48.4%)  Val:5.0M ( 49.7%)  Disk:1.96GB  0.6Mtok/s  [0.2h]
+  Art:530,000  Train:0.488B ( 48.8%)  Val:5.0M ( 50.2%)  Disk:1.97GB  0.6Mtok/s  [0.2h]
+  Art:535,000  Train:0.493B ( 49.3%)  Val:5.1M ( 50.5%)  Disk:1.99GB  0.6Mtok/s  [0.2h]
+  Art:540,000  Train:0.497B ( 49.7%)  Val:5.1M ( 51.1%)  Disk:2.01GB  0.6Mtok/s  [0.2h]
+  Art:545,000  Train:0.501B ( 50.1%)  Val:5.1M ( 51.5%)  Disk:2.02GB  0.6Mtok/s  [0.2h]
+  Art:550,000  Train:0.505B ( 50.5%)  Val:5.2M ( 51.9%)  Disk:2.04GB  0.6Mtok/s  [0.2h]
+  Art:555,000  Train:0.509B ( 50.9%)  Val:5.2M ( 52.4%)  Disk:2.06GB  0.6Mtok/s  [0.2h]
+  Art:560,000  Train:0.514B ( 51.4%)  Val:5.3M ( 52.7%)  Disk:2.08GB  0.6Mtok/s  [0.2h]
+  Art:565,000  Train:0.518B ( 51.8%)  Val:5.3M ( 53.0%)  Disk:2.09GB  0.6Mtok/s  [0.2h]
+  Art:570,000  Train:0.524B ( 52.4%)  Val:5.4M ( 53.7%)  Disk:2.12GB  0.6Mtok/s  [0.2h]
+  Art:575,000  Train:0.528B ( 52.8%)  Val:5.4M ( 54.0%)  Disk:2.13GB  0.6Mtok/s  [0.2h]
+  Art:580,000  Train:0.532B ( 53.2%)  Val:5.5M ( 54.5%)  Disk:2.15GB  0.6Mtok/s  [0.2h]
+  Art:585,000  Train:0.536B ( 53.6%)  Val:5.5M ( 55.0%)  Disk:2.17GB  0.6Mtok/s  [0.2h]
+  Art:590,000  Train:0.540B ( 54.0%)  Val:5.5M ( 55.5%)  Disk:2.18GB  0.6Mtok/s  [0.2h]
+  Art:595,000  Train:0.544B ( 54.4%)  Val:5.6M ( 55.7%)  Disk:2.20GB  0.6Mtok/s  [0.2h]
+  Art:600,000  Train:0.548B ( 54.8%)  Val:5.6M ( 56.2%)  Disk:2.21GB  0.6Mtok/s  [0.2h]
+  Art:605,000  Train:0.552B ( 55.2%)  Val:5.7M ( 56.7%)  Disk:2.23GB  0.7Mtok/s  [0.2h]
+  Art:610,000  Train:0.556B ( 55.6%)  Val:5.7M ( 57.1%)  Disk:2.25GB  0.7Mtok/s  [0.2h]
+  Art:615,000  Train:0.559B ( 55.9%)  Val:5.8M ( 57.5%)  Disk:2.26GB  0.6Mtok/s  [0.2h]
+  Art:620,000  Train:0.564B ( 56.4%)  Val:5.8M ( 58.0%)  Disk:2.28GB  0.7Mtok/s  [0.2h]
+  Art:625,000  Train:0.567B ( 56.7%)  Val:5.8M ( 58.3%)  Disk:2.29GB  0.7Mtok/s  [0.2h]
+  Art:630,000  Train:0.570B ( 57.0%)  Val:5.9M ( 58.7%)  Disk:2.31GB  0.7Mtok/s  [0.2h]
+  Art:635,000  Train:0.575B ( 57.5%)  Val:5.9M ( 59.2%)  Disk:2.32GB  0.7Mtok/s  [0.2h]
+  Art:640,000  Train:0.579B ( 57.9%)  Val:6.0M ( 59.5%)  Disk:2.34GB  0.7Mtok/s  [0.2h]
+  Art:645,000  Train:0.583B ( 58.3%)  Val:6.0M ( 59.9%)  Disk:2.35GB  0.7Mtok/s  [0.2h]
+  Art:650,000  Train:0.587B ( 58.7%)  Val:6.0M ( 60.5%)  Disk:2.37GB  0.7Mtok/s  [0.3h]
+  Art:655,000  Train:0.591B ( 59.1%)  Val:6.1M ( 60.9%)  Disk:2.39GB  0.7Mtok/s  [0.3h]
+  Art:660,000  Train:0.595B ( 59.5%)  Val:6.1M ( 61.2%)  Disk:2.41GB  0.7Mtok/s  [0.3h]
+  Art:665,000  Train:0.599B ( 59.9%)  Val:6.2M ( 61.6%)  Disk:2.42GB  0.7Mtok/s  [0.3h]
+  Art:670,000  Train:0.603B ( 60.3%)  Val:6.2M ( 61.9%)  Disk:2.44GB  0.7Mtok/s  [0.3h]
+  Art:675,000  Train:0.607B ( 60.7%)  Val:6.2M ( 62.2%)  Disk:2.45GB  0.7Mtok/s  [0.3h]
+  Art:680,000  Train:0.611B ( 61.1%)  Val:6.3M ( 62.7%)  Disk:2.47GB  0.7Mtok/s  [0.3h]
+  Art:685,000  Train:0.616B ( 61.6%)  Val:6.3M ( 63.2%)  Disk:2.49GB  0.7Mtok/s  [0.3h]
+  Art:690,000  Train:0.620B ( 62.0%)  Val:6.4M ( 63.6%)  Disk:2.50GB  0.7Mtok/s  [0.3h]
+  Art:695,000  Train:0.624B ( 62.4%)  Val:6.4M ( 64.0%)  Disk:2.52GB  0.7Mtok/s  [0.3h]
+  Art:700,000  Train:0.628B ( 62.8%)  Val:6.4M ( 64.3%)  Disk:2.54GB  0.7Mtok/s  [0.3h]
+  Art:705,000  Train:0.632B ( 63.2%)  Val:6.5M ( 64.7%)  Disk:2.55GB  0.7Mtok/s  [0.3h]
+  Art:710,000  Train:0.636B ( 63.6%)  Val:6.5M ( 65.1%)  Disk:2.57GB  0.7Mtok/s  [0.3h]
+  Art:715,000  Train:0.640B ( 64.0%)  Val:6.5M ( 65.4%)  Disk:2.59GB  0.7Mtok/s  [0.3h]
+  Art:720,000  Train:0.644B ( 64.4%)  Val:6.6M ( 65.9%)  Disk:2.60GB  0.7Mtok/s  [0.3h]
+  Art:725,000  Train:0.648B ( 64.8%)  Val:6.6M ( 66.1%)  Disk:2.62GB  0.7Mtok/s  [0.3h]
+  Art:730,000  Train:0.651B ( 65.1%)  Val:6.7M ( 66.6%)  Disk:2.63GB  0.7Mtok/s  [0.3h]
+  Art:735,000  Train:0.656B ( 65.6%)  Val:6.7M ( 66.9%)  Disk:2.65GB  0.7Mtok/s  [0.3h]
+  Art:740,000  Train:0.660B ( 66.0%)  Val:6.7M ( 67.2%)  Disk:2.67GB  0.7Mtok/s  [0.3h]
+  Art:745,000  Train:0.664B ( 66.4%)  Val:6.8M ( 67.6%)  Disk:2.68GB  0.7Mtok/s  [0.3h]
+  Art:750,000  Train:0.668B ( 66.8%)  Val:6.8M ( 68.0%)  Disk:2.70GB  0.7Mtok/s  [0.3h]
+  Art:755,000  Train:0.671B ( 67.1%)  Val:6.8M ( 68.4%)  Disk:2.71GB  0.7Mtok/s  [0.3h]
+  Art:760,000  Train:0.675B ( 67.5%)  Val:6.9M ( 68.7%)  Disk:2.73GB  0.7Mtok/s  [0.3h]
+  Art:765,000  Train:0.679B ( 67.9%)  Val:6.9M ( 69.1%)  Disk:2.74GB  0.7Mtok/s  [0.3h]
+  Art:770,000  Train:0.683B ( 68.3%)  Val:6.9M ( 69.4%)  Disk:2.76GB  0.7Mtok/s  [0.3h]
+  Art:775,000  Train:0.687B ( 68.7%)  Val:7.0M ( 69.7%)  Disk:2.78GB  0.7Mtok/s  [0.3h]
+  Art:780,000  Train:0.691B ( 69.1%)  Val:7.0M ( 70.2%)  Disk:2.79GB  0.7Mtok/s  [0.3h]
+  Art:785,000  Train:0.695B ( 69.5%)  Val:7.1M ( 70.9%)  Disk:2.81GB  0.7Mtok/s  [0.3h]
+  Art:790,000  Train:0.699B ( 69.9%)  Val:7.1M ( 71.3%)  Disk:2.82GB  0.7Mtok/s  [0.3h]
+  Art:795,000  Train:0.701B ( 70.1%)  Val:7.2M ( 71.6%)  Disk:2.83GB  0.7Mtok/s  [0.3h]
+  Art:800,000  Train:0.705B ( 70.5%)  Val:7.2M ( 71.9%)  Disk:2.85GB  0.7Mtok/s  [0.3h]
+  Art:805,000  Train:0.709B ( 70.9%)  Val:7.2M ( 72.3%)  Disk:2.87GB  0.7Mtok/s  [0.3h]
+  Art:810,000  Train:0.713B ( 71.3%)  Val:7.3M ( 72.8%)  Disk:2.88GB  0.7Mtok/s  [0.3h]
+  Art:815,000  Train:0.716B ( 71.6%)  Val:7.3M ( 73.0%)  Disk:2.89GB  0.7Mtok/s  [0.3h]
+  Art:820,000  Train:0.718B ( 71.8%)  Val:7.3M ( 73.2%)  Disk:2.90GB  0.7Mtok/s  [0.3h]
+  Art:825,000  Train:0.721B ( 72.1%)  Val:7.3M ( 73.4%)  Disk:2.91GB  0.7Mtok/s  [0.3h]
+  Art:830,000  Train:0.724B ( 72.4%)  Val:7.4M ( 73.9%)  Disk:2.93GB  0.7Mtok/s  [0.3h]
+  Art:835,000  Train:0.728B ( 72.8%)  Val:7.4M ( 74.2%)  Disk:2.94GB  0.7Mtok/s  [0.3h]
+  Art:840,000  Train:0.731B ( 73.1%)  Val:7.4M ( 74.4%)  Disk:2.95GB  0.7Mtok/s  [0.3h]
+  Art:845,000  Train:0.735B ( 73.5%)  Val:7.5M ( 74.8%)  Disk:2.97GB  0.7Mtok/s  [0.3h]
+  Art:850,000  Train:0.737B ( 73.7%)  Val:7.5M ( 75.1%)  Disk:2.98GB  0.7Mtok/s  [0.3h]
+  Art:855,000  Train:0.740B ( 74.0%)  Val:7.5M ( 75.3%)  Disk:2.99GB  0.7Mtok/s  [0.3h]
+  Art:860,000  Train:0.743B ( 74.3%)  Val:7.6M ( 75.5%)  Disk:3.00GB  0.7Mtok/s  [0.3h]
+  Art:865,000  Train:0.747B ( 74.7%)  Val:7.6M ( 75.8%)  Disk:3.02GB  0.7Mtok/s  [0.3h]
+  Art:870,000  Train:0.750B ( 75.0%)  Val:7.6M ( 76.0%)  Disk:3.03GB  0.7Mtok/s  [0.3h]
+  Art:875,000  Train:0.753B ( 75.3%)  Val:7.6M ( 76.4%)  Disk:3.04GB  0.7Mtok/s  [0.3h]
+  Art:880,000  Train:0.756B ( 75.6%)  Val:7.7M ( 76.6%)  Disk:3.05GB  0.7Mtok/s  [0.3h]
+  Art:885,000  Train:0.757B ( 75.7%)  Val:7.7M ( 76.8%)  Disk:3.06GB  0.7Mtok/s  [0.3h]
+  Art:890,000  Train:0.761B ( 76.1%)  Val:7.7M ( 77.2%)  Disk:3.07GB  0.7Mtok/s  [0.3h]
+  Art:895,000  Train:0.765B ( 76.5%)  Val:7.7M ( 77.5%)  Disk:3.09GB  0.7Mtok/s  [0.3h]
+  Art:900,000  Train:0.769B ( 76.9%)  Val:7.8M ( 77.8%)  Disk:3.11GB  0.7Mtok/s  [0.3h]
+  Art:905,000  Train:0.772B ( 77.2%)  Val:7.8M ( 78.1%)  Disk:3.12GB  0.7Mtok/s  [0.3h]
+  Art:910,000  Train:0.774B ( 77.4%)  Val:7.8M ( 78.3%)  Disk:3.13GB  0.7Mtok/s  [0.3h]
+  Art:915,000  Train:0.777B ( 77.7%)  Val:7.9M ( 78.7%)  Disk:3.14GB  0.7Mtok/s  [0.3h]
+  Art:920,000  Train:0.781B ( 78.1%)  Val:7.9M ( 79.0%)  Disk:3.15GB  0.7Mtok/s  [0.3h]
+  Art:925,000  Train:0.784B ( 78.4%)  Val:7.9M ( 79.4%)  Disk:3.17GB  0.7Mtok/s  [0.3h]
+  Art:930,000  Train:0.788B ( 78.8%)  Val:8.0M ( 79.7%)  Disk:3.18GB  0.7Mtok/s  [0.3h]
+  Art:935,000  Train:0.791B ( 79.1%)  Val:8.0M ( 80.1%)  Disk:3.20GB  0.7Mtok/s  [0.3h]
+  Art:940,000  Train:0.795B ( 79.5%)  Val:8.0M ( 80.4%)  Disk:3.21GB  0.7Mtok/s  [0.3h]
+  Art:945,000  Train:0.799B ( 79.9%)  Val:8.1M ( 80.7%)  Disk:3.23GB  0.7Mtok/s  [0.3h]
+  Art:950,000  Train:0.803B ( 80.3%)  Val:8.1M ( 81.0%)  Disk:3.24GB  0.7Mtok/s  [0.3h]
+  Art:955,000  Train:0.806B ( 80.6%)  Val:8.1M ( 81.4%)  Disk:3.26GB  0.7Mtok/s  [0.3h]
+  Art:960,000  Train:0.810B ( 81.0%)  Val:8.2M ( 81.7%)  Disk:3.27GB  0.7Mtok/s  [0.3h]
+  Art:965,000  Train:0.813B ( 81.3%)  Val:8.2M ( 82.0%)  Disk:3.29GB  0.7Mtok/s  [0.3h]
+  Art:970,000  Train:0.818B ( 81.8%)  Val:8.2M ( 82.3%)  Disk:3.30GB  0.7Mtok/s  [0.3h]
+  Art:975,000  Train:0.821B ( 82.1%)  Val:8.3M ( 82.6%)  Disk:3.32GB  0.7Mtok/s  [0.3h]
+  Art:980,000  Train:0.825B ( 82.5%)  Val:8.3M ( 82.9%)  Disk:3.34GB  0.7Mtok/s  [0.3h]
+  Art:985,000  Train:0.829B ( 82.9%)  Val:8.3M ( 83.4%)  Disk:3.35GB  0.7Mtok/s  [0.3h]
+  Art:990,000  Train:0.833B ( 83.3%)  Val:8.4M ( 83.7%)  Disk:3.37GB  0.7Mtok/s  [0.3h]
+  Art:995,000  Train:0.837B ( 83.7%)  Val:8.4M ( 84.1%)  Disk:3.38GB  0.7Mtok/s  [0.3h]
+  Art:1,000,000  Train:0.840B ( 84.0%)  Val:8.5M ( 84.5%)  Disk:3.40GB  0.7Mtok/s  [0.3h]
+  Art:1,005,000  Train:0.844B ( 84.4%)  Val:8.5M ( 84.8%)  Disk:3.41GB  0.7Mtok/s  [0.3h]
+  Art:1,010,000  Train:0.848B ( 84.8%)  Val:8.5M ( 85.1%)  Disk:3.43GB  0.7Mtok/s  [0.3h]
+  Art:1,015,000  Train:0.852B ( 85.2%)  Val:8.5M ( 85.5%)  Disk:3.44GB  0.7Mtok/s  [0.3h]
+  Art:1,020,000  Train:0.856B ( 85.6%)  Val:8.6M ( 85.9%)  Disk:3.46GB  0.7Mtok/s  [0.3h]
+  Art:1,025,000  Train:0.859B ( 85.9%)  Val:8.6M ( 86.2%)  Disk:3.47GB  0.7Mtok/s  [0.3h]
+  Art:1,030,000  Train:0.863B ( 86.3%)  Val:8.7M ( 86.5%)  Disk:3.48GB  0.7Mtok/s  [0.3h]
+  Art:1,035,000  Train:0.866B ( 86.6%)  Val:8.7M ( 86.9%)  Disk:3.50GB  0.7Mtok/s  [0.3h]
+  Art:1,040,000  Train:0.869B ( 86.9%)  Val:8.7M ( 87.2%)  Disk:3.51GB  0.7Mtok/s  [0.3h]
+  Art:1,045,000  Train:0.872B ( 87.2%)  Val:8.7M ( 87.5%)  Disk:3.52GB  0.7Mtok/s  [0.3h]
+  Art:1,050,000  Train:0.875B ( 87.5%)  Val:8.8M ( 87.7%)  Disk:3.53GB  0.7Mtok/s  [0.3h]
+  Art:1,055,000  Train:0.878B ( 87.8%)  Val:8.8M ( 88.1%)  Disk:3.55GB  0.7Mtok/s  [0.3h]
+  Art:1,060,000  Train:0.881B ( 88.1%)  Val:8.8M ( 88.5%)  Disk:3.56GB  0.7Mtok/s  [0.4h]
+  Art:1,065,000  Train:0.885B ( 88.5%)  Val:8.9M ( 88.8%)  Disk:3.57GB  0.7Mtok/s  [0.4h]
+  Art:1,070,000  Train:0.888B ( 88.8%)  Val:8.9M ( 89.3%)  Disk:3.59GB  0.7Mtok/s  [0.4h]
+  Art:1,075,000  Train:0.891B ( 89.1%)  Val:9.0M ( 89.6%)  Disk:3.60GB  0.7Mtok/s  [0.4h]
+  Art:1,080,000  Train:0.894B ( 89.4%)  Val:9.0M ( 90.0%)  Disk:3.61GB  0.7Mtok/s  [0.4h]
+  Art:1,085,000  Train:0.898B ( 89.8%)  Val:9.0M ( 90.3%)  Disk:3.63GB  0.7Mtok/s  [0.4h]
+  Art:1,090,000  Train:0.901B ( 90.1%)  Val:9.1M ( 90.5%)  Disk:3.64GB  0.7Mtok/s  [0.4h]
+  Art:1,095,000  Train:0.904B ( 90.4%)  Val:9.1M ( 90.8%)  Disk:3.65GB  0.7Mtok/s  [0.4h]
+  Art:1,100,000  Train:0.906B ( 90.6%)  Val:9.1M ( 91.0%)  Disk:3.66GB  0.7Mtok/s  [0.4h]
+  Art:1,105,000  Train:0.910B ( 91.0%)  Val:9.2M ( 91.5%)  Disk:3.67GB  0.7Mtok/s  [0.4h]
+  Art:1,110,000  Train:0.913B ( 91.3%)  Val:9.2M ( 91.8%)  Disk:3.69GB  0.7Mtok/s  [0.4h]
+  Art:1,115,000  Train:0.915B ( 91.5%)  Val:9.2M ( 92.0%)  Disk:3.70GB  0.7Mtok/s  [0.4h]
+  Art:1,120,000  Train:0.919B ( 91.9%)  Val:9.2M ( 92.3%)  Disk:3.71GB  0.7Mtok/s  [0.4h]
+  Art:1,125,000  Train:0.922B ( 92.2%)  Val:9.3M ( 92.7%)  Disk:3.73GB  0.7Mtok/s  [0.4h]
+  Art:1,130,000  Train:0.925B ( 92.5%)  Val:9.3M ( 93.4%)  Disk:3.74GB  0.7Mtok/s  [0.4h]
+  Art:1,135,000  Train:0.927B ( 92.7%)  Val:9.4M ( 93.5%)  Disk:3.75GB  0.7Mtok/s  [0.4h]
+  Art:1,140,000  Train:0.930B ( 93.0%)  Val:9.4M ( 93.9%)  Disk:3.76GB  0.7Mtok/s  [0.4h]
+  Art:1,145,000  Train:0.932B ( 93.2%)  Val:9.4M ( 94.1%)  Disk:3.77GB  0.7Mtok/s  [0.4h]
+  Art:1,150,000  Train:0.936B ( 93.6%)  Val:9.4M ( 94.4%)  Disk:3.78GB  0.7Mtok/s  [0.4h]
+  Art:1,155,000  Train:0.939B ( 93.9%)  Val:9.5M ( 94.7%)  Disk:3.80GB  0.7Mtok/s  [0.4h]
+  Art:1,160,000  Train:0.943B ( 94.3%)  Val:9.5M ( 95.1%)  Disk:3.81GB  0.7Mtok/s  [0.4h]
+  Art:1,165,000  Train:0.946B ( 94.6%)  Val:9.5M ( 95.5%)  Disk:3.82GB  0.7Mtok/s  [0.4h]
+  Art:1,170,000  Train:0.950B ( 95.0%)  Val:9.6M ( 95.8%)  Disk:3.84GB  0.7Mtok/s  [0.4h]
+  Art:1,175,000  Train:0.954B ( 95.4%)  Val:9.6M ( 96.2%)  Disk:3.85GB  0.7Mtok/s  [0.4h]
+  Art:1,180,000  Train:0.957B ( 95.7%)  Val:9.6M ( 96.5%)  Disk:3.87GB  0.7Mtok/s  [0.4h]
+  Art:1,185,000  Train:0.961B ( 96.1%)  Val:9.7M ( 96.8%)  Disk:3.88GB  0.7Mtok/s  [0.4h]
+  Art:1,190,000  Train:0.964B ( 96.4%)  Val:9.7M ( 97.4%)  Disk:3.90GB  0.7Mtok/s  [0.4h]
+  Art:1,195,000  Train:0.968B ( 96.8%)  Val:9.8M ( 97.7%)  Disk:3.91GB  0.7Mtok/s  [0.4h]
+  Art:1,200,000  Train:0.971B ( 97.1%)  Val:9.8M ( 98.0%)  Disk:3.92GB  0.7Mtok/s  [0.4h]
+  Art:1,205,000  Train:0.975B ( 97.5%)  Val:9.8M ( 98.4%)  Disk:3.94GB  0.7Mtok/s  [0.4h]
+  Art:1,210,000  Train:0.978B ( 97.8%)  Val:9.9M ( 98.7%)  Disk:3.95GB  0.7Mtok/s  [0.4h]
+  Art:1,215,000  Train:0.981B ( 98.1%)  Val:9.9M ( 99.0%)  Disk:3.97GB  0.7Mtok/s  [0.4h]
+  Art:1,220,000  Train:0.985B ( 98.5%)  Val:9.9M ( 99.4%)  Disk:3.98GB  0.7Mtok/s  [0.4h]
+  Art:1,225,000  Train:0.988B ( 98.8%)  Val:10.0M ( 99.7%)  Disk:3.99GB  0.7Mtok/s  [0.4h]
+  Art:1,230,000  Train:0.992B ( 99.2%)  Val:10.0M (100.0%)  Disk:4.01GB  0.7Mtok/s  [0.4h]
+  Art:1,235,000  Train:0.995B ( 99.5%)  Val:10.0M (100.0%)  Disk:4.02GB  0.7Mtok/s  [0.4h]
+  Art:1,240,000  Train:0.999B ( 99.9%)  Val:10.0M (100.0%)  Disk:4.03GB  0.7Mtok/s  [0.4h]
+
+══════════════════════════════════════════════════════════════
+  Wikipedia download complete!
+  Articles processed : 1,241,851
+  Train tokens       : 1,000,000,010  (4.00 GB)
+  Val   tokens       : 10,000,003  (40.0 MB)
+  Total time         : 0.4h
+══════════════════════════════════════════════════════════════
+
+✔  Cached to: /home/sem10/Desktop/nlpProj/data/phase2_wikipedia
+
+✔  All requested datasets ready.
+
+=== Download complete. Starting Phase 2 Training: Sat Apr 18 05:59:08 EDT 2026 ===
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: divydobariya11 (divydobariya11-international-institute-of-information-te) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run de6rz7ai
+wandb: Tracking run with wandb version 0.26.0
+wandb: Run data is saved locally in /home/sem10/Desktop/nlpProj/wandb/run-20260418_055911-de6rz7ai
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run phase2_wikipedia_124M
+wandb: ⭐️ View project at https://wandb.ai/divydobariya11-international-institute-of-information-te/curriculum_lm
+wandb: 🚀 View run at https://wandb.ai/divydobariya11-international-institute-of-information-te/curriculum_lm/runs/de6rz7ai
+
+  Device  : cuda
+  GPU     : NVIDIA GeForce RTX 4060 Ti
+  VRAM    : 16.7 GB
+  CUDA    : 12.1
+  W&B     : https://wandb.ai/divydobariya11-international-institute-of-information-te/curriculum_lm/runs/de6rz7ai
+
+Loading tokenizer …
+  Loading Phase 1 tokenizer from /home/sem10/Desktop/nlpProj/checkpoints/phase1/tokenizer …
+  Vocab size  : 50,257
+  EOS token   : '<|endoftext|>'  (id=50256)
+
+Loading Wikipedia datasets …
+Loading Wikipedia binary token cache …
+  WikiBinDataset : train_tokens.bin  1.000B tokens  → 1,953,124 blocks  (block=512, stride=512)
+  WikiBinDataset : val_tokens.bin  0.010B tokens  → 19,530 blocks  (block=512, stride=512)
+  Train batches : 122,071
+  Val   batches : 611
+
+  Model Architecture: Decoder-Only Transformer (GPT-style)
+  ──────────────────────────────────────────────
+  Total trainable parameters : 123.96 M
+    token_emb               38.60 M
+    pos_emb                  0.39 M
+    blocks                  84.97 M
+    ln_final                 0.00 M
+    lm_head                 38.60 M
+  ──────────────────────────────────────────────
+  Note: lm_head weights are TIED to token_emb (not double-counted)
+
+
+═════════════════════════════════════════════════════════════════
+  CURRICULUM LEARNING — Loading Phase 1 weights
+  Source: /home/sem10/Desktop/nlpProj/checkpoints/phase1/best_model.pt
+  Phase 1 val PPL  : 3.28  (TinyStories)
+  Phase 2 target   : lower PPL on Wikipedia corpus
+  LR               : 1e-04  (Phase 1 was 3e-4, ×3 lower)
+═════════════════════════════════════════════════════════════════
+
+═════════════════════════════════════════════════════════════════
+  Phase-2 Training — Wikipedia EN  |  124M decoder-only Transformer
+  Curriculum    : Phase 1 (TinyStories) → Phase 2 (Wikipedia)
+  Epochs        : 1 → 3
+  Effective batch: 16 × 8 = 128
+  Total steps   : 45,777  (warmup: 1,000)
+  LR            : 1e-04 → 1e-05  (cosine)
+  AMP (fp16)    : True
+═════════════════════════════════════════════════════════════════
+
+  Ep 01 | step    200 | loss 7.3763 | ppl  1597.68 | lr 1.99e-05 | 437s elapsed
+  Ep 01 | step    400 | loss 6.7479 | ppl   852.29 | lr 3.99e-05 | 874s elapsed
+  Ep 01 | step    600 | loss 6.3174 | ppl   554.16 | lr 5.99e-05 | 1311s elapsed
+  Ep 01 | step    800 | loss 5.9944 | ppl   401.18 | lr 7.99e-05 | 1747s elapsed
+  Ep 01 | step   1000 | loss 5.7415 | ppl   311.54 | lr 9.99e-05 | 2184s elapsed
+  Ep 01 | step   1200 | loss 5.5341 | ppl   253.19 | lr 1.00e-04 | 2620s elapsed
+  Ep 01 | step   1400 | loss 5.3616 | ppl   213.06 | lr 1.00e-04 | 3057s elapsed
+  Ep 01 | step   1600 | loss 5.2168 | ppl   184.35 | lr 1.00e-04 | 3493s elapsed
+  Ep 01 | step   1800 | loss 5.0946 | ppl   163.14 | lr 9.99e-05 | 3929s elapsed
+  Ep 01 | step   2000 | loss 4.9890 | ppl   146.79 | lr 9.99e-05 | 4365s elapsed
+  Ep 01 | step   2200 | loss 4.8971 | ppl   133.90 | lr 9.98e-05 | 4802s elapsed
+  Ep 01 | step   2400 | loss 4.8160 | ppl   123.47 | lr 9.98e-05 | 5238s elapsed
+  Ep 01 | step   2600 | loss 4.7440 | ppl   114.90 | lr 9.97e-05 | 5675s elapsed
+  Ep 01 | step   2800 | loss 4.6792 | ppl   107.69 | lr 9.96e-05 | 6111s elapsed
+  Ep 01 | step   3000 | loss 4.6208 | ppl   101.58 | lr 9.96e-05 | 6547s elapsed
+  Ep 01 | step   3200 | loss 4.5681 | ppl    96.37 | lr 9.95e-05 | 6983s elapsed
+  Ep 01 | step   3400 | loss 4.5196 | ppl    91.79 | lr 9.94e-05 | 7420s elapsed
+  Ep 01 | step   3600 | loss 4.4754 | ppl    87.83 | lr 9.93e-05 | 7856s elapsed
+  Ep 01 | step   3800 | loss 4.4346 | ppl    84.32 | lr 9.91e-05 | 8292s elapsed
+  Ep 01 | step   4000 | loss 4.3963 | ppl    81.15 | lr 9.90e-05 | 8729s elapsed
+  Ep 01 | step   4200 | loss 4.3608 | ppl    78.32 | lr 9.89e-05 | 9165s elapsed
+  Ep 01 | step   4400 | loss 4.3279 | ppl    75.79 | lr 9.87e-05 | 9601s elapsed
+  Ep 01 | step   4600 | loss 4.2970 | ppl    73.48 | lr 9.86e-05 | 10038s elapsed
+  Ep 01 | step   4800 | loss 4.2683 | ppl    71.40 | lr 9.84e-05 | 10474s elapsed
+  Ep 01 | step   5000 | loss 4.2412 | ppl    69.49 | lr 9.82e-05 | 10910s elapsed
+  Ep 01 | step   5200 | loss 4.2155 | ppl    67.73 | lr 9.81e-05 | 11347s elapsed
+  Ep 01 | step   5400 | loss 4.1914 | ppl    66.12 | lr 9.79e-05 | 11783s elapsed
+  Ep 01 | step   5600 | loss 4.1683 | ppl    64.61 | lr 9.77e-05 | 12220s elapsed
+  Ep 01 | step   5800 | loss 4.1463 | ppl    63.20 | lr 9.75e-05 | 12656s elapsed
+  Ep 01 | step   6000 | loss 4.1254 | ppl    61.89 | lr 9.73e-05 | 13093s elapsed
+  Ep 01 | step   6200 | loss 4.1054 | ppl    60.67 | lr 9.70e-05 | 13529s elapsed
+  Ep 01 | step   6400 | loss 4.0865 | ppl    59.53 | lr 9.68e-05 | 13966s elapsed
+  Ep 01 | step   6600 | loss 4.0684 | ppl    58.46 | lr 9.66e-05 | 14402s elapsed
+  Ep 01 | step   6800 | loss 4.0511 | ppl    57.46 | lr 9.63e-05 | 14839s elapsed
+  Ep 01 | step   7000 | loss 4.0346 | ppl    56.52 | lr 9.61e-05 | 15275s elapsed
+  Ep 01 | step   7200 | loss 4.0187 | ppl    55.63 | lr 9.58e-05 | 15712s elapsed
+  Ep 01 | step   7400 | loss 4.0033 | ppl    54.78 | lr 9.55e-05 | 16148s elapsed
+  Ep 01 | step   7600 | loss 3.9886 | ppl    53.98 | lr 9.53e-05 | 16585s elapsed
+  Ep 01 | step   7800 | loss 3.9743 | ppl    53.21 | lr 9.50e-05 | 17021s elapsed
+  Ep 01 | step   8000 | loss 3.9608 | ppl    52.50 | lr 9.47e-05 | 17457s elapsed
+  Ep 01 | step   8200 | loss 3.9478 | ppl    51.82 | lr 9.44e-05 | 17894s elapsed
+  Ep 01 | step   8400 | loss 3.9350 | ppl    51.16 | lr 9.41e-05 | 18331s elapsed
+  Ep 01 | step   8600 | loss 3.9227 | ppl    50.54 | lr 9.38e-05 | 18767s elapsed
+  Ep 01 | step   8800 | loss 3.9107 | ppl    49.94 | lr 9.34e-05 | 19204s elapsed
+  Ep 01 | step   9000 | loss 3.8992 | ppl    49.36 | lr 9.31e-05 | 19640s elapsed
+  Ep 01 | step   9200 | loss 3.8881 | ppl    48.82 | lr 9.28e-05 | 20077s elapsed
+  Ep 01 | step   9400 | loss 3.8775 | ppl    48.30 | lr 9.24e-05 | 20513s elapsed
+  Ep 01 | step   9600 | loss 3.8671 | ppl    47.80 | lr 9.21e-05 | 20950s elapsed
+  Ep 01 | step   9800 | loss 3.8571 | ppl    47.33 | lr 9.17e-05 | 21386s elapsed
+  Ep 01 | step  10000 | loss 3.8471 | ppl    46.86 | lr 9.13e-05 | 21823s elapsed
+  Ep 01 | step  10200 | loss 3.8376 | ppl    46.42 | lr 9.09e-05 | 22260s elapsed
+  Ep 01 | step  10400 | loss 3.8282 | ppl    45.98 | lr 9.06e-05 | 22696s elapsed
+  Ep 01 | step  10600 | loss 3.8194 | ppl    45.58 | lr 9.02e-05 | 23133s elapsed
+  Ep 01 | step  10800 | loss 3.8105 | ppl    45.17 | lr 8.98e-05 | 23570s elapsed
+  Ep 01 | step  11000 | loss 3.8020 | ppl    44.79 | lr 8.94e-05 | 24006s elapsed
+  Ep 01 | step  11200 | loss 3.7937 | ppl    44.42 | lr 8.90e-05 | 24443s elapsed
+  Ep 01 | step  11400 | loss 3.7854 | ppl    44.06 | lr 8.85e-05 | 24880s elapsed
+  Ep 01 | step  11600 | loss 3.7775 | ppl    43.71 | lr 8.81e-05 | 25316s elapsed
+  Ep 01 | step  11800 | loss 3.7698 | ppl    43.37 | lr 8.77e-05 | 25753s elapsed
+  Ep 01 | step  12000 | loss 3.7622 | ppl    43.04 | lr 8.73e-05 | 26189s elapsed
+  Ep 01 | step  12200 | loss 3.7548 | ppl    42.73 | lr 8.68e-05 | 26626s elapsed
+  Ep 01 | step  12400 | loss 3.7476 | ppl    42.42 | lr 8.64e-05 | 27062s elapsed
+  Ep 01 | step  12600 | loss 3.7405 | ppl    42.12 | lr 8.59e-05 | 27499s elapsed
+  Ep 01 | step  12800 | loss 3.7336 | ppl    41.83 | lr 8.54e-05 | 27935s elapsed
+  Ep 01 | step  13000 | loss 3.7269 | ppl    41.55 | lr 8.50e-05 | 28372s elapsed
+  Ep 01 | step  13200 | loss 3.7204 | ppl    41.28 | lr 8.45e-05 | 28808s elapsed
+  Ep 01 | step  13400 | loss 3.7140 | ppl    41.02 | lr 8.40e-05 | 29245s elapsed
+  Ep 01 | step  13600 | loss 3.7077 | ppl    40.76 | lr 8.35e-05 | 29681s elapsed
+  Ep 01 | step  13800 | loss 3.7016 | ppl    40.51 | lr 8.30e-05 | 30118s elapsed
+  Ep 01 | step  14000 | loss 3.6954 | ppl    40.26 | lr 8.25e-05 | 30555s elapsed
+  Ep 01 | step  14200 | loss 3.6895 | ppl    40.02 | lr 8.20e-05 | 30992s elapsed
+  Ep 01 | step  14400 | loss 3.6836 | ppl    39.79 | lr 8.15e-05 | 31428s elapsed
+  Ep 01 | step  14600 | loss 3.6778 | ppl    39.56 | lr 8.10e-05 | 31864s elapsed
+  Ep 01 | step  14800 | loss 3.6723 | ppl    39.34 | lr 8.05e-05 | 32301s elapsed
+  Ep 01 | step  15000 | loss 3.6668 | ppl    39.13 | lr 8.00e-05 | 32737s elapsed
+  Ep 01 | step  15200 | loss 3.6613 | ppl    38.91 | lr 7.95e-05 | 33174s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 01 done  (33412s  |  9.3h)
+  Train loss : 3.6598  PPL : 38.85
+  Val   loss : 3.2047  PPL : 24.65
+  Phase 1 PPL was : 3.28  (curriculum improvement: -21.37)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase2/checkpoint_epoch01.pt
+  ★ New best  (val_loss=3.2047  ppl=24.65)
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl who had heard of her mother's death.
+
+Cast 
+
+ Elizabeth Taylor as Emma "Kate" McQuinn (credited to as Florence Latham)  - Mrs McGowan
+ Brian Moore as Jim MacPherson 
+ Charles Birtchley as George Fenton
+ Peter O'Neil as himself 
+ Robert Ainsworth as James Paine
+ John Manners as Paul McQuinn   
+ Helen Woodruff as Mary McQuinn  
+ Frank Hickey as Mr Patrick McQuinn  
+ Thomas Davis Jr. as Albert McBryant
+ Robert Stewart as Sir Andrew McConorghorne  
+ William Gorman as Mr Michael McIntosh  
+ Jack Dickson as Henry Rimbaud  
+ David Cogan-Whitey as Dr Nicholas Graham  
+ Arthur Sutter as Mr Jules Smith
+ Donnie Koper as the King / The Queen 
+ Josephine Esmond as Mrs Margaret McQuinn 
+ Frederick Wray as the Princess 
+ Tanya Tucker as the Duchess Mother  
+ Freda Leachman as Lady Jane McVicott
+ Walter Shiner as Judge Fitzroy 
+ John Wesley Hughes as Courtmaster General
+ Harry West as Warden Edward Grey
+
+Release 
+The film opened on 3 November 1940 at the New York City Film Festival with 1,000 people in attendance and was watched by over 300,000 guests for an average audience of about 30
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began in the late 16th and early 17th centuries.  By this time, it was a thriving town with shops offering various religious services throughout its life. The majority consisted of wealthy merchants; they were from Rome who could easily afford to purchase goods from markets in their stores.
+
+During the First Vatican Council on November 24, 1809, Pope Pius XII issued decrees that "one can only appoint a cardinal," while not receiving the same letter as he did at St Paul's Basilica (St Paul's Cathedral). In order for Saint John Paul to return to Rome, the pope ordered his people to set aside "a number" to pay the visit to Constantinople. This was done because there had been no permanent population or political office in Europe since the fall of the Great Powers. Instead, all Greek refugees arrived, but did not see them. Some Greek immigrants settled into the town, and then built up offices within the walls. An important part of the city's Jewish community, the local Orthodox Church, is situated next door to the basilica. It is estimated that this building had 2,000 seats and has a total floor area of 1,100 square metres. Of the 490 seats (1,700 square kilometres) are located in the basilica itself, which is the largest one in Greece, making the city a popular tourist destination. A large Jewish cemetery is also located nearby, along with an exhibition hall (the original tomb of the saint), a library and a large
+
+
+  [Photosynthesis is the process by which]
+  Photosynthesis is the process by which organisms can be dispersed into a single substrate.  The species is found in different habitats, from the ocean up to 200 km away from the shoreline of Lake Eucalypus; it has been proposed that this pathway would have allowed its growth to expand in areas of the shoreline and then further enhance their growth by reducing their growth in a larger location.
+
+The eucomycete fungi are also commonly known as the clade lupis (Güntheria). They also occur on the surface of rocky ridges. Like most eucomycetes, these algae do not live off the shoreline but they are able to reach deeper water where there is only vegetation available to survive; as for example, when in H. xiforna, the presence of these fish is limited to plants such as Pritsonia and Orycterium, while the remaining marine eucomycets feed on planktonic crustaceans, as well as other marine algae like Cretanthus, Pseudomonas, Melatops, and Neotropical cephalopods such as Nenorhynchus and Prokofridon. However, a lot of eucomycetes thrive at higher concentrations in shallow marine waters, and at high levels along coastal shores. Also in this way, the larvae are thought to be able to reach high concentrations with low concentration density (in
+
+
+  [According to recent scientific research,]
+  According to recent scientific research, the primary reason for a new version of the concept was to provide additional information about the biological nature of this species.  The two proposed terms are:
+
+The first was introduced by the French biologist Pierre Baudelot in 1872 and is currently considered "one of the most important discoveries", but is not widely accepted as an adaptation of scientific evidence. He found that there were four distinct theories related to certain animals and the specific name "lephant" was coined. These concepts have also been identified as being used in experiments with the animal's ability to sense the body's visual features without revealing its eyes. This is due to the similarity of these ideas to other animals (such as the animal). In some cases, they have been replaced by various groups or groups in different areas, such as the American zoologist Albert Eusebius (1845–1928), who has argued the origins of what he called a "cinematic" concept for the genus. However, they were also able to describe several groups within the same genus: the large (or greater) group of mammals known only from the late 19th century, a group of birds known from northern Europe (including Madagascar, Morocco and Portugal), a group of geckosaurians from the Americas (especially Madagascar, Puerto Rico) and a group of moths known from Cuba. They could say that their fossilized ancestors included many vertebrates or plants, including eids, ants, spiders, etc.. Other similar
+
+────────────────────────────────────────────────────────────────
+
+  Ep 02 | step  15400 | loss 3.2359 | ppl    25.43 | lr 7.89e-05 | 309s elapsed
+  Ep 02 | step  15600 | loss 3.2330 | ppl    25.35 | lr 7.84e-05 | 745s elapsed
+  Ep 02 | step  15800 | loss 3.2326 | ppl    25.35 | lr 7.78e-05 | 1181s elapsed
+  Ep 02 | step  16000 | loss 3.2326 | ppl    25.34 | lr 7.73e-05 | 1617s elapsed
+  Ep 02 | step  16200 | loss 3.2299 | ppl    25.28 | lr 7.67e-05 | 2053s elapsed
+  Ep 02 | step  16400 | loss 3.2292 | ppl    25.26 | lr 7.62e-05 | 2489s elapsed
+  Ep 02 | step  16600 | loss 3.2286 | ppl    25.24 | lr 7.56e-05 | 2925s elapsed
+  Ep 02 | step  16800 | loss 3.2276 | ppl    25.22 | lr 7.51e-05 | 3362s elapsed
+  Ep 02 | step  17000 | loss 3.2269 | ppl    25.20 | lr 7.45e-05 | 3798s elapsed
+  Ep 02 | step  17200 | loss 3.2262 | ppl    25.18 | lr 7.39e-05 | 4234s elapsed
+  Ep 02 | step  17400 | loss 3.2251 | ppl    25.16 | lr 7.34e-05 | 4670s elapsed
+  Ep 02 | step  17600 | loss 3.2237 | ppl    25.12 | lr 7.28e-05 | 5106s elapsed
+  Ep 02 | step  17800 | loss 3.2226 | ppl    25.09 | lr 7.22e-05 | 5542s elapsed
+  Ep 02 | step  18000 | loss 3.2214 | ppl    25.06 | lr 7.16e-05 | 5978s elapsed
+  Ep 02 | step  18200 | loss 3.2200 | ppl    25.03 | lr 7.10e-05 | 6414s elapsed
+  Ep 02 | step  18400 | loss 3.2190 | ppl    25.00 | lr 7.04e-05 | 6850s elapsed
+  Ep 02 | step  18600 | loss 3.2178 | ppl    24.97 | lr 6.98e-05 | 7286s elapsed
+  Ep 02 | step  18800 | loss 3.2164 | ppl    24.94 | lr 6.92e-05 | 7722s elapsed
+  Ep 02 | step  19000 | loss 3.2150 | ppl    24.90 | lr 6.86e-05 | 8158s elapsed
+  Ep 02 | step  19200 | loss 3.2142 | ppl    24.88 | lr 6.80e-05 | 8594s elapsed
+  Ep 02 | step  19400 | loss 3.2133 | ppl    24.86 | lr 6.74e-05 | 9030s elapsed
+  Ep 02 | step  19600 | loss 3.2126 | ppl    24.84 | lr 6.68e-05 | 9467s elapsed
+  Ep 02 | step  19800 | loss 3.2115 | ppl    24.82 | lr 6.62e-05 | 9903s elapsed
+  Ep 02 | step  20000 | loss 3.2108 | ppl    24.80 | lr 6.56e-05 | 10339s elapsed
+  Ep 02 | step  20200 | loss 3.2096 | ppl    24.77 | lr 6.50e-05 | 10775s elapsed
+  Ep 02 | step  20400 | loss 3.2086 | ppl    24.74 | lr 6.44e-05 | 11212s elapsed
+  Ep 02 | step  20600 | loss 3.2074 | ppl    24.71 | lr 6.38e-05 | 11648s elapsed
+  Ep 02 | step  20800 | loss 3.2064 | ppl    24.69 | lr 6.31e-05 | 12084s elapsed
+  Ep 02 | step  21000 | loss 3.2053 | ppl    24.66 | lr 6.25e-05 | 12521s elapsed
+  Ep 02 | step  21200 | loss 3.2042 | ppl    24.63 | lr 6.19e-05 | 12957s elapsed
+  Ep 02 | step  21400 | loss 3.2033 | ppl    24.61 | lr 6.13e-05 | 13394s elapsed
+  Ep 02 | step  21600 | loss 3.2023 | ppl    24.59 | lr 6.06e-05 | 13830s elapsed
+  Ep 02 | step  21800 | loss 3.2013 | ppl    24.56 | lr 6.00e-05 | 14267s elapsed
+  Ep 02 | step  22000 | loss 3.2001 | ppl    24.53 | lr 5.94e-05 | 14704s elapsed
+  Ep 02 | step  22200 | loss 3.1992 | ppl    24.51 | lr 5.88e-05 | 15140s elapsed
+  Ep 02 | step  22400 | loss 3.1983 | ppl    24.49 | lr 5.81e-05 | 15577s elapsed
+  Ep 02 | step  22600 | loss 3.1973 | ppl    24.47 | lr 5.75e-05 | 16014s elapsed
+  Ep 02 | step  22800 | loss 3.1965 | ppl    24.45 | lr 5.69e-05 | 16450s elapsed
+  Ep 02 | step  23000 | loss 3.1956 | ppl    24.42 | lr 5.62e-05 | 16887s elapsed
+  Ep 02 | step  23200 | loss 3.1947 | ppl    24.40 | lr 5.56e-05 | 17323s elapsed
+  Ep 02 | step  23400 | loss 3.1938 | ppl    24.38 | lr 5.50e-05 | 17760s elapsed
+  Ep 02 | step  23600 | loss 3.1930 | ppl    24.36 | lr 5.43e-05 | 18197s elapsed
+  Ep 02 | step  23800 | loss 3.1921 | ppl    24.34 | lr 5.37e-05 | 18633s elapsed
+  Ep 02 | step  24000 | loss 3.1912 | ppl    24.32 | lr 5.31e-05 | 19070s elapsed
+  Ep 02 | step  24200 | loss 3.1901 | ppl    24.29 | lr 5.24e-05 | 19506s elapsed
+  Ep 02 | step  24400 | loss 3.1891 | ppl    24.27 | lr 5.18e-05 | 19943s elapsed
+  Ep 02 | step  24600 | loss 3.1882 | ppl    24.24 | lr 5.12e-05 | 20380s elapsed
+  Ep 02 | step  24800 | loss 3.1872 | ppl    24.22 | lr 5.06e-05 | 20817s elapsed
+  Ep 02 | step  25000 | loss 3.1863 | ppl    24.20 | lr 4.99e-05 | 21254s elapsed
+  Ep 02 | step  25200 | loss 3.1853 | ppl    24.17 | lr 4.93e-05 | 21691s elapsed
+  Ep 02 | step  25400 | loss 3.1844 | ppl    24.15 | lr 4.87e-05 | 22128s elapsed
+  Ep 02 | step  25600 | loss 3.1834 | ppl    24.13 | lr 4.80e-05 | 22565s elapsed
+  Ep 02 | step  25800 | loss 3.1826 | ppl    24.11 | lr 4.74e-05 | 23002s elapsed
+  Ep 02 | step  26000 | loss 3.1818 | ppl    24.09 | lr 4.68e-05 | 23439s elapsed
+  Ep 02 | step  26200 | loss 3.1809 | ppl    24.07 | lr 4.62e-05 | 23876s elapsed
+  Ep 02 | step  26400 | loss 3.1801 | ppl    24.05 | lr 4.56e-05 | 24313s elapsed
+  Ep 02 | step  26600 | loss 3.1793 | ppl    24.03 | lr 4.49e-05 | 24751s elapsed
+  Ep 02 | step  26800 | loss 3.1784 | ppl    24.01 | lr 4.43e-05 | 25188s elapsed
+  Ep 02 | step  27000 | loss 3.1777 | ppl    23.99 | lr 4.37e-05 | 25625s elapsed
+  Ep 02 | step  27200 | loss 3.1768 | ppl    23.97 | lr 4.31e-05 | 26062s elapsed
+  Ep 02 | step  27400 | loss 3.1760 | ppl    23.95 | lr 4.25e-05 | 26498s elapsed
+  Ep 02 | step  27600 | loss 3.1753 | ppl    23.93 | lr 4.19e-05 | 26935s elapsed
+  Ep 02 | step  27800 | loss 3.1743 | ppl    23.91 | lr 4.13e-05 | 27372s elapsed
+  Ep 02 | step  28000 | loss 3.1735 | ppl    23.89 | lr 4.07e-05 | 27809s elapsed
+  Ep 02 | step  28200 | loss 3.1727 | ppl    23.87 | lr 4.01e-05 | 28246s elapsed
+  Ep 02 | step  28400 | loss 3.1719 | ppl    23.85 | lr 3.95e-05 | 28683s elapsed
+  Ep 02 | step  28600 | loss 3.1711 | ppl    23.83 | lr 3.89e-05 | 29120s elapsed
+  Ep 02 | step  28800 | loss 3.1703 | ppl    23.82 | lr 3.83e-05 | 29557s elapsed
+  Ep 02 | step  29000 | loss 3.1695 | ppl    23.80 | lr 3.77e-05 | 29994s elapsed
+  Ep 02 | step  29200 | loss 3.1689 | ppl    23.78 | lr 3.72e-05 | 30432s elapsed
+  Ep 02 | step  29400 | loss 3.1680 | ppl    23.76 | lr 3.66e-05 | 30869s elapsed
+  Ep 02 | step  29600 | loss 3.1673 | ppl    23.74 | lr 3.60e-05 | 31306s elapsed
+  Ep 02 | step  29800 | loss 3.1665 | ppl    23.72 | lr 3.54e-05 | 31742s elapsed
+  Ep 02 | step  30000 | loss 3.1658 | ppl    23.71 | lr 3.49e-05 | 32178s elapsed
+  Ep 02 | step  30200 | loss 3.1650 | ppl    23.69 | lr 3.43e-05 | 32614s elapsed
+  Ep 02 | step  30400 | loss 3.1643 | ppl    23.67 | lr 3.37e-05 | 33050s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 02 done  (33415s  |  9.3h)
+  Train loss : 3.1639  PPL : 23.66
+  Val   loss : 3.0623  PPL : 21.38
+  Phase 1 PPL was : 3.28  (curriculum improvement: -18.10)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase2/checkpoint_epoch02.pt
+  ★ New best  (val_loss=3.0623  ppl=21.38)
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl in the house and she had been married for the first time since childhood. After all, when his father dies suddenly, he returns to her.
+
+Cast 
+
+ Frank Lloyd as George L. "Honeycomb" Teller
+ Jack Rennie Jr., Jr. as Dr. Jossy C. Smith
+ Charles Custer Sr. as Judge D.C. Smith
+ Robert Guggenheim as Capt. Bessard
+ William Lee Morgan as Doctor Luther Sibley
+ James M. Leitch (as J.M.) Miller as Dr. Harker E. O'Malley
+ Edward Viner as Professor W.L. Sprague
+ Louis Stevenson-Porter as Mr. Van Der Sandberg
+ John Fritschman as Judge Proust
+ Irving Rosenwald as Judge Storrs
+ Robert McKee as Professor A.J. DeRozell
+ Harold Schlosser as Master Martin DuSable
+ Frederick Lawler as Major
+ Edith Fuhr and Margaret Reichelbelle as Mrs. VanDer Sandberger
+ Walter Scherer (credited as Walter Sibley) as Lt. Bartender
+ Fred Spink as Sergeant General
+ Charles Robinson as Maj. Gen. Tom Scott
+ Norman Richter (uncredited) as Sergeant Thomas Mannion
+ Arthur Thompson (1942), as Colonel Harker
+ Billy Simms as Captain Benjamin Franklin
+ Alfredo Prado (1881) as Captain James
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began with an episcopal succession in 1441, with a new suffragan bishop and ten other bishops, who were re-elected at one point. The first was Charles de Valois (1437–1520), who had been crowned on 7 April 1444 after his predecessor died in 1519 when the latter was deposed for his coronation by King Louis I of France. He was consecrated to succeed him as Archbishop in the cathedral chapter by Cardinal Pierre François Fassé.
+
+Culture
+The most popular festival is the Church Music Festival (Stade pour l'Oiseau) organised in 1825, which organises many different forms of music from classical opera, classical ballet, oratorio and operas such as Mozart's Symphony No. 4 and Mozart's Concerto No. 1, although in some parts it is also used on performances at parades.
+
+History of the Catholic Church in France dates back more than three millennia ago, and has never had its official origin in France. The main source of information about this early church comes from medieval sources: the Church Chapter of Viernais, established in 1258, and then by Duke Henry II of Navarre between 1380 and 1384 under Pope Gregory XI. This Chapter was the seat of the archbishopric until 1612, when the Archdiocese of Bordeaux was created; since that time the Archbishopric of Toulouse now includes all the Archdeaconries
+
+
+  [Photosynthesis is the process by which]
+  Photosynthesis is the process by which a number of other proteins are modified (i.e., nucleic acids) to form a new cell, such as the cytoplasmic protein A2 and cytosol. This mechanism can be applied with bacteria in order to produce the same molecular product into a cell.
+
+Clinical significance 
+
+ Asparagine-1 was identified through its gene regulation, it plays an important role in pathogenesis due to its ability for DNA damage repair and mitosis. It has also been shown that expression of ubiquitin B3 expression on the nucleus is associated with a lack of transcriptional activity as well as a poor prognosis, however this is not well understood and appears to lead to increased development of many tumor cells. In addition to being able to stimulate genes, some tumor cells expressed ubiquitination pathway functions, including ubiquitin B4. These genes play important roles in cellular proliferation when the protein binds to RNA or PDB and are responsible for maintaining nuclear localization; these include:
+ PTPase 1 - Retaining transcription from pre-kappa-phosphate (PAPs), which regulates ubiquity.
+ Pseudomonas aeruginosus - The proteoglycans constituting the proline of mRNA in Eukaryotic cell lines.
+ Pseudoplastic transmembrane membrane protein 2 - Human specific ubiquitin-protein binding sites that are critical for transcription from downstream genes involved in eukaryotes; the intrace
+
+
+  [According to recent scientific research,]
+  According to recent scientific research, the total number of samples taken by scientists in the laboratory is roughly 7.8 million people.
+
+The laboratory has a science research facility with three buildings containing an experimental radio transmitter and two additional laboratories. The laboratory is equipped with the latest technology (AMC), which can transmit high-quality acoustic data over many different frequencies including up to 12 kHz. A second research facility, called "Radio Research & Innovation", was built at the back of the laboratory. This project is now being used for commercial purposes as part of the International Station Safety Network. Also, the main building was designed specifically for use during the war and for security reasons. It opened on 25 April 1947. In this facility, radio measurements were used to determine if it would be useful for detecting fire hazards, such as enemy aircraft or airplanes, even though the actual measurement for sound was never carried out. There is also evidence of chemical contamination that may have been caused by human error.
+
+In the 1950s the laboratory moved from its original location in Lausanne, Switzerland, to its current site near Ticino, Italy. Until then, the facility was housed in a former farmhouse of  that had been closed for several decades. Since 1995 the building remains a private residence with facilities and administrative offices located there. Currently the ground floor contains a library, classrooms, and some food service areas. On 5 March 2009, the facility became operational again when the federal government announced plans to reopen it under a new name,
+
+────────────────────────────────────────────────────────────────
+
+  Ep 03 | step  30600 | loss 3.0810 | ppl    21.78 | lr 3.32e-05 | 183s elapsed
+  Ep 03 | step  30800 | loss 3.0946 | ppl    22.08 | lr 3.26e-05 | 619s elapsed
+  Ep 03 | step  31000 | loss 3.0903 | ppl    21.98 | lr 3.21e-05 | 1054s elapsed
+  Ep 03 | step  31200 | loss 3.0863 | ppl    21.90 | lr 3.16e-05 | 1490s elapsed
+  Ep 03 | step  31400 | loss 3.0844 | ppl    21.85 | lr 3.10e-05 | 1926s elapsed
+  Ep 03 | step  31600 | loss 3.0860 | ppl    21.89 | lr 3.05e-05 | 2361s elapsed
+  Ep 03 | step  31800 | loss 3.0854 | ppl    21.88 | lr 3.00e-05 | 2797s elapsed
+  Ep 03 | step  32000 | loss 3.0856 | ppl    21.88 | lr 2.94e-05 | 3233s elapsed
+  Ep 03 | step  32200 | loss 3.0853 | ppl    21.87 | lr 2.89e-05 | 3669s elapsed
+  Ep 03 | step  32400 | loss 3.0851 | ppl    21.87 | lr 2.84e-05 | 4105s elapsed
+  Ep 03 | step  32600 | loss 3.0853 | ppl    21.87 | lr 2.79e-05 | 4541s elapsed
+  Ep 03 | step  32800 | loss 3.0850 | ppl    21.87 | lr 2.74e-05 | 4976s elapsed
+  Ep 03 | step  33000 | loss 3.0845 | ppl    21.86 | lr 2.69e-05 | 5412s elapsed
+  Ep 03 | step  33200 | loss 3.0841 | ppl    21.85 | lr 2.64e-05 | 5848s elapsed
+  Ep 03 | step  33400 | loss 3.0837 | ppl    21.84 | lr 2.59e-05 | 6284s elapsed
+  Ep 03 | step  33600 | loss 3.0834 | ppl    21.83 | lr 2.55e-05 | 6720s elapsed
+  Ep 03 | step  33800 | loss 3.0830 | ppl    21.82 | lr 2.50e-05 | 7156s elapsed
+  Ep 03 | step  34000 | loss 3.0831 | ppl    21.82 | lr 2.45e-05 | 7592s elapsed
+  Ep 03 | step  34200 | loss 3.0828 | ppl    21.82 | lr 2.40e-05 | 8027s elapsed
+  Ep 03 | step  34400 | loss 3.0829 | ppl    21.82 | lr 2.36e-05 | 8463s elapsed
+  Ep 03 | step  34600 | loss 3.0828 | ppl    21.82 | lr 2.31e-05 | 8898s elapsed
+  Ep 03 | step  34800 | loss 3.0824 | ppl    21.81 | lr 2.27e-05 | 9334s elapsed
+  Ep 03 | step  35000 | loss 3.0819 | ppl    21.80 | lr 2.23e-05 | 9770s elapsed
+  Ep 03 | step  35200 | loss 3.0815 | ppl    21.79 | lr 2.18e-05 | 10205s elapsed
+  Ep 03 | step  35400 | loss 3.0815 | ppl    21.79 | lr 2.14e-05 | 10641s elapsed
+  Ep 03 | step  35600 | loss 3.0812 | ppl    21.78 | lr 2.10e-05 | 11076s elapsed
+  Ep 03 | step  35800 | loss 3.0810 | ppl    21.78 | lr 2.06e-05 | 11512s elapsed
+  Ep 03 | step  36000 | loss 3.0807 | ppl    21.77 | lr 2.02e-05 | 11947s elapsed
+  Ep 03 | step  36200 | loss 3.0805 | ppl    21.77 | lr 1.98e-05 | 12383s elapsed
+  Ep 03 | step  36400 | loss 3.0802 | ppl    21.76 | lr 1.94e-05 | 12819s elapsed
+  Ep 03 | step  36600 | loss 3.0801 | ppl    21.76 | lr 1.90e-05 | 13254s elapsed
+  Ep 03 | step  36800 | loss 3.0798 | ppl    21.75 | lr 1.86e-05 | 13690s elapsed
+  Ep 03 | step  37000 | loss 3.0795 | ppl    21.75 | lr 1.83e-05 | 14125s elapsed
+  Ep 03 | step  37200 | loss 3.0792 | ppl    21.74 | lr 1.79e-05 | 14561s elapsed
+  Ep 03 | step  37400 | loss 3.0787 | ppl    21.73 | lr 1.76e-05 | 14997s elapsed
+  Ep 03 | step  37600 | loss 3.0785 | ppl    21.73 | lr 1.72e-05 | 15432s elapsed
+  Ep 03 | step  37800 | loss 3.0781 | ppl    21.72 | lr 1.69e-05 | 15868s elapsed
+  Ep 03 | step  38000 | loss 3.0778 | ppl    21.71 | lr 1.65e-05 | 16303s elapsed
+  Ep 03 | step  38200 | loss 3.0775 | ppl    21.70 | lr 1.62e-05 | 16739s elapsed
+  Ep 03 | step  38400 | loss 3.0773 | ppl    21.70 | lr 1.59e-05 | 17175s elapsed
+  Ep 03 | step  38600 | loss 3.0770 | ppl    21.69 | lr 1.56e-05 | 17611s elapsed
+  Ep 03 | step  38800 | loss 3.0769 | ppl    21.69 | lr 1.53e-05 | 18046s elapsed
+  Ep 03 | step  39000 | loss 3.0767 | ppl    21.69 | lr 1.50e-05 | 18482s elapsed
+  Ep 03 | step  39200 | loss 3.0763 | ppl    21.68 | lr 1.47e-05 | 18918s elapsed
+  Ep 03 | step  39400 | loss 3.0761 | ppl    21.67 | lr 1.44e-05 | 19354s elapsed
+  Ep 03 | step  39600 | loss 3.0757 | ppl    21.67 | lr 1.42e-05 | 19790s elapsed
+  Ep 03 | step  39800 | loss 3.0754 | ppl    21.66 | lr 1.39e-05 | 20226s elapsed
+  Ep 03 | step  40000 | loss 3.0752 | ppl    21.65 | lr 1.36e-05 | 20662s elapsed
+  Ep 03 | step  40200 | loss 3.0750 | ppl    21.65 | lr 1.34e-05 | 21098s elapsed
+  Ep 03 | step  40400 | loss 3.0748 | ppl    21.65 | lr 1.32e-05 | 21534s elapsed
+  Ep 03 | step  40600 | loss 3.0745 | ppl    21.64 | lr 1.29e-05 | 21970s elapsed
+  Ep 03 | step  40800 | loss 3.0741 | ppl    21.63 | lr 1.27e-05 | 22406s elapsed
+  Ep 03 | step  41000 | loss 3.0739 | ppl    21.63 | lr 1.25e-05 | 22842s elapsed
+  Ep 03 | step  41200 | loss 3.0737 | ppl    21.62 | lr 1.23e-05 | 23278s elapsed
+  Ep 03 | step  41400 | loss 3.0736 | ppl    21.62 | lr 1.21e-05 | 23714s elapsed
+  Ep 03 | step  41600 | loss 3.0734 | ppl    21.62 | lr 1.19e-05 | 24150s elapsed
+  Ep 03 | step  41800 | loss 3.0732 | ppl    21.61 | lr 1.17e-05 | 24586s elapsed
+  Ep 03 | step  42000 | loss 3.0729 | ppl    21.60 | lr 1.16e-05 | 25022s elapsed
+  Ep 03 | step  42200 | loss 3.0726 | ppl    21.60 | lr 1.14e-05 | 25458s elapsed
+  Ep 03 | step  42400 | loss 3.0724 | ppl    21.59 | lr 1.13e-05 | 25894s elapsed
+  Ep 03 | step  42600 | loss 3.0721 | ppl    21.59 | lr 1.11e-05 | 26329s elapsed
+  Ep 03 | step  42800 | loss 3.0718 | ppl    21.58 | lr 1.10e-05 | 26765s elapsed
+  Ep 03 | step  43000 | loss 3.0716 | ppl    21.58 | lr 1.09e-05 | 27200s elapsed
+  Ep 03 | step  43200 | loss 3.0714 | ppl    21.57 | lr 1.07e-05 | 27636s elapsed
+  Ep 03 | step  43400 | loss 3.0713 | ppl    21.57 | lr 1.06e-05 | 28071s elapsed
+  Ep 03 | step  43600 | loss 3.0710 | ppl    21.56 | lr 1.05e-05 | 28507s elapsed
+  Ep 03 | step  43800 | loss 3.0708 | ppl    21.56 | lr 1.04e-05 | 28942s elapsed
+  Ep 03 | step  44000 | loss 3.0706 | ppl    21.55 | lr 1.03e-05 | 29378s elapsed
+  Ep 03 | step  44200 | loss 3.0703 | ppl    21.55 | lr 1.03e-05 | 29813s elapsed
+  Ep 03 | step  44400 | loss 3.0701 | ppl    21.54 | lr 1.02e-05 | 30249s elapsed
+  Ep 03 | step  44600 | loss 3.0699 | ppl    21.54 | lr 1.02e-05 | 30685s elapsed
+  Ep 03 | step  44800 | loss 3.0697 | ppl    21.54 | lr 1.01e-05 | 31121s elapsed
+  Ep 03 | step  45000 | loss 3.0695 | ppl    21.53 | lr 1.01e-05 | 31557s elapsed
+  Ep 03 | step  45200 | loss 3.0694 | ppl    21.53 | lr 1.00e-05 | 31993s elapsed
+  Ep 03 | step  45400 | loss 3.0693 | ppl    21.53 | lr 1.00e-05 | 32429s elapsed
+  Ep 03 | step  45600 | loss 3.0691 | ppl    21.52 | lr 1.00e-05 | 32864s elapsed
+
+─────────────────────────────────────────────────────────────────
+  Epoch 03 done  (33365s  |  9.3h)
+  Train loss : 3.0690  PPL : 21.52
+  Val   loss : 3.0188  PPL : 20.47
+  Phase 1 PPL was : 3.28  (curriculum improvement: -17.19)
+─────────────────────────────────────────────────────────────────
+
+  Checkpoint  → /home/sem10/Desktop/nlpProj/checkpoints/phase2/checkpoint_epoch03.pt
+  ★ New best  (val_loss=3.0188  ppl=20.47)
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading history steps 230-230, summary, console lines 418-457
+wandb: 
+wandb: Run history:
+wandb:      epoch ▁▅█
+wandb:     tokens ▁▁▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▆▆▇▇▇▇▇▇████
+wandb: train/loss █▇▆▅▅▄▄▄▄▃▃▃▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   train/lr ▂▅▆█████▇▇▇▇▆▆▅▅▅▅▅▄▄▄▄▄▃▃▃▃▂▂▂▂▂▂▁▁▁▁▁▁
+wandb:  train/ppl █▄▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   val/loss █▃▁
+wandb:    val/ppl █▃▁
+wandb: 
+wandb: Run summary:
+wandb:      epoch 3
+wandb:     tokens 2988441600
+wandb: train/loss 3.06914
+wandb:   train/lr 1e-05
+wandb:  train/ppl 21.52345
+wandb:   val/loss 3.01882
+wandb:    val/ppl 20.46706
+wandb: 
+wandb: 🚀 View run phase2_wikipedia_124M at: https://wandb.ai/divydobariya11-international-institute-of-information-te/curriculum_lm/runs/de6rz7ai
+wandb: ⭐️ View project at: https://wandb.ai/divydobariya11-international-institute-of-information-te/curriculum_lm
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260418_055911-de6rz7ai/logs
+
+── Sample Generations ──────────────────────────────────────────
+
+  [Once upon a time, there was a little girl]
+  Once upon a time, there was a little girl in his house. When it turned out she had been sent to prison by the people of her village who were waiting for them to release her. This came after him and his wife left the land where they lived.
+
+When the soldiers went back to their camp at Ternopil, the two children saw some of the men as they went to the nearby monastery of St. Columbanus;  The first and last of these boys arrived with the assistance of the nuns from their local monastery who were staying in Ternopil. It is said that he heard about a group of people, but when they arrived in the town of Liguria, the nuns found out only the head of one of their houses was in his possession. They took him to the monastery where he spent most of night. After three days, the brothers returned home to the church of Saint James. Then the sisters started a new mission, which ended with the birth of Saint Columban.
+
+The second missionary was a man named Jaccio who was sent as part of the order, but he did not take his name as he could not speak English and the people spoke Spanish, so it happened to be known as "Jolita". But when he visited the monastery he became sick, and had to leave with another woman. He then fell ill again and died on 2 May 1883 in Mexico City where he was buried. At this point the brothers made the decision to send their brothers (as J
+
+
+  [The history of the Roman Empire began]
+  The history of the Roman Empire began in 1075 when Emperor Frederick II granted a papal dispensation to John XXIII, granting it to him. In 1210, under Peter IV, the emperor's son, Duke Henry III, the duchy of Lorraine and the Kingdom of Württemberg was founded as one of its principal centres of government.
+
+In 1307, King Louis IX of France created a new imperial city named Dukes-Guillaume, which became a major military center. During this period, the Dukes were involved in several wars between France and Germany. The French military administration under King Ferdinand I of France granted the Duchy to Charles V of Navarre (1547–1613), who established an important trade route through the territory. He also granted the province to the Bailiwicki family, and the city of Périgord to Robert de La Fontainebleau. A significant part of the region that formed Dukes-Harcourt, whose population is known for being heavily influenced by the Renaissance or early modern European languages. Although the Dukes-Lacraine had been a minor power for over 40 years, their presence has largely disappeared since the beginning of the 19th century. After Napoleon's conquest, the Habsburgs came into conflict with France. At first, however, France was reluctant to recognize their rule, so they took the initiative to intervene on behalf of the British East India Company. In 1848, French troops attacked
+
+
+  [Photosynthesis is the process by which]
+  Photosynthesis is the process by which an organism can move in a way that makes it easier to reproduce.
+
+Reptiles and plants 
+Many organisms have evolved from other animals, including birds or fish. Animal species include:
+ African catfish (Papilioa leucomelas)
+ Black-tailed deer (Sorbus platycephalus)
+ Asian leopard shark (Mentura leucogaster), red deer (Krappos gularis), white-footed boar (Aromyscus sylvaticola), red fox squirrel (Bathius cinereus)
+ Chinese elephant (Tantinodactylus tibetanus)
+ Dormopter bat (Sphingosoma flaviventer)
+ Echinoderma echidnae (Echolophaga helvumii).
+
+Insects are also known as "grapes" or "Gastropods". Insects may be found outside of insects because they form an symbiotic relationship with each other and compete against each other for their survival status. However, there has been no evidence supporting these relationships since the early 20th century. There has been a decrease in insect diversity due to increased competition from species such as the giant hyena. The numbers of this population have decreased greatly compared to today's population growth as well; however, the number of species is decreasing rapidly over time, so the level of variation among different groups will continue to increase
+
+
+  [According to recent scientific research,]
+  According to recent scientific research, the population density is estimated at  per km2. The median household income for this species was $12,038 and the total family size was 3.6 families (1.3%).
+
+References
+
+ Bank, H. C., & King, N. S. 2005. Family Toxantaceae in Europe: a guidebook of new plant taxa. In E.L. D'Aquino, J.F. Elliott et al.: Protechnical Coagulation Guide – Mollusca. pp. 89–90 in Mammal Species of World War II. Journal of Entomology 39(4): 467-489. doi:10.1007/s002550563215353764/http://www.cicillagefirthland.com.au/en/lacis_arctos/index.php?page=view&id=190855453080607201046929
+ Smith, W.H. 1978. "The Fungi Tree Group". Plant Biology 37 (5), 81–98. https://doi.org/10.1016/jstorax-davidures2023.htm#Jepson Manual Treatment
+ Stebbins, R.S. 2006. The distribution of Fungi (Papilionidae) from Africa. Part III (Cambodia). Annals of Zoological Society 32(
+
+────────────────────────────────────────────────────────────────
+
+
+═════════════════════════════════════════════════════════════════
+  Phase-2 Training Complete!
+  Best val PPL : 20.47  (Wikipedia)
+  Phase 1 PPL  : 3.28  (TinyStories)
+  Curriculum   : model improved across both domains ✓
+  Best model   : /home/sem10/Desktop/nlpProj/checkpoints/phase2/best_model.pt
+  History      : /home/sem10/Desktop/nlpProj/logs/phase2_history.json
+═════════════════════════════════════════════════════════════════
+
+→ Inference: python inference_phase2.py
+=== Phase 2 Training Complete: Sun Apr 19 09:49:37 EDT 2026 ===
