@@ -1,0 +1,125 @@
+
+  Device: cuda
+  GPU   : NVIDIA GeForce RTX 4060 Ti
+
+═════════════════════════════════════════════════════════════════
+  Evaluating Phase 1 — TinyStories
+═════════════════════════════════════════════════════════════════
+  ✓ Loaded checkpoint: /home/sem10/Desktop/nlpProj/checkpoints/phase1/best_model.pt
+    Epoch: 3  |  Saved val PPL: 3.2799274832692804
+
+  [1/6] Computing Perplexity on held-out validation set …
+        PPL = 3.2469  (reported during training: 3.28)
+
+  [2/6] Generating completions for 10 prompts …
+         [ 1/10] 'Once upon a time there was a little girl name' → 'Emma. She liked to play with her toys and draw pictures on t'
+         [ 2/10] 'The small rabbit looked up at the sky and'     → 'the sun was a bright day. It shone so brilliant that made th'
+         [ 3/10] 'One day in the forest, the animals decided to' → 'the bathroom. It was very big and it was all different and i'
+         [ 4/10] 'According to recent scientific research, the ' → 'a strange and not like any any normal.\nOne day, the weird th'
+         [ 5/10] 'The history of the Roman Empire began when'    → 'the wind suddenly. Little Little Little Little Little Little'
+         [ 6/10] 'Machine learning is a subfield of artificial ' → 'she is filled with life and joy.\nOne day, the sky began to s'
+         [ 7/10] 'The best way to implement a binary search tre' → 'a giant and you need more than of much more. \nâ€œ â€™ â€™ " '
+         [ 8/10] 'Recent advancements in natural language proce' → 'up on the moon. As each night, a bright light appeared and t'
+         [ 9/10] 'To deploy a web application at scale, enginee' → 'and a bed in the same place. One day, while playing outside,'
+         [10/10] 'Climate change is affecting the world because' → 'it has been given to its usual. \nOne day, a different from b'
+
+  [3/6] Computing BLEU-4 …
+        BLEU-4 = 0.2379
+
+  [4/6] Computing ROUGE-L …
+        ROUGE-L (F1) = 0.0532
+
+  [5/6] Computing Distinct-1 / Distinct-2 …
+        Distinct-1 = 0.4520  |  Distinct-2 = 0.8354
+
+  [6/6] Computing Self-BLEU and Repetition Rate …
+        Self-BLEU       = 2.8354
+        Repetition Rate = 0.0893
+
+  ✓ Phase 1 evaluation complete in 6.4s
+
+═════════════════════════════════════════════════════════════════
+  Evaluating Phase 2 — Wikipedia
+═════════════════════════════════════════════════════════════════
+  ✓ Loaded checkpoint: /home/sem10/Desktop/nlpProj/checkpoints/phase2/best_model.pt
+    Epoch: 3  |  Saved val PPL: 20.467062887039017
+
+  [1/6] Computing Perplexity on held-out validation set …
+        PPL = 19.7810  (reported during training: 20.47)
+
+  [2/6] Generating completions for 10 prompts …
+         [ 1/10] 'Once upon a time there was a little girl name' → 'Terengganh, whom he called "Truk".\n\nIn the early days of the'
+         [ 2/10] 'The small rabbit looked up at the sky and'     → 'told him to try and win, but they were too late. But he got '
+         [ 3/10] 'One day in the forest, the animals decided to' → 'move for a walk. The herd became so close that they could se'
+         [ 4/10] 'According to recent scientific research, the ' → 'this syndrome is a hereditary or familial condition known as'
+         [ 5/10] 'The history of the Roman Empire began when'    → 'a group of men of some 20,000–30,000 Roman soldiers attacked'
+         [ 6/10] 'Machine learning is a subfield of artificial ' → 'can be used to produce information about an object. This app'
+         [ 7/10] 'The best way to implement a binary search tre' → 'by solving a non-standard query using the following:\nSketche'
+         [ 8/10] 'Recent advancements in natural language proce' → 'that the use of software is an important resource for learni'
+         [ 9/10] 'To deploy a web application at scale, enginee' → 'create the software from scratch or other tools to complete '
+         [10/10] 'Climate change is affecting the world because' → 'of its proximity to South Asia.\n\nThere are five global warmi'
+
+  [3/6] Computing BLEU-4 …
+        BLEU-4 = 0.2216
+
+  [4/6] Computing ROUGE-L …
+        ROUGE-L (F1) = 0.0634
+
+  [5/6] Computing Distinct-1 / Distinct-2 …
+        Distinct-1 = 0.5967  |  Distinct-2 = 0.9647
+
+  [6/6] Computing Self-BLEU and Repetition Rate …
+        Self-BLEU       = 1.4333
+        Repetition Rate = 0.0000
+
+  ✓ Phase 2 evaluation complete in 5.9s
+
+═════════════════════════════════════════════════════════════════
+  Evaluating Phase 3 — Mixed Corpus
+═════════════════════════════════════════════════════════════════
+  ✓ Loaded checkpoint: /home/sem10/Desktop/nlpProj/checkpoints/phase3/best_model.pt
+    Epoch: 3  |  Saved val PPL: 30.117198408720384
+
+  [1/6] Computing Perplexity on held-out validation set …
+        PPL = 28.1746  (reported during training: 30.12)
+
+  [2/6] Generating completions for 10 prompts …
+         [ 1/10] 'Once upon a time there was a little girl name' → 'Grace, who had disappeared in her home with her parents. On '
+         [ 2/10] 'The small rabbit looked up at the sky and'     → 'said, ‘What is my cat?’ So we went back to the house, but it'
+         [ 3/10] 'One day in the forest, the animals decided to' → 'sleep and to eat. The animals then moved on to another cave '
+         [ 4/10] 'According to recent scientific research, the ' → 'death among humans is a sudden and persistent mutation in th'
+         [ 5/10] 'The history of the Roman Empire began when'    → 'Emperor Cilipius was made governor and a bishop. He was a Ch'
+         [ 6/10] 'Machine learning is a subfield of artificial ' → 'includes the idea that we can create complex systems, such a'
+         [ 7/10] 'The best way to implement a binary search tre' → 'with <a href="http://docs.python.org/library/logging.html#bi'
+         [ 8/10] 'Recent advancements in natural language proce' → 'that many languages are being used for different purposes. T'
+         [ 9/10] 'To deploy a web application at scale, enginee' → 'want to use the latest version of PHP and/or Java. A small s'
+         [10/10] 'Climate change is affecting the world because' → 'it has led to a flood of cheap and increasingly deadly gas.\n'
+
+  [3/6] Computing BLEU-4 …
+        BLEU-4 = 0.2692
+
+  [4/6] Computing ROUGE-L …
+        ROUGE-L (F1) = 0.0711
+
+  [5/6] Computing Distinct-1 / Distinct-2 …
+        Distinct-1 = 0.5761  |  Distinct-2 = 0.9600
+
+  [6/6] Computing Self-BLEU and Repetition Rate …
+        Self-BLEU       = 1.2472
+        Repetition Rate = 0.0000
+
+  ✓ Phase 3 evaluation complete in 5.8s
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════
+  EVALUATION SUMMARY
+════════════════════════════════════════════════════════════════════════════════════════════════════════
+Phase                      |      PPL |   BLEU-4 |  ROUGE-L |  Dist-1 |  Dist-2 |  Self-BLEU |  Rep.Rate
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+Phase 1 — TinyStories      |    3.247 |   0.2379 |   0.0532 |  0.4520 |  0.8354 |     2.8354 |    0.0893
+Phase 2 — Wikipedia        |   19.781 |   0.2216 |   0.0634 |  0.5967 |  0.9647 |     1.4333 |    0.0000
+Phase 3 — Mixed Corpus     |   28.175 |   0.2692 |   0.0711 |  0.5761 |  0.9600 |     1.2472 |    0.0000
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ↓ PPL better  ↑ BLEU/ROUGE better  ↑ Distinct better  ↓ Self-BLEU/RepRate better
+
+  Results saved → /home/sem10/Desktop/nlpProj/eval_results.json
+  Table  saved → /home/sem10/Desktop/nlpProj/eval_results_table.txt

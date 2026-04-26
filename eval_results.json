@@ -1,0 +1,77 @@
+[
+  {
+    "phase": 1,
+    "name": "Phase 1 \u2014 TinyStories",
+    "perplexity": 3.2469,
+    "reported_ppl": 3.28,
+    "bleu4": 0.2379,
+    "rouge_l": 0.0532,
+    "distinct_1": 0.452,
+    "distinct_2": 0.8354,
+    "self_bleu": 2.8354,
+    "repetition_rate": 0.0893,
+    "hypotheses": [
+      "Emma. She liked to play with her toys and draw pictures on the wall.\nOne day, Emma's mom said that she had a very big surprise for Emma. Mom told Emma to go upstairs so she could find out what it was! \nSo Emma ran up stairs, faster than ever before. When she reached the top of the stairs, she saw something really special - an ice-",
+      "the sun was a bright day. It shone so brilliant that made the world look much brighter. The birds sang the night. \nBut then something bad happened; the sun had been too too harsh for everything. The sky got darker and more dark, until it started to become blue again as if they had no water. Everywhere was covered by by with the brilliant began to stop stopped was so loud",
+      "the bathroom. It was very big and it was all different and it made a lot of noise when you got into something that was really scary!\nThe animals knew what had happened, so they started cleaning up around the bathroom. They were making loud noises so that their house would be even messier than before. \nFinally, after many hours, their little house was completely clean! Everyone in",
+      "a strange and not like any any normal.\nOne day, the weird things were going on in the house was finally off! The family was very worried and they wanted the weird things had come from a place that didn't have been taken away. \nThey asked all their friends and family's reply \"I don't know where this is now.\" Everyone started looking for the unknown.",
+      "the wind suddenly. Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little LittleLittle Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little Little",
+      "she is filled with life and joy.\nOne day, the sky began to shake and the little girl was scared. \n\u00e2\u20ac\u0153Mommy, what is happening? What is it\u00e2\u20ac her mother replied softly in understanding. \nThe shaking grew stronger until finally the lightning struck down, leaving a mark on the ground where you were standing. The small girl looked up at her",
+      "a giant and you need more than of much more. \n\u00e2\u20ac\u0153 \u00e2\u20ac\u2122 \u00e2\u20ac\u2122 \" \u00e2\u20ac on the other day for a better \u00e2\u20ac\nOne morning, while walking through town, the enormous giant appeared right at his front door.\n\n\"Why do you want this mighty giant?\" said the little girl who was playing outside.",
+      "up on the moon. As each night, a bright light appeared and the dark moon lit up so brightly that it looked like a giant shield.\n\" came to strike an evil monster with its weapon. I am strong and can protect the earth from anything.\" \nThe mysterious creature with powerful force struck the earth with one hand. The evil monster felt helpless and could no escape. \nAt",
+      "and a bed in the same place. One day, while playing outside, she noticed something very impressive. It was a big bowl of ice cream! She couldn't help but wonder what this delicious treat would be, she had never seen it to weigh things being weighed by itself. \n\nThe answer to move around the next to play. The number. This made out on its own rock at",
+      "it has been given to its usual. \nOne day, a different from being a rough and become after something was made life. Everyone around. Some people thought that they had not happened in as the old or end. People were scared of what would come from their regular days. \nWhen the people stopped worrying about getting the same changes, the people decided to talk about what had happened to"
+    ],
+    "elapsed_s": 6.4
+  },
+  {
+    "phase": 2,
+    "name": "Phase 2 \u2014 Wikipedia",
+    "perplexity": 19.781,
+    "reported_ppl": 20.47,
+    "bleu4": 0.2216,
+    "rouge_l": 0.0634,
+    "distinct_1": 0.5967,
+    "distinct_2": 0.9647,
+    "self_bleu": 1.4333,
+    "repetition_rate": 0.0,
+    "hypotheses": [
+      "Terengganh, whom he called \"Truk\".\n\nIn the early days of the Gajapur-Ganga Dynasty (c. 605 - c. 630 CE), the ruler of this region also referred to as Bhakti, which means \"the kingdom's land\" in Sanskrit. In modern times it has been referred to simply as Thalasserya",
+      "told him to try and win, but they were too late. But he got his eye through a door and was turned in the right direction. He got back on top of it by jumping through it again. Then he jumped out and climbed up to the top.\n \nOne day before the battle with Todarh, they had a confrontation. They then fought to win the battle against",
+      "move for a walk. The herd became so close that they could see their new home and would not have anyone else come or leave. When someone came and walked into the hut and asked if he had ever seen anything about it, the animal refused to answer and instead declared he was leaving with nothing. At this point, the elephant gave chase and fled while the elephants were moving around. After hearing a",
+      "this syndrome is a hereditary or familial condition known as erythematosia.\n\nDiagnosis and treatment\nThe diagnosis for HCS1 is due to congenital heart failure and/or myocardial infarction. The patient will be required to undergo an intensive care unit which is located near their right side after initial symptoms. Following surgery, the person will be transported from the",
+      "a group of men of some 20,000\u201330,000 Roman soldiers attacked a Jewish settlement near Wetzlar in T\u00fcbingen. The village was part of a larger settlement named Jutland which had about 100 inhabitants in 1848. After the French invasion in 1799, the Jews moved to Westphalia and founded S\u00f6derwald (nowadays called G\u00e4rtelberg",
+      "can be used to produce information about an object. This approach can be applied in a variety of ways, including data gathering and the use of various techniques.\n\nThe technique can be applied with all methods (including the object-based design) by means of the following:\n\n C++ Visual Basic Programming Language  for example, in this case, and\n Java Pascal/JavaScript Architecture\n Advanced",
+      "by solving a non-standard query using the following:\nSketches of length  and , respectively.\nFor every integer , the total range depends on the weight of . A solution using this method can be found using the formula . For each number  we have\n\nwhere  denotes the maximum value, ,  denotes  and  are the weights for which the sample should be calculated;",
+      "that the use of software is an important resource for learning and sharing. The creation of a system based on this technique has demonstrated the complexity, flexibility and application requirements of language processing technologies.\n\nSee also \n\n Basic semantics\n Language processing (computer science)\n Computational linguistics\n Language control\n Learning processing (disambiguation)\n Knowledge gathering (mathematics)\n Languages in",
+      "create the software from scratch or other tools to complete the process.\n\nFutures \nIn addition to the work of developing a web site for specific purposes, the engineering team is also responsible for implementing its own web applications using FTSS and related products. The FTSS technology offers a wide range of technical support as well as tools that may be used in an online-only environment",
+      "of its proximity to South Asia.\n\nThere are five global warming zones: Asia, Africa and Europe (the latter in Eastern European countries). The United States has a high level of heat that can be dangerous for both humans and animals as well as their wildlife. Some countries have warm weather areas that are cooler than their national temperature zone.\n\nSouth Asian climate\nThe South Pacific climate classification for"
+    ],
+    "elapsed_s": 5.9
+  },
+  {
+    "phase": 3,
+    "name": "Phase 3 \u2014 Mixed Corpus",
+    "perplexity": 28.1746,
+    "reported_ppl": 30.12,
+    "bleu4": 0.2692,
+    "rouge_l": 0.0711,
+    "distinct_1": 0.5761,
+    "distinct_2": 0.96,
+    "self_bleu": 1.2472,
+    "repetition_rate": 0.0,
+    "hypotheses": [
+      "Grace, who had disappeared in her home with her parents. On the other hand, I was a quiet girl, as she could not be heard from the house in which she lived. She did not even have a voice or the words to say anything but that all of my experiences were about sex and sex and everything was about relationships.\nAnd then, last year I did not know what happened next",
+      "said, \u2018What is my cat?\u2019 So we went back to the house, but it was hard. My cat was getting very hungry and then I saw a black bear on its head. He had been walking in this area for over two weeks now (the first day of September). The last thing I wanted to do was sit down and let the car get out of the way so",
+      "sleep and to eat. The animals then moved on to another cave and settled down at the edge of a mountain. A cave is named after it because it was found in the vicinity of a large rock at about 2 kilometers (0.9 mi) high.\nThe animals then proceeded up the mountainside through the jungle until reaching an elevation of over 600 meters (1,200 ft), where they",
+      "death among humans is a sudden and persistent mutation in the human genome. In some cases, that causes an increase or decrease in the amount of tissue produced.\nThe current study found that there are two main types of mutations known as \u201cnon-homologous\u201d (N1), one for which it was considered an important factor; and N2, which has been linked to human mortality",
+      "Emperor Cilipius was made governor and a bishop. He was a Christian who refused to accept baptism, and became an emperor after his death in 654.\n\nAfter Cilius died, he left behind some of his sons (including Antigonopoulas) and some of his own daughters, but eventually made peace with the Roman authorities and took their place among his former allies.",
+      "includes the idea that we can create complex systems, such as neural networks to communicate with computers or robots. As a result, it's possible for us to develop complex systems, in which case, it would be a great investment to help them make more efficient and faster predictions when they need to improve their own algorithms.\nThe AI software industry has long been dominated by software companies, with many now developing",
+      "with <a href=\"http://docs.python.org/library/logging.html#binary_searching\" rel=\"nofollow noreferrer\">bison</a>.</p></li>\n<li><p>Don't use the <code>.get()</code>, <strong>\"hash\".uniq(2)</strong>: you can change it in",
+      "that many languages are being used for different purposes. The current goal of this project is to develop a novel algorithm that utilizes several thousand or more words, and then classify the words by their own categories (words) into clusters using specific algorithms. There are a number of possible applications, but it\u2019s time to figure out how these works on our own\nIn most cases, a simple algorithm would",
+      "want to use the latest version of PHP and/or Java. A small subset is running into serious bugs when using Apache.</p>\n<h3>1) What can I do?</h3></li>\n</ul>\n\n\n<blockquote>In general the <a href=\"http://en.wikipedia.org/wiki/Web_Application\" rel=\"nof",
+      "it has led to a flood of cheap and increasingly deadly gas.\nThe oil price of crude oil in recent years was more than double what used to be high on the market for carbon monoxide, which kills off all energy-producing plants but not the environment. It\u2019s already hitting record highs as low as $1 per barrel. Gas prices have seen an increase from 2012, when the"
+    ],
+    "elapsed_s": 5.8
+  }
+]
